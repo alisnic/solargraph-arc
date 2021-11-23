@@ -52,16 +52,38 @@ private
       hook.args[1..-1].each_with_index.all? { |arg, i| child.children[i] == arg }
     end
 
-    hook.proc.call(node) if matched
+    if matched
+      if hook.proc.arity == 1
+        hook.proc.call(node)
+      elsif hook.proc.arity == 2
+        walker = Walker.new(node)
+        hook.proc.call(node, walker)
+        walker.walk
+      end
+    end
   end
 end
 
+SCHEMA = {}
+
 walker = Walker.new(ast)
-walker.on :block, [:send, nil, :create_table] do |ast|
-  pp ast
-  binding.pry
-  puts "\n"
+walker.on :block, [:send, nil, :create_table] do |ast, query|
+  table_name = ast.children.first.children[2].children.last
+  SCHEMA[table_name] = {}
+
+  query.on :send, [:lvar, :t] do |column_ast|
+    name = column_ast.children[2].children.last
+    type = column_ast.children[1]
+
+    next if type == :index
+    SCHEMA[table_name][name] = type
+  end
 end
 
 walker.walk
+
+pp SCHEMA
+
+binding.pry
+
 
