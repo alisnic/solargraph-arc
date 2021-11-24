@@ -1,7 +1,7 @@
 ENV["RAILS_ENV"] = "test"
 
 require 'solargraph'
-require_relative '../ast_demo.rb'
+require 'solar-rails'
 require 'pry'
 
 RSpec.configure do |config|
