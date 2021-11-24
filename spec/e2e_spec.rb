@@ -83,7 +83,7 @@ RSpec.describe "solargraph rails integration" do
   end
 
   it "generates methods based on schema" do
-    source = load_string 'app/models/account.rb', <<-RUBY
+    load_string 'app/models/account.rb', <<-RUBY
       class Account < ActiveRecord::Base
       end
     RUBY
@@ -103,5 +103,41 @@ RSpec.describe "solargraph rails integration" do
     assert_public_instance_method("Account#active", "Boolean")
     assert_public_instance_method("Account#notes", "String")
     assert_public_instance_method("Account#some_ip", "IPAddr")
+  end
+
+  it "generates nested namespaces" do
+    # load_string 'lib/foo/bar.rb', <<-RUBY
+    #   module Foo
+    #     module Bar
+    #       module Baz
+    #       end
+    #     end
+    #   end
+    # RUBY
+    #
+    #
+    #  #<Solargraph::Pin::Namespace `Foo`
+    #  #<Solargraph::Pin::Namespace `Foo::Bar`
+    #  #<Solargraph::Pin::Namespace `Foo::Bar::Baz`
+    #
+    # DIFF
+    # #<Solargraph::Pin::Namespace `Foo::Bar::Baz`
+    #
+    # "Foo"
+    # ["Foo", ""]
+    # "Foo::Bar"
+    # ["Foo::Bar", "Foo", ""]
+    # "Foo::Bar::Baz"
+    # ["Foo::Bar::Baz", "Foo::Bar", "Foo", ""]
+    load_string 'lib/foo/bar.rb', <<-RUBY
+      class Foo::Bar::Baz
+      end
+    RUBY
+
+    pp local_pins.map {|p| { path: p.path, closure: p.closure, gates: p.gates }}
+
+    pins = api_map.get_constants('Foo')
+    paths = pins.map(&:path)
+    expect(paths).to include('Foo::Bar')
   end
 end

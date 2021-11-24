@@ -87,15 +87,49 @@ class SolarRails < Solargraph::Convention::Base
   }
 
   def local source_map
-    if source_map.filename.include?("app/models")
-      pins = model_pins(source_map)
-      Solargraph::Environ.new(pins: pins)
-    else
-      EMPTY_ENVIRON
+    pins = []
+    ds   = source_map.document_symbols
+    ns   = ds.first
+
+    if ds.size == 1 && ns.path.include?("::")
+      root_ns = source_map.pins.find {|p| p.path == "" }
+      pins += namespace_stubs(root_ns, ns)
     end
+
+    if source_map.filename.include?("app/models")
+      pins += model_pins(source_map)
+    end
+
+    Solargraph::Environ.new(pins: pins)
   end
 
   private
+
+  def namespace_stubs(root_ns, ns)
+    parts = ns.path.split("::")
+
+    candidates = parts.each_with_index.reduce([]) do |acc, (_, i)|
+      acc + [parts[0..i].join("::")]
+    end.reject {|el| el == ns.path }
+
+    previous_ns = root_ns
+
+    candidates.each_with_index.map do |name, i|
+      gates = candidates[0..i].reverse + [""]
+
+      puts "Seeding #{name} #{gates}"
+
+      previous_ns = Solargraph::Pin::Namespace.new(
+        type:       ns.type,
+        location:   ns.location,
+        closure:    previous_ns,
+        name:       name,
+        comments:   ns.comments,
+        visibility: :public,
+        # gates:      gates[1..-1]
+      )
+    end
+  end
 
   def model_pins(source_map)
     ns = source_map.document_symbols.find {|s| s.is_a?(Solargraph::Pin::Namespace) }
