@@ -88,7 +88,13 @@ RSpec.describe "solargraph rails integration" do
       end
     RUBY
 
-    assert_public_instance_method("Account#extra", "Hash")
+    assert_public_instance_method("Account#extra", "Hash") do |pin|
+      expect(pin.location.range.to_hash).to eq({
+        :start => { :line => 5, :character => 0 },
+        :end => { :line => 5, :character => 10 }
+      })
+    end
+
     assert_public_instance_method("Account#balance", "BigDecimal")
     assert_public_instance_method("Account#some_int", "Integer")
     assert_public_instance_method("Account#some_date", "Date")

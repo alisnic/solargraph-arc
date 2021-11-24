@@ -108,17 +108,19 @@ class SolarRails < Solargraph::Convention::Base
 
     return [] unless table
 
-    table.map do |column, type|
-      build_public_method(ns, column, RUBY_TYPES.fetch(type.to_sym))
+    table.map do |column, data|
+      build_public_method(
+        ns,
+        column,
+        RUBY_TYPES.fetch(data.type.to_sym),
+        ast:  data.ast,
+        path: "db/schema.rb"
+      )
     end
   end
 
-  def build_public_method(ns, name, type, ast: nil, path: nil)
-    location = if ast
-      build_location(ast, path)
-    else
-      dummy_location
-    end
+  def build_public_method(ns, name, type, ast:, path:)
+    location = build_location(ast, path)
 
     Solargraph::Pin::Method.new(
       name:      name,
@@ -138,19 +140,6 @@ class SolarRails < Solargraph::Convention::Base
         0,
         ast.location.last_line,
         ast.location.column
-      )
-    )
-  end
-
-  def dummy_location
-    # TODO: get location data from db/schema.rb
-    Solargraph::Location.new(
-      "db/schema.rb",
-      Solargraph::Range.from_to(
-        0,
-        0,
-        0,
-        0
       )
     )
   end
@@ -205,6 +194,8 @@ class SolarRails < Solargraph::Convention::Base
     end
   end
 
+  ColumnData = Struct.new(:type, :ast)
+
   def extract_schema(ast)
     schema = {}
 
@@ -218,7 +209,7 @@ class SolarRails < Solargraph::Convention::Base
         type = column_ast.children[1]
 
         next if type == :index
-        schema[table_name][name] = type
+        schema[table_name][name] = ColumnData.new(type, column_ast)
       end
     end
 
