@@ -4,9 +4,13 @@ RSpec.describe "solargraph rails integration" do
   let(:api_map) { Solargraph::ApiMap.new }
 
   def load_string(filename, str)
-    source = Solargraph::Source.load_string(str, filename)
+    source = build_source(filename, str)
     api_map.map(source)
     source
+  end
+
+  def build_source(filename, str)
+    Solargraph::Source.load_string(str, filename)
   end
 
   def find_pin(path)
@@ -111,14 +115,29 @@ RSpec.describe "solargraph rails integration" do
     end
   end
 
+  def catalog_bench(sources)
+    maps = sources.map {|s| Solargraph::SourceMap.map(s) }
+    api_map.catalog Solargraph::Bench.new(source_maps: maps)
+  end
+
   it "generates nested namespaces" do
-    load_string 'test.rb', %(
+    src1 = build_source 'test1.rb', %(
       class Foo::Bar::Baz; end
       Foo::Bar::Baz
     )
 
-    names = api_map.clip_at('test.rb', [2, 17]).complete.pins.map(&:name)
+    src2 = build_source 'test2.rb', %(
+      class Foo::Bar::Zaz; end
+      Foo::Bar::Zaz
+    )
+
+    catalog_bench([src1, src2])
+
+    names = api_map.clip_at('test1.rb', [2, 17]).complete.pins.map(&:name)
     expect(names).to eq(['Baz'])
+
+    names = api_map.clip_at('test2.rb', [2, 17]).complete.pins.map(&:name)
+    expect(names).to eq(['Zaz'])
 
     pins = api_map.get_constants('Foo')
     paths = pins.map(&:path)

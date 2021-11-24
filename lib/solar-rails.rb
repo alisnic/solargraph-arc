@@ -116,8 +116,9 @@ class SolarRails < Solargraph::Convention::Base
     pins = []
 
     parts[0..-2].each_with_index do |name, i|
-      next if name == ns.name
       gates = candidates[0..i].reverse + [""]
+      path = gates.first
+      next if path == ns.path
 
       previous_ns = Solargraph::Pin::Namespace.new(
         type:       :module,
