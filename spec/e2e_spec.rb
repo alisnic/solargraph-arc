@@ -47,9 +47,12 @@ RSpec.describe "solargraph rails integration" do
     RUBY
   end
 
-  it "generates methods based on relationships" do
-    expect(File).to receive(:read).with("db/schema.rb").and_return(schema)
+  before do
+    allow(File).to receive(:read).with("db/schema.rb").and_return(schema)
+    Solargraph::Convention.register SolarRails
+  end
 
+  it "generates methods based on relationships" do
     load_string 'app/models/transaction.rb', <<-RUBY
       class Transaction < ActiveRecord::Base
         belongs_to :account
@@ -70,8 +73,6 @@ RSpec.describe "solargraph rails integration" do
   end
 
   it "generates methods based on schema" do
-    expect(File).to receive(:read).with("db/schema.rb").and_return(schema)
-
     source = load_string 'app/models/account.rb', <<-RUBY
       class Account < ActiveRecord::Base
       end

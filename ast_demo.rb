@@ -205,4 +205,4 @@ class SolarRails < Solargraph::Convention::Base
   end
 end
 
-Solargraph::Convention.register SolarRails
+Solargraph::Convention.register SolarRails unless ENV["RAILS_ENV"] == "test"

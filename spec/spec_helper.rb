@@ -1,3 +1,5 @@
+ENV["RAILS_ENV"] = "test"
+
 require 'solargraph'
 require_relative '../ast_demo.rb'
 require 'pry'
