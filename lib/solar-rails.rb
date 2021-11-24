@@ -113,22 +113,29 @@ class SolarRails < Solargraph::Convention::Base
     end.reject {|el| el == ns.path }
 
     previous_ns = root_ns
+    pins = []
 
-    candidates.each_with_index.map do |name, i|
+    parts[0..-2].each_with_index do |name, i|
+      next if name == ns.name
       gates = candidates[0..i].reverse + [""]
 
-      puts "Seeding #{name} #{gates}"
-
       previous_ns = Solargraph::Pin::Namespace.new(
-        type:       ns.type,
+        type:       :module,
         location:   ns.location,
         closure:    previous_ns,
         name:       name,
         comments:   ns.comments,
         visibility: :public,
-        # gates:      gates[1..-1]
+        gates:      gates[1..-1]
       )
+
+      pins << previous_ns
     end
+
+    ns.instance_variable_set("@closure", previous_ns)
+    ns.instance_variable_set("@open_gates", candidates[0..-1].reverse + [""])
+
+    pins
   end
 
   def model_pins(source_map)

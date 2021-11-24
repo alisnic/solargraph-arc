@@ -105,36 +105,20 @@ RSpec.describe "solargraph rails integration" do
     assert_public_instance_method("Account#some_ip", "IPAddr")
   end
 
-  it "generates nested namespaces" do
-    # load_string 'lib/foo/bar.rb', <<-RUBY
-    #   module Foo
-    #     module Bar
-    #       module Baz
-    #       end
-    #     end
-    #   end
-    # RUBY
-    #
-    #
-    #  #<Solargraph::Pin::Namespace `Foo`
-    #  #<Solargraph::Pin::Namespace `Foo::Bar`
-    #  #<Solargraph::Pin::Namespace `Foo::Bar::Baz`
-    #
-    # DIFF
-    # #<Solargraph::Pin::Namespace `Foo::Bar::Baz`
-    #
-    # "Foo"
-    # ["Foo", ""]
-    # "Foo::Bar"
-    # ["Foo::Bar", "Foo", ""]
-    # "Foo::Bar::Baz"
-    # ["Foo::Bar::Baz", "Foo::Bar", "Foo", ""]
-    load_string 'lib/foo/bar.rb', <<-RUBY
-      class Foo::Bar::Baz
-      end
-    RUBY
+  def ns_pin(name)
+    local_pins.find do |p|
+      p.is_a?(Solargraph::Pin::Namespace) && p.path == name
+    end
+  end
 
-    pp local_pins.map {|p| { path: p.path, closure: p.closure, gates: p.gates }}
+  it "generates nested namespaces" do
+    load_string 'test.rb', %(
+      class Foo::Bar::Baz; end
+      Foo::Bar::Baz
+    )
+
+    names = api_map.clip_at('test.rb', [2, 17]).complete.pins.map(&:name)
+    expect(names).to eq(['Baz'])
 
     pins = api_map.get_constants('Foo')
     paths = pins.map(&:path)
