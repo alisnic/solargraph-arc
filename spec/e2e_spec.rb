@@ -52,20 +52,23 @@ RSpec.describe "solargraph rails integration" do
     Solargraph::Convention.register SolarRails
   end
 
-  it "generates methods based on relationships" do
+  it "generates method for belongs_to" do
     load_string 'app/models/transaction.rb', <<-RUBY
       class Transaction < ActiveRecord::Base
         belongs_to :account
       end
     RUBY
 
+    assert_public_instance_method("Transaction#account", "Account")
+  end
+
+  it "generates method for has_many" do
     load_string 'app/models/account.rb', <<-RUBY
       class Account < ActiveRecord::Base
         has_many :transactions
       end
     RUBY
 
-    # assert_public_instance_method("Transaction#account", "Account")
     assert_public_instance_method(
       "Account#transactions",
       "ActiveRecord::Associations::CollectionProxy<Transaction>"

@@ -1,4 +1,0 @@
-example_id              | status | run_time        |
------------------------ | ------ | --------------- |
-./spec/e2e_spec.rb[1:1] | passed | 0.27929 seconds |
-./spec/e2e_spec.rb[1:2] | passed | 0.01342 seconds |
