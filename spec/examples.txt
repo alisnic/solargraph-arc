@@ -1,3 +1,4 @@
 example_id              | status | run_time        |
 ----------------------- | ------ | --------------- |
-./spec/e2e_spec.rb[1:1] | passed | 0.00023 seconds |
+./spec/e2e_spec.rb[1:1] | passed | 0.24754 seconds |
+./spec/e2e_spec.rb[1:2] | failed | 0.01966 seconds |

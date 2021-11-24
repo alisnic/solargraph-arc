@@ -1,6 +1,5 @@
 require 'solargraph'
 require 'active_support/core_ext/string/inflections'
-require 'pry'
 
 class Walker
   class Hook
@@ -17,7 +16,7 @@ class Walker
     @hooks = Hash.new([])
   end
 
-  def on(node_type, args, &block)
+  def on(node_type, args=[], &block)
     @hooks[node_type] << Hook.new(node_type, args, &block)
   end
 
@@ -45,10 +44,10 @@ class Walker
     return unless node.type == hook.node_type
     return unless node.children
 
-    matched = node.children.any? do |child|
-      next unless child.is_a?(Parser::AST::Node)
-      next unless child.type == hook.args.first
-      hook.args[1..-1].each_with_index.all? { |arg, i| child.children[i] == arg }
+    matched = hook.args.empty? || if node.children.first.is_a?(Parser::AST::Node)
+      node.children.any? { |child| child.is_a?(Parser::AST::Node) && match_children(hook.args[1..-1], child.children) }
+    else
+      match_children(hook.args, node.children)
     end
 
     if matched
@@ -58,6 +57,16 @@ class Walker
         walker = Walker.new(node)
         hook.proc.call(node, walker)
         walker.walk
+      end
+    end
+  end
+
+  def match_children(args, children)
+    args.each_with_index.all? do |arg, i|
+      if children[i].is_a?(Parser::AST::Node)
+        children[i].type == arg
+      else
+        children[i] == arg
       end
     end
   end
@@ -79,9 +88,8 @@ class SolarRails < Solargraph::Convention::Base
 
   def local source_map
     if source_map.filename.include?("app/models")
-      Solargraph::Environ.new(pins: model_pins(source_map))
-      # pp model_pins(source_map)
-      # EMPTY_ENVIRON
+      pins = model_pins(source_map)
+      Solargraph::Environ.new(pins: pins)
     else
       EMPTY_ENVIRON
     end
@@ -90,50 +98,82 @@ class SolarRails < Solargraph::Convention::Base
   private
 
   def model_pins(source_map)
-    ns         = source_map.document_symbols.find {|s| s.is_a?(Solargraph::Pin::Namespace) }
+    ns = source_map.document_symbols.find {|s| s.is_a?(Solargraph::Pin::Namespace) }
+    schema_pins(ns) + relation_pins(source_map, ns)
+  end
+
+  def schema_pins(ns)
     table_name = infer_table_name(ns)
     table      = schema[table_name]
 
     return [] unless table
 
     table.map do |column, type|
-      # TODO: get location data from db/schema.rb
-      location = Solargraph::Location.new(
-        "db/schema.rb",
-        Solargraph::Range.from_to(
-          0,
-          0,
-          0,
-          0
-        )
-      )
+      build_public_method(ns, column, RUBY_TYPES.fetch(type.to_sym))
+    end
+  end
 
-      Solargraph::Pin::Method.new(
-        name:      column,
-        comments:  "@return [#{RUBY_TYPES.fetch(type.to_sym)}]",
-        location:  location,
-        closure:   ns,
-        scope:     :instance,
-        attribute: true
+  def build_public_method(ns, name, type)
+    Solargraph::Pin::Method.new(
+      name:      name,
+      comments:  "@return [#{type}]",
+      location:  dummy_location,
+      closure:   ns,
+      scope:     :instance,
+      attribute: true
+    )
+  end
+
+  def relation_pins(source_map, ns)
+    ast    = source_map.source.node
+    walker = Walker.new(ast)
+    pins   = []
+
+    walker.on :send, [nil, :belongs_to] do |ast|
+      relation_name = ast.children[2].children.first
+
+      # TODO: handle custom class for relation
+      pins << build_public_method(
+        ns,
+        relation_name.to_s,
+        relation_name.to_s.camelize
       )
     end
+
+    walker.on :send, [nil, :has_many] do |ast|
+      relation_name = ast.children[2].children.first
+
+      Solargraph.logger.debug("#{ns.name}: found has_many #{relation_name}")
+
+      # TODO: handle custom class for relation
+      pins << build_public_method(
+        ns,
+        relation_name.to_s,
+        "ActiveRecord::Associations::CollectionProxy<#{relation_name.to_s.singularize.camelize}>"
+      )
+    end
+
+    walker.walk
+    pins
+  end
+
+  def dummy_location
+    # TODO: get location data from db/schema.rb
+    Solargraph::Location.new(
+      "db/schema.rb",
+      Solargraph::Range.from_to(
+        0,
+        0,
+        0,
+        0
+      )
+    )
   end
 
   # TODO: support custom table names, by parsing `self.table_name = ` invokations
   # inside model
   def infer_table_name(ns)
     ns.name.underscore.pluralize
-  end
-
-  def build_method_definition
-    Solargraph::Pin::Method.new(
-      name: attr[:name],
-      comments: "@return [#{type_translation.fetch(attr[:type], attr[:type])}]",
-      location: attr[:location],
-      closure: Solargraph::Pin::Namespace.new(name: module_names.join('::') + "::#{model_name}"),
-      scope: :instance,
-      attribute: true
-    )
   end
 
   def schema
