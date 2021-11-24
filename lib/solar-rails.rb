@@ -113,14 +113,45 @@ class SolarRails < Solargraph::Convention::Base
     end
   end
 
-  def build_public_method(ns, name, type)
+  def build_public_method(ns, name, type, ast: nil, path: nil)
+    location = if ast
+      build_location(ast, path)
+    else
+      dummy_location
+    end
+
     Solargraph::Pin::Method.new(
       name:      name,
       comments:  "@return [#{type}]",
-      location:  dummy_location,
+      location:  location,
       closure:   ns,
       scope:     :instance,
       attribute: true
+    )
+  end
+
+  def build_location(ast, path)
+    Solargraph::Location.new(
+      path,
+      Solargraph::Range.from_to(
+        ast.location.first_line,
+        0,
+        ast.location.last_line,
+        ast.location.column
+      )
+    )
+  end
+
+  def dummy_location
+    # TODO: get location data from db/schema.rb
+    Solargraph::Location.new(
+      "db/schema.rb",
+      Solargraph::Range.from_to(
+        0,
+        0,
+        0,
+        0
+      )
     )
   end
 
@@ -136,7 +167,9 @@ class SolarRails < Solargraph::Convention::Base
       pins << build_public_method(
         ns,
         relation_name.to_s,
-        relation_name.to_s.camelize
+        relation_name.to_s.camelize,
+        ast:  ast,
+        path: ns.filename
       )
     end
 
@@ -149,25 +182,14 @@ class SolarRails < Solargraph::Convention::Base
       pins << build_public_method(
         ns,
         relation_name.to_s,
-        "ActiveRecord::Associations::CollectionProxy<#{relation_name.to_s.singularize.camelize}>"
+        "ActiveRecord::Associations::CollectionProxy<#{relation_name.to_s.singularize.camelize}>",
+        ast:  ast,
+        path: ns.filename
       )
     end
 
     walker.walk
     pins
-  end
-
-  def dummy_location
-    # TODO: get location data from db/schema.rb
-    Solargraph::Location.new(
-      "db/schema.rb",
-      Solargraph::Range.from_to(
-        0,
-        0,
-        0,
-        0
-      )
-    )
   end
 
   # TODO: support custom table names, by parsing `self.table_name = ` invokations

@@ -17,11 +17,13 @@ RSpec.describe "solargraph rails integration" do
     api_map.pins.select {|p| p.filename }
   end
 
-  def assert_public_instance_method(query, return_type)
+  def assert_public_instance_method(query, return_type, &block)
     pin = find_pin(query)
     expect(pin).to_not be_nil
     expect(pin.scope).to eq(:instance)
     expect(pin.return_type.tag).to eq(return_type)
+
+    yield pin if block_given?
   end
 
   let(:schema) do
@@ -59,7 +61,12 @@ RSpec.describe "solargraph rails integration" do
       end
     RUBY
 
-    assert_public_instance_method("Transaction#account", "Account")
+    assert_public_instance_method("Transaction#account", "Account") do |pin|
+      expect(pin.location.range.to_hash).to eq({
+        :start => { :line => 1, :character => 0 },
+        :end => { :line=>1, :character => 8 }
+      })
+    end
   end
 
   it "generates method for has_many" do
