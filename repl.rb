@@ -23,11 +23,29 @@ class Repl
 
     clip = @api_map.clip_at('repl.rb', position)
     cursor = clip.send(:cursor)
+    chain  = cursor.chain
     word = cursor.chain.links.first.word
 
     Solargraph.logger.debug("Complete: word=#{word}, links=#{cursor.chain.links}")
+    Solargraph.logger.debug("Complete: chain.constant?=#{chain.constant?}, cursor.start_of_constant?=#{cursor.start_of_constant?}")
+
+    type = cursor.chain.base.infer(api_map, clip.send(:block), clip.locals)
+    links_length = chain.links.length
+    Solargraph.logger.debug("Complete: type=#{type} chain.links.length=#{links_length}")
 
     clip.complete.pins.map(&:name)
+  end
+
+  def methods_for(pin)
+    api_map.get_complex_type_methods(pin.return_type)
+  end
+
+  def reload
+    load '~/Play/rails-solar/debug.rb'
+  end
+
+  def find_pin(path)
+    api_map.pins.find {|p| p.path == path }
   end
 
   def run

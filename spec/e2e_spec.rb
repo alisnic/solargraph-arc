@@ -109,33 +109,19 @@ RSpec.describe "solargraph rails integration" do
     assert_public_instance_method("Account#some_ip", "IPAddr")
   end
 
-  it "parses activerecord annotations" do
+  it "includes activerecord annotations" do
     load_string 'test.rb', %(
-      module ActiveRecord
-        module Querying
-          def find_in_querying; end
-        end
-      end
-
-      module ActiveRecord
-        class Base
-          extend Querying
-          def self.find_in_base; end
-        end
-      end
-
       class ApplicationRecord < ActiveRecord::Base
         self.abstract_class = true
       end
 
       class Model < ApplicationRecord
-        def self.find_in_model; end
       end
       Model.fi
     )
 
-    expect(completion_at('test.rb', [21, 14])).to eq([
-      "find_in_model", "find_in_base", "find_in_querying"
+    expect(completion_at('test.rb', [7, 14])).to eq([
+      "find"
     ])
   end
 

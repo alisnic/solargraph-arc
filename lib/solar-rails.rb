@@ -279,6 +279,14 @@ module SolarRails
   end
 
   class Convention < Solargraph::Convention::Base
+    def global yard_map
+      ann = File.read(File.dirname(__FILE__) + "/annotations.rb")
+      source = Solargraph::Source.load_string(ann, "annotations.rb")
+      map = Solargraph::SourceMap.map(source)
+
+      Solargraph::Environ.new(pins: map.pins)
+    end
+
     def local source_map
       Solargraph.logger.debug("[Rails] process #{source_map.filename}")
 

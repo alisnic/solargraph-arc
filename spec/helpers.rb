@@ -10,7 +10,7 @@ module Helpers
   end
 
   def find_pin(path)
-    api_map.pins.find {|p| p.is_a?(Solargraph::Pin::Method) && p.path == path }
+    api_map.pins.find {|p| p.path == path }
   end
 
   def local_pins
