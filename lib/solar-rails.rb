@@ -189,35 +189,49 @@ class SolarRails < Solargraph::Convention::Base
     pins   = []
 
     walker.on :send, [nil, :belongs_to] do |ast|
-      relation_name = ast.children[2].children.first
+      pins << singular_association(ns, ast)
+    end
 
-      # TODO: handle custom class for relation
-      pins << build_public_method(
-        ns,
-        relation_name.to_s,
-        relation_name.to_s.camelize,
-        ast:  ast,
-        path: ns.filename
-      )
+    walker.on :send, [nil, :has_one] do |ast|
+      pins << singular_association(ns, ast)
     end
 
     walker.on :send, [nil, :has_many] do |ast|
-      relation_name = ast.children[2].children.first
+      pins << plural_association(ns, ast)
+    end
 
-      Solargraph.logger.debug("#{ns.name}: found has_many #{relation_name}")
-
-      # TODO: handle custom class for relation
-      pins << build_public_method(
-        ns,
-        relation_name.to_s,
-        "ActiveRecord::Associations::CollectionProxy<#{relation_name.to_s.singularize.camelize}>",
-        ast:  ast,
-        path: ns.filename
-      )
+    walker.on :send, [nil, :has_and_belongs_to_many] do |ast|
+      pins << plural_association(ns, ast)
     end
 
     walker.walk
     pins
+  end
+
+  # TODO: handle custom class for relation
+  def plural_association(ns, ast)
+    relation_name = ast.children[2].children.first
+
+    build_public_method(
+      ns,
+      relation_name.to_s,
+      "ActiveRecord::Associations::CollectionProxy<#{relation_name.to_s.singularize.camelize}>",
+      ast:  ast,
+      path: ns.filename
+    )
+  end
+
+  # TODO: handle custom class for relation
+  def singular_association(ns, ast)
+    relation_name = ast.children[2].children.first
+
+    build_public_method(
+      ns,
+      relation_name.to_s,
+      relation_name.to_s.camelize,
+      ast:  ast,
+      path: ns.filename
+    )
   end
 
   # TODO: support custom table names, by parsing `self.table_name = ` invokations

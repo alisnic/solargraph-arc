@@ -41,10 +41,11 @@ RSpec.describe "solargraph rails integration" do
     Solargraph::Convention.register SolarRails
   end
 
-  it "generates method for belongs_to" do
+  it "generates methods for singular association" do
     load_string 'app/models/transaction.rb', <<-RUBY
       class Transaction < ActiveRecord::Base
         belongs_to :account
+        has_one :category
       end
     RUBY
 
@@ -54,18 +55,25 @@ RSpec.describe "solargraph rails integration" do
         :end => { :line=>1, :character => 8 }
       })
     end
+
+    assert_public_instance_method("Transaction#category", "Category")
   end
 
-  it "generates method for has_many" do
+  it "generates methods for plural associations" do
     load_string 'app/models/account.rb', <<-RUBY
       class Account < ActiveRecord::Base
         has_many :transactions
+        has_and_belongs_to_many :things
       end
     RUBY
 
     assert_public_instance_method(
       "Account#transactions",
       "ActiveRecord::Associations::CollectionProxy<Transaction>"
+    )
+    assert_public_instance_method(
+      "Account#things",
+      "ActiveRecord::Associations::CollectionProxy<Thing>"
     )
   end
 
