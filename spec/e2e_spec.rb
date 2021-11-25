@@ -3,24 +3,6 @@ require 'spec_helper'
 RSpec.describe "solargraph rails integration" do
   let(:api_map) { Solargraph::ApiMap.new }
 
-  def load_string(filename, str)
-    source = build_source(filename, str)
-    api_map.map(source)
-    source
-  end
-
-  def build_source(filename, str)
-    Solargraph::Source.load_string(str, filename)
-  end
-
-  def find_pin(path)
-    api_map.pins.find {|p| p.is_a?(Solargraph::Pin::Method) && p.path == path }
-  end
-
-  def local_pins
-    api_map.pins.select {|p| p.filename }
-  end
-
   def assert_public_instance_method(query, return_type, &block)
     pin = find_pin(query)
     expect(pin).to_not be_nil
@@ -54,6 +36,7 @@ RSpec.describe "solargraph rails integration" do
   end
 
   before do
+    allow(File).to receive(:read).and_call_original
     allow(File).to receive(:read).with("db/schema.rb").and_return(schema)
     Solargraph::Convention.register SolarRails
   end
@@ -109,38 +92,27 @@ RSpec.describe "solargraph rails integration" do
     assert_public_instance_method("Account#some_ip", "IPAddr")
   end
 
-  def ns_pin(name)
-    local_pins.find do |p|
-      p.is_a?(Solargraph::Pin::Namespace) && p.path == name
-    end
-  end
+  it "auto completes implicit nested classes" do
+    load_string 'test1.rb', %(
+      class Foo
+        class Bar
+          class Baz; end
+        end
+      end
+      Foo::Bar::Baz
+    )
 
-  def catalog_bench(sources)
-    maps = sources.map {|s| Solargraph::SourceMap.map(s) }
-    api_map.catalog Solargraph::Bench.new(source_maps: maps)
-  end
+    expect(completion_at('test1.rb', [6, 6])).to include("Foo")
+    expect(completion_at('test1.rb', [6, 11])).to include("Bar")
+    expect(completion_at('test1.rb', [6, 16])).to include("Baz")
 
-  it "generates nested namespaces" do
-    src1 = build_source 'test1.rb', %(
+    load_string 'test1.rb', %(
       class Foo::Bar::Baz; end
       Foo::Bar::Baz
     )
 
-    src2 = build_source 'test2.rb', %(
-      class Foo::Bar::Zaz; end
-      Foo::Bar::Zaz
-    )
-
-    catalog_bench([src1, src2])
-
-    names = api_map.clip_at('test1.rb', [2, 17]).complete.pins.map(&:name)
-    expect(names).to eq(['Baz'])
-
-    names = api_map.clip_at('test2.rb', [2, 17]).complete.pins.map(&:name)
-    expect(names).to eq(['Zaz'])
-
-    pins = api_map.get_constants('Foo')
-    paths = pins.map(&:path)
-    expect(paths).to include('Foo::Bar')
+    expect(completion_at('test1.rb', [2, 6])).to include("Foo")
+    expect(completion_at('test1.rb', [2, 11])).to include("Bar")
+    expect(completion_at('test1.rb', [2, 16])).to include("Baz")
   end
 end

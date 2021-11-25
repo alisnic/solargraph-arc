@@ -121,7 +121,7 @@ class SolarRails < Solargraph::Convention::Base
       next if path == ns.path
 
       previous_ns = Solargraph::Pin::Namespace.new(
-        type:       :module,
+        type:       :class,
         location:   ns.location,
         closure:    previous_ns,
         name:       name,
@@ -132,9 +132,6 @@ class SolarRails < Solargraph::Convention::Base
 
       pins << previous_ns
     end
-
-    ns.instance_variable_set("@closure", previous_ns)
-    ns.instance_variable_set("@open_gates", candidates[0..-1].reverse + [""])
 
     pins
   end
