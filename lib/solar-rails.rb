@@ -280,6 +280,8 @@ module SolarRails
 
   class Convention < Solargraph::Convention::Base
     def local source_map
+      Solargraph.logger.debug("[Rails] process #{source_map.filename}")
+
       pins = []
       ds   = source_map.document_symbols.select {|n| n.is_a?(Solargraph::Pin::Namespace) }
       ns   = ds.first

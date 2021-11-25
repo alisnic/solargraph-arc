@@ -4,6 +4,7 @@ require 'pry'
 Solargraph.logger.level = Logger::DEBUG
 
 class Repl
+  attr_reader :api_map
   def initialize
     @api_map = Solargraph::ApiMap.load('./')
   end
@@ -14,6 +15,7 @@ class Repl
     source = Solargraph::Source.load_string(query, 'repl.rb')
     map = Solargraph::SourceMap.map(source)
     sources = @api_map.source_maps
+    sources.delete_if {|s| s.filename == "repl.rb" }
     sources << map
 
     bench = Solargraph::Bench.new(source_maps: sources)
