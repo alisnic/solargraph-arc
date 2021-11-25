@@ -12,6 +12,15 @@ RSpec.describe "solargraph rails integration" do
     yield pin if block_given?
   end
 
+  def assert_class_method(query, return_type, &block)
+    pin = find_pin(query)
+    expect(pin).to_not be_nil
+    expect(pin.scope).to eq(:class)
+    # expect(pin.return_type.tag).to eq(return_type)
+
+    yield pin if block_given?
+  end
+
   let(:schema) do
     <<-RUBY
       ActiveRecord::Schema.define(version: 2021_10_20_084658) do
@@ -98,6 +107,36 @@ RSpec.describe "solargraph rails integration" do
     assert_public_instance_method("Account#active", "Boolean")
     assert_public_instance_method("Account#notes", "String")
     assert_public_instance_method("Account#some_ip", "IPAddr")
+  end
+
+  it "parses activerecord annotations" do
+    load_string 'test.rb', %(
+      module ActiveRecord
+        module Querying
+          def find_in_querying; end
+        end
+      end
+
+      module ActiveRecord
+        class Base
+          extend Querying
+          def self.find_in_base; end
+        end
+      end
+
+      class ApplicationRecord < ActiveRecord::Base
+        self.abstract_class = true
+      end
+
+      class Model < ApplicationRecord
+        def self.find_in_model; end
+      end
+      Model.fi
+    )
+
+    expect(completion_at('test.rb', [21, 14])).to eq([
+      "find_in_model", "find_in_base", "find_in_querying"
+    ])
   end
 
   it "auto completes implicit nested classes" do
