@@ -27,7 +27,6 @@ module Helpers
     cursor = clip.send(:cursor)
     word = cursor.chain.links.first.word
 
-    # puts "Complete: word=#{word}, links=#{cursor.chain.links}"
     clip.complete.pins.map(&:name)
   end
 
