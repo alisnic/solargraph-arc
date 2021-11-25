@@ -88,7 +88,7 @@ class SolarRails < Solargraph::Convention::Base
 
   def local source_map
     pins = []
-    ds   = source_map.document_symbols
+    ds   = source_map.document_symbols.select {|n| n.is_a?(Solargraph::Pin::Namespace) }
     ns   = ds.first
 
     if ds.size == 1 && ns.path.include?("::")
@@ -257,4 +257,4 @@ class SolarRails < Solargraph::Convention::Base
   end
 end
 
-Solargraph::Convention.register SolarRails unless ENV["RAILS_ENV"] == "test"
+Solargraph::Convention.register(SolarRails) # unless ENV["RAILS_ENV"] == "test"

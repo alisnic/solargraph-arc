@@ -96,23 +96,27 @@ RSpec.describe "solargraph rails integration" do
     load_string 'test1.rb', %(
       class Foo
         class Bar
-          class Baz; end
+          class Baz
+            def run; end
+          end
         end
       end
       Foo::Bar::Baz
     )
 
-    expect(completion_at('test1.rb', [6, 6])).to include("Foo")
-    expect(completion_at('test1.rb', [6, 11])).to include("Bar")
-    expect(completion_at('test1.rb', [6, 16])).to include("Baz")
+    expect(completion_at('test1.rb', [8, 6])).to include("Foo")
+    expect(completion_at('test1.rb', [8, 11])).to include("Bar")
+    expect(completion_at('test1.rb', [8, 16])).to include("Baz")
 
     load_string 'test1.rb', %(
-      class Foo::Bar::Baz; end
+      class Foo::Bar::Baz;
+        def run; end
+      end
       Foo::Bar::Baz
     )
 
-    expect(completion_at('test1.rb', [2, 6])).to include("Foo")
-    expect(completion_at('test1.rb', [2, 11])).to include("Bar")
-    expect(completion_at('test1.rb', [2, 16])).to include("Baz")
+    expect(completion_at('test1.rb', [4, 6])).to include("Foo")
+    expect(completion_at('test1.rb', [4, 11])).to include("Bar")
+    expect(completion_at('test1.rb', [4, 16])).to include("Baz")
   end
 end
