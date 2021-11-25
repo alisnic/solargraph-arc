@@ -16,6 +16,10 @@ After all the rough edges are ironed out, I will attempt to upstream this approa
 # Usage
 
 1. clone repo somewhere `git clone git@github.com:alisnic/solar-rails.git`
+2. Install or update `solargraph'
+
+    gem update solargraph || gem install solagraph
+
 2. If you project does not have a solagraph config, generate one using `solargraph config`
 2. update your project `.solargraph.yml`:
 
