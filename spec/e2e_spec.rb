@@ -38,7 +38,7 @@ RSpec.describe "solargraph rails integration" do
   before do
     allow(File).to receive(:read).and_call_original
     allow(File).to receive(:read).with("db/schema.rb").and_return(schema)
-    Solargraph::Convention.register SolarRails
+    Solargraph::Convention.register SolarRails::Convention
   end
 
   it "generates methods for singular association" do

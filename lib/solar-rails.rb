@@ -72,7 +72,7 @@ class Walker
   end
 end
 
-class SolarRails < Solargraph::Convention::Base
+module SolarRails
   module Util
     def self.build_public_method(ns, name, type, ast:, path:)
       location = build_location(ast, path)
@@ -278,25 +278,19 @@ class SolarRails < Solargraph::Convention::Base
     end
   end
 
-  def local source_map
-    pins = []
-    ds   = source_map.document_symbols.select {|n| n.is_a?(Solargraph::Pin::Namespace) }
-    ns   = ds.first
+  class Convention < Solargraph::Convention::Base
+    def local source_map
+      pins = []
+      ds   = source_map.document_symbols.select {|n| n.is_a?(Solargraph::Pin::Namespace) }
+      ns   = ds.first
 
-    pins += Schema.instance.process(source_map, ns)
-    pins += Relation.instance.process(source_map, ns)
-    pins += NamespaceHack.instance.process(source_map, ns, ds)
+      pins += Schema.instance.process(source_map, ns)
+      pins += Relation.instance.process(source_map, ns)
+      pins += NamespaceHack.instance.process(source_map, ns, ds)
 
-    Solargraph::Environ.new(pins: pins)
-  end
-
-  private
-
-
-  def model_pins(source_map)
-    ns = source_map.document_symbols.find {|s| s.is_a?(Solargraph::Pin::Namespace) }
-    schema_pins(ns) + relation_pins(source_map, ns)
+      Solargraph::Environ.new(pins: pins)
+    end
   end
 end
 
-Solargraph::Convention.register(SolarRails) unless ENV["RAILS_ENV"] == "test"
+Solargraph::Convention.register(SolarRails::Convention) unless ENV["RAILS_ENV"] == "test"
