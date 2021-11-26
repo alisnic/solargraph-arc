@@ -5,6 +5,7 @@ Rails. Features:
 - autocomplete database columns by parsing db/schema.rb
 - autocomplete of model relations
 - fixes autocompletion for multi-level classes defined in 1 line `class Foo::Bar::Baz`. See https://github.com/castwide/solargraph/issues/506
+- includes [annotations](https://github.com/alisnic/solar-rails/blob/master/lib/solar-rails/annotations.rb) for improving ActiveRecord autocomplete. They no longer have to be added by hand to project.
 
 Main difference from https://github.com/iftheshoefritz/solargraph-rails are:
 - parsing is done by piggy-backing on solargraph parsing logic. solargraph-rails does it with regular expressions

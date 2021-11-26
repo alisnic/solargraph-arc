@@ -10,7 +10,7 @@ require_relative './solar-rails/walker.rb'
 module SolarRails
   class Convention < Solargraph::Convention::Base
     def global yard_map
-      ann    = File.read(File.dirname(__FILE__) + "/annotations.rb")
+      ann    = File.read(File.dirname(__FILE__) + "/solar-rails/annotations.rb")
       source = Solargraph::Source.load_string(ann, "annotations.rb")
       map    = Solargraph::SourceMap.map(source)
 
