@@ -109,7 +109,7 @@ RSpec.describe "solargraph rails integration" do
     assert_public_instance_method("Account#some_ip", "IPAddr")
   end
 
-  it "includes activerecord annotations" do
+  xit "includes activerecord annotations" do
     load_string 'test.rb', %(
       class ApplicationRecord < ActiveRecord::Base
         self.abstract_class = true

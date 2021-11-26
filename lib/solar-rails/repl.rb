@@ -36,12 +36,13 @@ class Repl
     clip.complete.pins.map(&:name)
   end
 
-  def methods_for(pin)
+  def methods_for(pin: nil, path: nil)
+    pin ||= find_pin(path)
     api_map.get_complex_type_methods(pin.return_type)
   end
 
-  def reload
-    load '~/Play/rails-solar/debug.rb'
+  def local_methods_for(pin: nil, path: nil)
+    methods_for(pin: pin, path: path).select {|m| m.filename }
   end
 
   def find_pin(path)
