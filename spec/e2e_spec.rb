@@ -38,7 +38,7 @@ RSpec.describe "solargraph rails integration" do
           t.text "notes"
           t.inet "some_ip"
           t.datetime "created_at", null: false
-          t.index ["checksum", "login_id"], name: "index_accounts_on_checksum_and_login_id", unique: true
+          t.index ["some_big_id"], name: "index_accounts_on_some_big_id", unique: true
         end
       end
     RUBY
@@ -109,20 +109,12 @@ RSpec.describe "solargraph rails integration" do
     assert_public_instance_method("Account#some_ip", "IPAddr")
   end
 
-  xit "includes activerecord annotations" do
-    load_string 'test.rb', %(
-      class ApplicationRecord < ActiveRecord::Base
-        self.abstract_class = true
-      end
+  it "includes activerecord annotations" do
+    # NOTE: without this, gem logic does not see gems inside sample project"
+    Bundler.reset_rubygems!
 
-      class Model < ApplicationRecord
-      end
-      Model.fi
-    )
-
-    expect(completion_at('test.rb', [7, 14])).to eq([
-      "find"
-    ])
+    map = Solargraph::ApiMap.load("./spec/rails5")
+    expect(completion_at('./spec/rails5/model.rb', [6, 8], map)).to include("find")
   end
 
   it "auto completes implicit nested classes" do

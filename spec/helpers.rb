@@ -1,8 +1,14 @@
 module Helpers
   def load_string(filename, str)
     source = build_source(filename, str)
-    api_map.map(source)
+    map = Solargraph::SourceMap.map(source)
+    api_map.catalog Solargraph::Bench.new(source_maps: [map])
+    # api_map.map(source)
     source
+  end
+
+  def callstack
+    caller.reject {|f| f.include?("pry") || f.include?("rspec") }
   end
 
   def build_source(filename, str)
@@ -17,30 +23,22 @@ module Helpers
     api_map.pins.select {|p| p.filename }
   end
 
-  def catalog_bench(sources)
-    maps = sources.map {|s| Solargraph::SourceMap.map(s) }
-    api_map.catalog Solargraph::Bench.new(source_maps: maps)
+  def methods_for(pin: nil, path: nil)
+    pin ||= find_pin(path)
+    api_map.get_complex_type_methods(pin.return_type)
   end
 
-  def completion_at(filename, position)
-    clip = api_map.clip_at(filename, position)
+  def local_methods_for(pin: nil, path: nil)
+    methods_for(pin: pin, path: path).select {|m| m.filename }
+  end
+
+  def completion_at(filename, position, map=api_map)
+    clip = map.clip_at(filename, position)
     cursor = clip.send(:cursor)
     word = cursor.chain.links.first.word
 
     Solargraph.logger.debug("Complete: word=#{word}, links=#{cursor.chain.links}")
 
     clip.complete.pins.map(&:name)
-  end
-
-  def local_pins_hash
-    api_map.pins.select {|p| p.filename }.map do |p|
-      {
-        name:       p.name,
-        type:       p.type,
-        closure:    p.closure&.path,
-        visibility: p.visibility,
-        gates:      p.gates
-      }
-    end
   end
 end
