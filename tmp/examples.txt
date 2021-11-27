@@ -1,7 +1,0 @@
-example_id                      | status | run_time        |
-------------------------------- | ------ | --------------- |
-./spec/annotations_spec.rb[1:1] | passed | 2.43 seconds    |
-./spec/autoload_spec.rb[1:1]    | passed | 0.09958 seconds |
-./spec/relation_spec.rb[1:1]    | passed | 0.04938 seconds |
-./spec/relation_spec.rb[1:2]    | passed | 0.06972 seconds |
-./spec/schema_spec.rb[1:1]      | passed | 0.46286 seconds |

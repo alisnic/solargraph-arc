@@ -20,8 +20,17 @@ RSpec.describe "bundled annotations" do
         end
         Model.find
       EOS
+
+      root.write_file 'app/controllers/things_controller.rb', <<~EOS
+        class ThingsController < ActionController::Base
+          def index
+            ren
+          end
+        end
+      EOS
     end
 
     expect(completion_at('./app/models/model.rb', [6, 9], map)).to include("find")
+    # expect(completion_at('./app/controllers/things_controller.rb', [2, 6], map)).to include("render")
   end
 end
