@@ -110,11 +110,21 @@ RSpec.describe "solargraph rails integration" do
   end
 
   it "includes activerecord annotations" do
-    # NOTE: without this, gem logic does not see gems inside sample project"
-    Bundler.reset_rubygems!
+    # map = Solargraph::ApiMap.load("./spec/rails5")
+    # expect(completion_at('./spec/rails5/model.rb', [6, 8], map)).to include("find")
+    map = use_workspace "./spec/rails5" do |root|
+      root.write_file 'app/models/model.rb', <<~EOS
+        class ApplicationRecord < ActiveRecord::Base
+          self.abstract_class = true
+        end
 
-    map = Solargraph::ApiMap.load("./spec/rails5")
-    expect(completion_at('./spec/rails5/model.rb', [6, 8], map)).to include("find")
+        class Model < ActiveRecord::Base
+        end
+        Model.find
+      EOS
+    end
+
+    expect(completion_at('./app/models/model.rb', [6, 9], map)).to include("find")
   end
 
   it "auto completes implicit nested classes" do

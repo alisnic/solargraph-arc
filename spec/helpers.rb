@@ -11,6 +11,32 @@ module Helpers
     caller.reject {|f| f.include?("pry") || f.include?("rspec") }
   end
 
+  class Injector
+    attr_reader :files
+    def initialize(folder)
+      @folder = folder
+      @files  = []
+    end
+
+    def write_file(path, content)
+      File.write(path, content)
+      @files << path
+    end
+  end
+
+  def use_workspace(folder, &block)
+    injector = Injector.new(folder)
+    map      = nil
+
+    Dir.chdir folder do
+      yield injector
+      map = Solargraph::ApiMap.load("./")
+      injector.files.each {|f| File.delete(f) }
+    end
+
+    map
+  end
+
   def build_source(filename, str)
     Solargraph::Source.load_string(str, filename)
   end
