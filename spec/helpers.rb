@@ -37,6 +37,15 @@ module Helpers
     map
   end
 
+  def assert_public_instance_method(query, return_type, &block)
+    pin = find_pin(query)
+    expect(pin).to_not be_nil
+    expect(pin.scope).to eq(:instance)
+    expect(pin.return_type.tag).to eq(return_type)
+
+    yield pin if block_given?
+  end
+
   def build_source(filename, str)
     Solargraph::Source.load_string(str, filename)
   end

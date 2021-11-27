@@ -16,7 +16,7 @@ RSpec.configure do |config|
 
   config.include(Helpers)
   config.shared_context_metadata_behavior = :apply_to_host_groups
-  config.example_status_persistence_file_path = "spec/examples.txt"
+  config.example_status_persistence_file_path = "tmp/examples.txt"
   config.disable_monkey_patching!
 
   config.before(:suite) do

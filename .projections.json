@@ -1,6 +1,5 @@
 {
   "*": {
-    "make": "bundle exec rspec spec/e2e_spec.rb",
-    "alternate": "{}.rb"
+    "make": "bundle exec rspec {file}"
   }
 }
