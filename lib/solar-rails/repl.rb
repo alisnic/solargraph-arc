@@ -4,9 +4,10 @@ require 'pry'
 Solargraph.logger.level = Logger::DEBUG
 
 class Repl
-  attr_reader :api_map
+  attr_reader :api_map, :yard_map
   def initialize
     @api_map = Solargraph::ApiMap.load('./')
+    @yard_map = @api_map.yard_map
   end
 
   def autocomplete(query, position=nil)
@@ -34,6 +35,14 @@ class Repl
     Solargraph.logger.debug("Complete: type=#{type} chain.links.length=#{links_length}")
 
     clip.complete.pins.map(&:name)
+  end
+
+  def required_gems
+    yard_map.required.sort
+  end
+
+  def local_pins
+    api_pins.select {|p| p.filename}
   end
 
   def methods_for(pin: nil, path: nil)

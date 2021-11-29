@@ -10,6 +10,7 @@
 # @!parse
 #   class ActionController::Base
 #     include ActionController::MimeResponds
+#     include ActionController::Redirecting
 #     extend ActiveSupport::Callbacks::ClassMethods
 #     extend AbstractController::Callbacks::ClassMethods
 #   end

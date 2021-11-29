@@ -7,6 +7,27 @@ require_relative './solar-rails/autoload.rb'
 require_relative './solar-rails/relation.rb'
 require_relative './solar-rails/walker.rb'
 
+# TODO: remove after https://github.com/castwide/solargraph/pull/509 is merged
+class Solargraph::YardMap
+  def spec_for_require path
+    name = path.split('/').first
+    spec = Gem::Specification.find_by_name(name, @gemset[name])
+
+    # Avoid loading the spec again if it's going to be skipped anyway
+    #
+    return spec if @source_gems.include?(spec.name)
+    # Avoid loading the spec again if it's already the correct version
+    if @gemset[spec.name] && @gemset[spec.name] != spec.version
+      begin
+        return Gem::Specification.find_by_name(spec.name, "= #{@gemset[spec.name]}")
+      rescue Gem::LoadError
+        Solargraph.logger.warn "Unable to load #{spec.name} #{@gemset[spec.name]} specified by workspace, using #{spec.version} instead"
+      end
+    end
+    spec
+  end
+end
+
 module SolarRails
   class Convention < Solargraph::Convention::Base
     def global yard_map
@@ -18,6 +39,7 @@ module SolarRails
       Solargraph::Environ.new(pins: map.pins)
     end
 
+    #<Solargraph::Pin::Reference::Include ``
     def local source_map
       pins = []
       ds   = source_map.document_symbols.select {|n| n.is_a?(Solargraph::Pin::Namespace) }
