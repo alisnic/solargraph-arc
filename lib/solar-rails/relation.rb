@@ -42,7 +42,7 @@ module SolarRails
       Util.build_public_method(
         ns,
         relation_name.to_s,
-        "ActiveRecord::Associations::CollectionProxy<#{relation_name.to_s.singularize.camelize}>",
+        types: ["ActiveRecord::Associations::CollectionProxy<#{relation_name.to_s.singularize.camelize}>"],
         ast:  ast,
         path: ns.filename
       )
@@ -55,9 +55,9 @@ module SolarRails
       Util.build_public_method(
         ns,
         relation_name.to_s,
-        relation_name.to_s.camelize,
-        ast:  ast,
-        path: ns.filename
+        types: [relation_name.to_s.camelize],
+        ast:   ast,
+        path:  ns.filename
       )
     end
   end

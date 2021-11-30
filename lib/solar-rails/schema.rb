@@ -33,8 +33,8 @@ module SolarRails
         Util.build_public_method(
           ns,
           column,
-          RUBY_TYPES.fetch(data.type.to_sym),
-          ast:  data.ast,
+          types: [RUBY_TYPES.fetch(data.type.to_sym)],
+          ast:   data.ast,
           path: "db/schema.rb"
         )
       end

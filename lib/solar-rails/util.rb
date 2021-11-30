@@ -1,23 +1,30 @@
 module SolarRails
   module Util
-    def self.build_public_method(ns, name, type, ast:, path:)
+    def self.build_public_method(ns, name, types:, ast:, path:, attribute: false)
       location = build_location(ast, path)
 
       Solargraph::Pin::Method.new(
         name:      name,
-        comments:  "@return [#{type}]",
+        comments:  "@return [#{types.join(',')}]",
         location:  location,
         closure:   ns,
         scope:     :instance,
-        attribute: true
+        attribute: attribute
       )
     end
 
-    def self.build_module_include(ns, module_name, ast:, path:)
+    def self.build_module_include(ns, module_name, location)
       Solargraph::Pin::Reference::Include.new(
         closure:  ns,
         name:     module_name,
-        location: build_location(ast, path)
+        location: location
+      )
+    end
+
+    def self.dummy_location(path)
+      Solargraph::Location.new(
+        path,
+        Solargraph::Range.from_to(0, 0, 0, 0)
       )
     end
 

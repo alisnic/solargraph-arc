@@ -17,8 +17,19 @@ RSpec.describe SolarRails::Devise do
         end
         User.new.conf
       RUBY
+
+      root.write_file 'app/controllers/application_controller.rb', <<~RUBY
+        class ApplicationController < ActionController::Base
+          def index
+            curr
+            sign
+          end
+        end
+      RUBY
     end
 
     expect(completion_at('./app/models/user.rb', [3, 13], map)).to include("confirm")
+    expect(completion_at('./app/controllers/application_controller.rb', [3, 7], map)).to include("sign_in_and_redirect")
+    expect(completion_at('./app/controllers/application_controller.rb', [2, 7], map)).to include("current_user")
   end
 end
