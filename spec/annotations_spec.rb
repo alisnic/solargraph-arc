@@ -30,6 +30,7 @@ RSpec.describe "bundled annotations" do
 
       root.write_file 'app/controllers/things_controller.rb', <<~EOS
         class ThingsController < ActionController::Base
+          pro
           def index
             res
             red
@@ -39,11 +40,14 @@ RSpec.describe "bundled annotations" do
       EOS
     end
 
-    expect(completion_at('./app/models/model.rb', [6, 9], map)).to include("find")
-    expect(completion_at('./app/controllers/things_controller.rb', [2, 6], map)).to include("respond_to")
-    expect(completion_at('./app/controllers/things_controller.rb', [3, 6], map)).to include("redirect_to")
+    expect(completion_at('./app/controllers/things_controller.rb', [1, 4], map)).to include("protect_from_forgery")
 
-    expect(completion_at('./app/controllers/things_controller.rb', [4, 6], map)).to include("params")
+    expect(completion_at('./app/controllers/things_controller.rb', [3, 6], map)).to include("respond_to")
+    expect(completion_at('./app/controllers/things_controller.rb', [4, 6], map)).to include("redirect_to")
+
+    expect(completion_at('./app/controllers/things_controller.rb', [5, 6], map)).to include("params")
     expect(find_pin("ActionController::Metal#params", map).return_type.tag).to eq("ActionController::Parameters")
+
+    expect(completion_at('./app/models/model.rb', [6, 9], map)).to include("find")
   end
 end

@@ -42,7 +42,15 @@ module SolarRails
         Util.method_return("ActionController::Metal#params", "ActionController::Parameters")
       ]
 
-      Solargraph::Environ.new(pins: map.pins + overrides)
+      definitions = [
+        # Util.build_public_method(
+        #   ns,
+        #   "response",
+        #   types: ["ActionDispatch::Response"]
+        # )
+      ]
+
+      Solargraph::Environ.new(pins: map.pins + definitions + overrides)
     end
 
     #<Solargraph::Pin::Reference::Include ``

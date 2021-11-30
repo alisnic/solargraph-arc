@@ -12,6 +12,7 @@
 #     include ActionController::Redirecting
 #     extend ActiveSupport::Callbacks::ClassMethods
 #     extend AbstractController::Callbacks::ClassMethods
+#     extend ActionController::RequestForgeryProtection::ClassMethods
 #   end
 #   class ActiveRecord::Base
 #     extend ActiveRecord::QueryMethods
