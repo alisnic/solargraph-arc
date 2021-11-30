@@ -50,8 +50,16 @@ module Helpers
     Solargraph::Source.load_string(str, filename)
   end
 
-  def find_pin(path)
-    api_map.pins.find {|p| p.path == path }
+  def find_pin(path, map=api_map)
+    find_pins(path, map).first
+  end
+
+  def find_pins(path, map=api_map)
+    map.pins.select {|p| p.path == path }
+  end
+
+  def search_pin(name, map=api_map)
+    map.pins.select {|p| p.path && p.path.downcase.include?(name) }
   end
 
   def local_pins

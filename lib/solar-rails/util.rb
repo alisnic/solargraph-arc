@@ -24,6 +24,9 @@ module SolarRails
         )
       )
     end
-  end
 
+    def self.method_return(path, type)
+      Solargraph::Pin::Reference::Override.method_return(path, type)
+    end
+  end
 end

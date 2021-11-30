@@ -36,7 +36,12 @@ module SolarRails
       map    = Solargraph::SourceMap.map(source)
 
       Solargraph.logger.debug("[Rails] found #{map.pins.size} pins in annotations")
-      Solargraph::Environ.new(pins: map.pins)
+
+      overrides = [
+        Util.method_return("ActionController::Metal#params", "ActionController::Parameters")
+      ]
+
+      Solargraph::Environ.new(pins: map.pins + overrides)
     end
 
     #<Solargraph::Pin::Reference::Include ``

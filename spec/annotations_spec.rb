@@ -1,5 +1,11 @@
 require 'spec_helper'
 
+class Solargraph::Pin::Base
+  def inspect
+    "#<#{self.class} `#{self.path}`>"
+  end
+end
+
 RSpec.describe "bundled annotations" do
   let(:api_map) { Solargraph::ApiMap.new }
 
@@ -10,6 +16,7 @@ RSpec.describe "bundled annotations" do
   end
 
   it "includes activerecord annotations" do
+    # Solargraph.logger.level = Logger::DEBUG
     map = use_workspace "./spec/rails5" do |root|
       root.write_file 'app/models/model.rb', <<~EOS
         class ApplicationRecord < ActiveRecord::Base
@@ -26,6 +33,7 @@ RSpec.describe "bundled annotations" do
           def index
             res
             red
+            par
           end
         end
       EOS
@@ -34,5 +42,8 @@ RSpec.describe "bundled annotations" do
     expect(completion_at('./app/models/model.rb', [6, 9], map)).to include("find")
     expect(completion_at('./app/controllers/things_controller.rb', [2, 6], map)).to include("respond_to")
     expect(completion_at('./app/controllers/things_controller.rb', [3, 6], map)).to include("redirect_to")
+
+    expect(completion_at('./app/controllers/things_controller.rb', [4, 6], map)).to include("params")
+    expect(find_pin("ActionController::Metal#params", map).return_type.tag).to eq("ActionController::Parameters")
   end
 end
