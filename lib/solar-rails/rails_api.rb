@@ -13,7 +13,8 @@ module SolarRails
 
       overrides = [
         Util.method_return("ActionController::Metal#params", "ActionController::Parameters"),
-        Util.method_return("ActionController::Cookies#cookies", "ActionDispatch::Cookies::CookieJar")
+        Util.method_return("ActionController::Cookies#cookies", "ActionDispatch::Cookies::CookieJar"),
+        Util.method_return("ActionDispatch::Flash::FlashHash#now", "ActionDispatch::Flash::FlashNow")
       ]
 
       ns = Solargraph::Pin::Namespace.new(
@@ -38,6 +39,12 @@ module SolarRails
           ns,
           "session",
           types: ["ActionDispatch::Request::Session"],
+          location: Util.dummy_location("whatever.rb")
+        ),
+        Util.build_public_method(
+          ns,
+          "flash",
+          types: ["ActionDispatch::Flash::FlashHash"],
           location: Util.dummy_location("whatever.rb")
         )
       ]

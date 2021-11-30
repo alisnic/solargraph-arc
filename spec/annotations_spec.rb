@@ -16,7 +16,6 @@ RSpec.describe "bundled annotations" do
   end
 
   it "includes activerecord annotations" do
-    # Solargraph.logger.level = Logger::DEBUG
     map = use_workspace "./spec/rails5" do |root|
       root.write_file 'app/models/model.rb', <<~EOS
         class ApplicationRecord < ActiveRecord::Base
@@ -36,6 +35,7 @@ RSpec.describe "bundled annotations" do
             par
             coo
             ses
+            fla
           end
         end
       EOS
@@ -51,7 +51,9 @@ RSpec.describe "bundled annotations" do
     expect(completion_at('./app/controllers/things_controller.rb', [5, 6], map)).to include("cookies")
     expect(find_pin("ActionController::Cookies#cookies", map).return_type.tag).to eq("ActionDispatch::Cookies::CookieJar")
 
+
     expect(completion_at('./app/controllers/things_controller.rb', [6, 6], map)).to include("session")
+    expect(completion_at('./app/controllers/things_controller.rb', [7, 6], map)).to include("flash")
 
     expect(completion_at('./app/models/model.rb', [6, 9], map)).to include("find")
   end
