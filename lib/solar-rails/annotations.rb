@@ -10,6 +10,7 @@
 #   class ActionController::Base
 #     include ActionController::MimeResponds
 #     include ActionController::Redirecting
+#     include ActionController::Cookies
 #     extend ActiveSupport::Callbacks::ClassMethods
 #     extend AbstractController::Callbacks::ClassMethods
 #     extend ActionController::RequestForgeryProtection::ClassMethods

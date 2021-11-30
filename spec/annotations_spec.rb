@@ -34,6 +34,7 @@ RSpec.describe "bundled annotations" do
           def index
             re
             par
+            coo
           end
         end
       EOS
@@ -45,6 +46,9 @@ RSpec.describe "bundled annotations" do
 
     expect(completion_at('./app/controllers/things_controller.rb', [4, 6], map)).to include("params")
     expect(find_pin("ActionController::Metal#params", map).return_type.tag).to eq("ActionController::Parameters")
+
+    expect(completion_at('./app/controllers/things_controller.rb', [5, 6], map)).to include("cookies")
+    expect(find_pin("ActionController::Cookies#cookies", map).return_type.tag).to eq("ActionDispatch::Cookies::CookieJar")
 
     expect(completion_at('./app/models/model.rb', [6, 9], map)).to include("find")
   end

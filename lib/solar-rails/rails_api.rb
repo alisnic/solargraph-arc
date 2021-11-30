@@ -12,7 +12,8 @@ module SolarRails
       Solargraph.logger.debug("[Rails] found #{map.pins.size} pins in annotations")
 
       overrides = [
-        Util.method_return("ActionController::Metal#params", "ActionController::Parameters")
+        Util.method_return("ActionController::Metal#params", "ActionController::Parameters"),
+        Util.method_return("ActionController::Cookies#cookies", "ActionDispatch::Cookies::CookieJar")
       ]
 
       ns = Solargraph::Pin::Namespace.new(
