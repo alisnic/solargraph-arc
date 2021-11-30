@@ -35,6 +35,7 @@ RSpec.describe "bundled annotations" do
             re
             par
             coo
+            ses
           end
         end
       EOS
@@ -49,6 +50,8 @@ RSpec.describe "bundled annotations" do
 
     expect(completion_at('./app/controllers/things_controller.rb', [5, 6], map)).to include("cookies")
     expect(find_pin("ActionController::Cookies#cookies", map).return_type.tag).to eq("ActionDispatch::Cookies::CookieJar")
+
+    expect(completion_at('./app/controllers/things_controller.rb', [6, 6], map)).to include("session")
 
     expect(completion_at('./app/models/model.rb', [6, 9], map)).to include("find")
   end

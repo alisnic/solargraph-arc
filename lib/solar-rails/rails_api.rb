@@ -33,6 +33,12 @@ module SolarRails
           "request",
           types: ["ActionDispatch::Request"],
           location: Util.dummy_location("whatever.rb")
+        ),
+        Util.build_public_method(
+          ns,
+          "session",
+          types: ["ActionDispatch::Request::Session"],
+          location: Util.dummy_location("whatever.rb")
         )
       ]
 
