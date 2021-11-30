@@ -57,7 +57,7 @@ module SolarRails
       pins + @seen_devise_closures.map do |model_ns|
         Util.build_public_method(
           ns,
-          "current_#{model_ns.name.downcase}",
+          "current_#{model_ns.name.underscore}",
           types: [model_ns.name, "nil"],
           location: Util.build_location(source_map.source.node, ns.filename)
         )

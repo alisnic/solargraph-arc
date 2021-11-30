@@ -11,11 +11,10 @@ RSpec.describe SolarRails::Devise do
 
   it "includes devise modules" do
     map = use_workspace "./spec/rails5" do |root|
-      root.write_file 'app/models/user.rb', <<~RUBY
-        class User < ActiveRecord::Base
+      root.write_file 'app/models/awesome_user.rb', <<~RUBY
+        class AwesomeUser < ActiveRecord::Base
           devise :registerable, :confirmable, :timeoutable, timeout_in: 12.hours
         end
-        User.new.conf
       RUBY
 
       root.write_file 'app/controllers/application_controller.rb', <<~RUBY
@@ -23,13 +22,14 @@ RSpec.describe SolarRails::Devise do
           def index
             curr
             sign
+            AwesomeUser.new.conf
           end
         end
       RUBY
     end
 
-    expect(completion_at('./app/models/user.rb', [3, 13], map)).to include("confirm")
     expect(completion_at('./app/controllers/application_controller.rb', [3, 7], map)).to include("sign_in_and_redirect")
-    expect(completion_at('./app/controllers/application_controller.rb', [2, 7], map)).to include("current_user")
+    expect(completion_at('./app/controllers/application_controller.rb', [2, 7], map)).to include("current_awesome_user")
+    expect(completion_at('./app/controllers/application_controller.rb', [4, 23], map)).to include("confirm")
   end
 end
