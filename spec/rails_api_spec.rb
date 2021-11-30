@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe "bundled annotations" do
+RSpec.describe SolarRails::RailsApi do
   let(:api_map) { Solargraph::ApiMap.new }
 
   before do
