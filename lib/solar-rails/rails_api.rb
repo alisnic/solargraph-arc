@@ -11,6 +11,7 @@ module SolarRails
 
       Solargraph.logger.debug("[Rails] found #{map.pins.size} pins in annotations")
 
+      # TODO: move to annotations.rb when https://github.com/castwide/solargraph/issues/514 is fixed
       overrides = [
         Util.method_return("ActionController::Metal#params", "ActionController::Parameters"),
         Util.method_return("ActionController::Cookies#cookies", "ActionDispatch::Cookies::CookieJar"),

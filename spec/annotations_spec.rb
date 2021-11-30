@@ -1,11 +1,5 @@
 require 'spec_helper'
 
-class Solargraph::Pin::Base
-  def inspect
-    "#<#{self.class} `#{self.path}`>"
-  end
-end
-
 RSpec.describe "bundled annotations" do
   let(:api_map) { Solargraph::ApiMap.new }
 

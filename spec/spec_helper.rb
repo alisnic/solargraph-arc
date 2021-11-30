@@ -5,6 +5,12 @@ require 'solar-rails'
 require 'pry'
 require_relative './helpers'
 
+class Solargraph::Pin::Base
+  def inspect
+    "#<#{self.class} `#{self.path}`>"
+  end
+end
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
