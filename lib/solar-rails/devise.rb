@@ -59,8 +59,7 @@ module SolarRails
           ns,
           "current_#{model_ns.name.downcase}",
           types: [model_ns.name, "nil"],
-          ast:   source_map.source.node,
-          path:  ns.filename
+          location: Util.build_location(source_map.source.node, ns.filename)
         )
       end
     end

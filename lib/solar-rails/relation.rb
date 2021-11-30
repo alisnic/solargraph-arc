@@ -43,8 +43,7 @@ module SolarRails
         ns,
         relation_name.to_s,
         types: ["ActiveRecord::Associations::CollectionProxy<#{relation_name.to_s.singularize.camelize}>"],
-        ast:  ast,
-        path: ns.filename
+        location: Util.build_location(ast, ns.filename)
       )
     end
 
@@ -56,8 +55,7 @@ module SolarRails
         ns,
         relation_name.to_s,
         types: [relation_name.to_s.camelize],
-        ast:   ast,
-        path:  ns.filename
+        location: Util.build_location(ast, ns.filename)
       )
     end
   end

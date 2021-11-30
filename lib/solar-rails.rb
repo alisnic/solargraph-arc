@@ -42,12 +42,24 @@ module SolarRails
         Util.method_return("ActionController::Metal#params", "ActionController::Parameters")
       ]
 
+      ns = Solargraph::Pin::Namespace.new(
+        name:  "ActionController::Base",
+        gates: ["ActionController::Base"]
+      )
+
       definitions = [
-        # Util.build_public_method(
-        #   ns,
-        #   "response",
-        #   types: ["ActionDispatch::Response"]
-        # )
+        Util.build_public_method(
+          ns,
+          "response",
+          types: ["ActionDispatch::Response"],
+          location: Util.dummy_location("whatever.rb")
+        ),
+        Util.build_public_method(
+          ns,
+          "request",
+          types: ["ActionDispatch::Request"],
+          location: Util.dummy_location("whatever.rb")
+        )
       ]
 
       Solargraph::Environ.new(pins: map.pins + definitions + overrides)

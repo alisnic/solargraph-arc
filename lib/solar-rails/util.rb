@@ -1,8 +1,6 @@
 module SolarRails
   module Util
-    def self.build_public_method(ns, name, types:, ast:, path:, attribute: false)
-      location = build_location(ast, path)
-
+    def self.build_public_method(ns, name, types:, location:, attribute: false)
       Solargraph::Pin::Method.new(
         name:      name,
         comments:  "@return [#{types.join(',')}]",

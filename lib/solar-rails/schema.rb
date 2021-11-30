@@ -34,8 +34,7 @@ module SolarRails
           ns,
           column,
           types: [RUBY_TYPES.fetch(data.type.to_sym)],
-          ast:   data.ast,
-          path: "db/schema.rb"
+          location: Util.build_location(data.ast, "db/schema.rb")
         )
       end
     end
