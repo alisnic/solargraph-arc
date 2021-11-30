@@ -5,6 +5,7 @@ require_relative './solar-rails/util.rb'
 require_relative './solar-rails/schema.rb'
 require_relative './solar-rails/autoload.rb'
 require_relative './solar-rails/relation.rb'
+require_relative './solar-rails/devise.rb'
 require_relative './solar-rails/walker.rb'
 
 # TODO: remove after https://github.com/castwide/solargraph/pull/509 is merged
@@ -53,6 +54,7 @@ module SolarRails
       pins += Schema.instance.process(source_map, ns)
       pins += Relation.instance.process(source_map, ns)
       pins += Autoload.instance.process(source_map, ns, ds)
+      pins += Devise.instance.process(source_map, ns)
 
       Solargraph::Environ.new(pins: pins)
     end

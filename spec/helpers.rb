@@ -1,9 +1,9 @@
 module Helpers
   def load_string(filename, str)
     source = build_source(filename, str)
-    map = Solargraph::SourceMap.map(source)
-    api_map.catalog Solargraph::Bench.new(source_maps: [map])
-    # api_map.map(source)
+    # map = Solargraph::SourceMap.map(source)
+    # api_map.catalog Solargraph::Bench.new(source_maps: [map])
+    api_map.map(source)
     source
   end
 
@@ -58,12 +58,12 @@ module Helpers
     map.pins.select {|p| p.path == path }
   end
 
-  def search_pin(name, map=api_map)
-    map.pins.select {|p| p.path && p.path.downcase.include?(name) }
+  def search_pins(name, map=api_map)
+    map.pins.select {|p| p.path && p.path.include?(name) }
   end
 
-  def local_pins
-    api_map.pins.select {|p| p.filename }
+  def local_pins(map=api_map)
+    map.pins.select {|p| p.filename }
   end
 
   def methods_for(pin: nil, path: nil)

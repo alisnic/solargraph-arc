@@ -13,6 +13,14 @@ module SolarRails
       )
     end
 
+    def self.build_module_include(ns, module_name, ast:, path:)
+      Solargraph::Pin::Reference::Include.new(
+        closure:  ns,
+        name:     module_name,
+        location: build_location(ast, path)
+      )
+    end
+
     def self.build_location(ast, path)
       Solargraph::Location.new(
         path,
