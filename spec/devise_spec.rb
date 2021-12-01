@@ -17,8 +17,8 @@ RSpec.describe SolarRails::Devise do
         end
       RUBY
 
-      root.write_file 'app/controllers/application_controller.rb', <<~RUBY
-        class ApplicationController < ActionController::Base
+      root.write_file 'app/controllers/pages_controller.rb', <<~RUBY
+        class PagesController < ApplicationController
           def index
             curr
             sign
@@ -28,8 +28,9 @@ RSpec.describe SolarRails::Devise do
       RUBY
     end
 
-    expect(completion_at('./app/controllers/application_controller.rb', [3, 7], map)).to include("sign_in_and_redirect")
-    expect(completion_at('./app/controllers/application_controller.rb', [2, 7], map)).to include("current_awesome_user")
-    expect(completion_at('./app/controllers/application_controller.rb', [4, 23], map)).to include("confirm")
+    filename = './app/controllers/pages_controller.rb'
+    expect(completion_at(filename, [3, 7], map)).to include("sign_in_and_redirect")
+    expect(completion_at(filename, [2, 7], map)).to include("current_awesome_user")
+    expect(completion_at(filename, [4, 23], map)).to include("confirm")
   end
 end
