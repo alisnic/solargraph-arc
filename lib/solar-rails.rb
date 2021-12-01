@@ -1,6 +1,7 @@
 require 'solargraph'
 require 'active_support/core_ext/string/inflections'
 
+require_relative './solar-rails/patches.rb'
 require_relative './solar-rails/util.rb'
 require_relative './solar-rails/schema.rb'
 require_relative './solar-rails/autoload.rb'
@@ -8,27 +9,6 @@ require_relative './solar-rails/relation.rb'
 require_relative './solar-rails/devise.rb'
 require_relative './solar-rails/walker.rb'
 require_relative './solar-rails/rails_api.rb'
-
-# TODO: remove after https://github.com/castwide/solargraph/pull/509 is merged
-class Solargraph::YardMap
-  def spec_for_require path
-    name = path.split('/').first
-    spec = Gem::Specification.find_by_name(name, @gemset[name])
-
-    # Avoid loading the spec again if it's going to be skipped anyway
-    #
-    return spec if @source_gems.include?(spec.name)
-    # Avoid loading the spec again if it's already the correct version
-    if @gemset[spec.name] && @gemset[spec.name] != spec.version
-      begin
-        return Gem::Specification.find_by_name(spec.name, "= #{@gemset[spec.name]}")
-      rescue Gem::LoadError
-        Solargraph.logger.warn "Unable to load #{spec.name} #{@gemset[spec.name]} specified by workspace, using #{spec.version} instead"
-      end
-    end
-    spec
-  end
-end
 
 module SolarRails
   class Convention < Solargraph::Convention::Base

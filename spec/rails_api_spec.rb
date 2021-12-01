@@ -61,12 +61,24 @@ RSpec.describe SolarRails::RailsApi do
         end
         Model.find
         Model.whe
+        Model.where.not(foo: "bar").whe
+        Model.sel
+        Model.ord
       EOS
     end
 
     filename = './app/models/model.rb'
 
-    expect(completions_for(map, filename, [6, 9])).to include("find" => "self")
-    expect(completion_at(filename, [7, 8], map)).to include("where")
+    expect(completions_for(map, filename, [6, 9]))
+      .to include("find" => ["self", "Array<self>"])
+
+    expect(completions_for(map, filename, [7, 8]))
+      .to include("where" => ["self", "ActiveRecord::Relation", "ActiveRecord::QueryMethods::WhereChain"])
+
+    # expect(completions_for(map, filename, [8, 30]))
+    #   .to include("where" => ["self", "ActiveRecord::Relation", "ActiveRecord::QueryMethods::WhereChain"])
+
+    pp completions_for(map, filename, [9, 9])
+    pp completions_for(map, filename, [10, 9])
   end
 end

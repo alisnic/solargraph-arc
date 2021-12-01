@@ -89,7 +89,7 @@ module Helpers
     clip = map.clip_at(filename, position)
 
     clip.complete.pins.map do |pin|
-      [pin.name, pin.return_type.tag]
+      [pin.name, pin.return_type.map(&:tag)]
     end.to_h
   end
 end

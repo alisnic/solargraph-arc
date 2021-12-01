@@ -1,3 +1,5 @@
 ActionController::Metal#params: ["ActionController::Parameters"]
 ActionController::Cookies#cookies: ["ActionDispatch::Cookies::CookieJar"]
 ActionDispatch::Flash::FlashHash#now: ["ActionDispatch::Flash::FlashNow"]
+ActiveRecord::QueryMethods#where: ["self", "ActiveRecord::Relation", "ActiveRecord::QueryMethods::WhereChain"]
+ActiveRecord::QueryMethods#not: ["ActiveRecord::QueryMethods::WhereChain"]

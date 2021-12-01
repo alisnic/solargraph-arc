@@ -1,2 +1,4 @@
 tmp/examples.txt
 .DS_Store
+spec/rails5/log/
+spec/rails5/tmp/
