@@ -12,6 +12,7 @@
 #     include ActionController::Redirecting
 #     include ActionController::Cookies
 #     extend ActiveSupport::Callbacks::ClassMethods
+#     extend ActiveSupport::Rescuable::ClassMethods
 #     extend AbstractController::Callbacks::ClassMethods
 #     extend ActionController::RequestForgeryProtection::ClassMethods
 #   end
