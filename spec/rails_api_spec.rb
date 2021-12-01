@@ -9,18 +9,8 @@ RSpec.describe SolarRails::RailsApi do
     Solargraph::Convention.register SolarRails::Convention
   end
 
-  it "includes activerecord annotations" do
+  it "it provides Rails controller api" do
     map = use_workspace "./spec/rails5" do |root|
-      root.write_file 'app/models/model.rb', <<~EOS
-        class ApplicationRecord < ActiveRecord::Base
-          self.abstract_class = true
-        end
-
-        class Model < ActiveRecord::Base
-        end
-        Model.find
-      EOS
-
       root.write_file 'app/controllers/things_controller.rb', <<~EOS
         class ThingsController < ActionController::Base
           def index
@@ -45,7 +35,8 @@ RSpec.describe SolarRails::RailsApi do
     expect(completion_at('./app/controllers/stuff_controller.rb', [1, 4], map)).to include("protect_from_forgery")
     expect(completion_at('./app/controllers/stuff_controller.rb', [2, 4], map)).to include("rescue_from")
 
-    expect(completion_at('./app/controllers/things_controller.rb', [2, 5], map)).to include("respond_to", "redirect_to", "response", "request")
+    expect(completion_at('./app/controllers/things_controller.rb', [2, 5], map))
+      .to include("respond_to", "redirect_to", "response", "request", "render")
 
     expect(completion_at('./app/controllers/things_controller.rb', [3, 6], map)).to include("params")
     expect(find_pin("ActionController::Metal#params", map).return_type.tag).to eq("ActionController::Parameters")
@@ -57,6 +48,25 @@ RSpec.describe SolarRails::RailsApi do
     expect(completion_at('./app/controllers/things_controller.rb', [5, 6], map)).to include("session")
     expect(completion_at('./app/controllers/things_controller.rb', [6, 6], map)).to include("flash")
 
-    expect(completion_at('./app/models/model.rb', [6, 9], map)).to include("find")
+  end
+
+  it "provides Rails Model api" do
+    map = use_workspace "./spec/rails5" do |root|
+      root.write_file 'app/models/model.rb', <<~EOS
+        class ApplicationRecord < ActiveRecord::Base
+          self.abstract_class = true
+        end
+
+        class Model < ActiveRecord::Base
+        end
+        Model.find
+        Model.whe
+      EOS
+    end
+
+    filename = './app/models/model.rb'
+
+    expect(completions_for(map, filename, [6, 9])).to include("find" => "self")
+    expect(completion_at(filename, [7, 8], map)).to include("where")
   end
 end

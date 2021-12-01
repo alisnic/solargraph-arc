@@ -11,12 +11,9 @@ module SolarRails
 
       Solargraph.logger.debug("[Rails] found #{map.pins.size} pins in annotations")
 
-      # TODO: move to annotations.rb when https://github.com/castwide/solargraph/issues/514 is fixed
-      overrides = [
-        Util.method_return("ActionController::Metal#params", "ActionController::Parameters"),
-        Util.method_return("ActionController::Cookies#cookies", "ActionDispatch::Cookies::CookieJar"),
-        Util.method_return("ActionDispatch::Flash::FlashHash#now", "ActionDispatch::Flash::FlashNow")
-      ]
+      overrides = YAML.load_file(File.dirname(__FILE__) + "/types.yml").map do |meth, types|
+        Util.method_return(meth, types)
+      end
 
       ns = Solargraph::Pin::Namespace.new(
         name:  "ActionController::Base",

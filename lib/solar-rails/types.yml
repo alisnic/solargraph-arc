@@ -1,0 +1,3 @@
+ActionController::Metal#params: ["ActionController::Parameters"]
+ActionController::Cookies#cookies: ["ActionDispatch::Cookies::CookieJar"]
+ActionDispatch::Flash::FlashHash#now: ["ActionDispatch::Flash::FlashNow"]

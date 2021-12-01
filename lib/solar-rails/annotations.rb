@@ -11,6 +11,7 @@
 #     include ActionController::MimeResponds
 #     include ActionController::Redirecting
 #     include ActionController::Cookies
+#     include AbstractController::Rendering
 #     extend ActiveSupport::Callbacks::ClassMethods
 #     extend ActiveSupport::Rescuable::ClassMethods
 #     extend AbstractController::Callbacks::ClassMethods

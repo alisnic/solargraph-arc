@@ -84,4 +84,12 @@ module Helpers
 
     clip.complete.pins.map(&:name)
   end
+
+  def completions_for(map, filename, position)
+    clip = map.clip_at(filename, position)
+
+    clip.complete.pins.map do |pin|
+      [pin.name, pin.return_type.tag]
+    end.to_h
+  end
 end
