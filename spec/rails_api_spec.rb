@@ -37,6 +37,11 @@ RSpec.describe SolarRails::RailsApi do
 
   it "provides completions for ActionController::Base" do
     map = use_workspace "./spec/rails5"
-    assert_matches_definitions(map, "ActionController::Base", :actioncontroller5, print_stats: true)
+    assert_matches_definitions(
+      map,
+      "ActionController::Base",
+      :actioncontroller5,
+      print_stats: true
+    )
   end
 end
