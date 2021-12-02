@@ -202,11 +202,11 @@
 ".attribute_types":
   types:
   - undefined
-  skip: true
+  skip: false
 ".attributes_builder":
   types:
   - undefined
-  skip: true
+  skip: false
 ".attributes_to_define_after_schema_loads":
   types:
   - undefined
@@ -346,7 +346,7 @@
 ".column_defaults":
   types:
   - undefined
-  skip: true
+  skip: false
 ".column_for_attribute":
   types:
   - undefined
@@ -354,15 +354,15 @@
 ".column_names":
   types:
   - undefined
-  skip: true
+  skip: false
 ".columns":
   types:
   - undefined
-  skip: true
+  skip: false
 ".columns_hash":
   types:
   - undefined
-  skip: true
+  skip: false
 ".composed_of":
   types:
   - undefined
@@ -410,7 +410,7 @@
 ".content_columns":
   types:
   - undefined
-  skip: true
+  skip: false
 ".count":
   types:
   - undefined
@@ -719,11 +719,11 @@
 ".full_table_name_prefix":
   types:
   - undefined
-  skip: true
+  skip: false
 ".full_table_name_suffix":
   types:
   - undefined
-  skip: true
+  skip: false
 ".generate_unique_secure_token":
   types:
   - undefined
@@ -791,11 +791,11 @@
 ".ignored_columns":
   types:
   - undefined
-  skip: true
+  skip: false
 ".ignored_columns=":
   types:
   - undefined
-  skip: true
+  skip: false
 ".in_batches":
   types:
   - undefined
@@ -831,11 +831,11 @@
 ".inheritance_column":
   types:
   - undefined
-  skip: true
+  skip: false
 ".inheritance_column=":
   types:
   - undefined
-  skip: true
+  skip: false
 ".initialize_find_by_cache":
   types:
   - undefined
@@ -987,7 +987,7 @@
 ".next_sequence_value":
   types:
   - undefined
-  skip: true
+  skip: false
 ".no_touching":
   types:
   - undefined
@@ -1059,7 +1059,7 @@
 ".prefetch_primary_key?":
   types:
   - undefined
-  skip: true
+  skip: false
 ".preload":
   types:
   - undefined
@@ -1083,11 +1083,11 @@
 ".protected_environments":
   types:
   - undefined
-  skip: true
+  skip: false
 ".protected_environments=":
   types:
   - undefined
-  skip: true
+  skip: false
 ".quoted_primary_key":
   types:
   - undefined
@@ -1095,7 +1095,7 @@
 ".quoted_table_name":
   types:
   - undefined
-  skip: true
+  skip: false
 ".readonly":
   types:
   - undefined
@@ -1163,7 +1163,7 @@
 ".reset_column_information":
   types:
   - undefined
-  skip: true
+  skip: false
 ".reset_counters":
   types:
   - undefined
@@ -1179,11 +1179,11 @@
 ".reset_sequence_name":
   types:
   - undefined
-  skip: true
+  skip: false
 ".reset_table_name":
   types:
   - undefined
-  skip: true
+  skip: false
 ".retrieve_connection":
   types:
   - undefined
@@ -1279,11 +1279,11 @@
 ".sequence_name":
   types:
   - undefined
-  skip: true
+  skip: false
 ".sequence_name=":
   types:
   - undefined
-  skip: true
+  skip: false
 ".serialize":
   types:
   - undefined
@@ -1351,15 +1351,15 @@
 ".table_exists?":
   types:
   - undefined
-  skip: true
+  skip: false
 ".table_name":
   types:
   - undefined
-  skip: true
+  skip: false
 ".table_name=":
   types:
   - undefined
-  skip: true
+  skip: false
 ".table_name_prefix":
   types:
   - undefined
@@ -1455,7 +1455,7 @@
 ".type_for_attribute":
   types:
   - undefined
-  skip: true
+  skip: false
 ".uncached":
   types:
   - undefined
@@ -1585,7 +1585,7 @@
 ".yaml_encoder":
   types:
   - undefined
-  skip: true
+  skip: false
 "#[]":
   types:
   - undefined

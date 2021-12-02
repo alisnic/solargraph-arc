@@ -24,7 +24,7 @@ module Helpers
     typed   = 0
 
     definitions.each do |meth, data|
-      next skipped +=1 if data["skip"]
+      next skipped +=1 if data["skip"] && !update
 
       pin = if meth.start_with?(".")
         class_methods.find {|p| p.name == meth[1..-1] }
@@ -36,7 +36,9 @@ module Helpers
 
       if pin
         assert_entry_valid(pin, data, update: update)
+        data["skip"] = false if update
       elsif update
+        skipped += 1
         data["skip"] = true
       else
         raise "#{meth} was not found in completions"

@@ -22,6 +22,7 @@
 #     extend ActiveRecord::FinderMethods
 #     extend ActiveRecord::Associations::ClassMethods
 #     extend ActiveRecord::Inheritance::ClassMethods
+#     extend ActiveRecord::ModelSchema::ClassMethods
 #     include ActiveRecord::Persistence
 #   end
 # @!override ActiveRecord::FinderMethods#find
