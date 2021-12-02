@@ -47,7 +47,10 @@ RSpec.describe SolarRails::RailsApi do
 
     expect(completion_at('./app/controllers/things_controller.rb', [5, 6], map)).to include("session")
     expect(completion_at('./app/controllers/things_controller.rb', [6, 6], map)).to include("flash")
+  end
 
+  it "provides completions for ActiveRecord::Base" do
+    assert_matches_definitions("Model", :activerecord5)
   end
 
   it "provides Rails Model api" do
@@ -69,6 +72,8 @@ RSpec.describe SolarRails::RailsApi do
 
     filename = './app/models/model.rb'
 
+    binding.pry
+    # map.get_methods("Model", scope: :class, visibility: [:public])
     expect(completions_for(map, filename, [6, 9]))
       .to include("find" => ["self", "Array<self>"])
 

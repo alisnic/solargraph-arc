@@ -7,6 +7,10 @@ module Helpers
     source
   end
 
+  def assert_matches_definitions(class_name, defition_name)
+    #
+  end
+
   def callstack
     caller.reject {|f| f.include?("pry") || f.include?("rspec") }
   end

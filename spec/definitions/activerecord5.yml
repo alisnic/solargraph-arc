@@ -1,0 +1,2345 @@
+---
+".abstract_class":
+  types:
+  - undefined
+  skip: false
+".abstract_class=":
+  types:
+  - undefined
+  skip: false
+".abstract_class?":
+  types:
+  - undefined
+  skip: false
+".accepts_nested_attributes_for":
+  types:
+  - undefined
+  skip: false
+".after_commit":
+  types:
+  - undefined
+  skip: false
+".after_commit_without_transaction_enrollment":
+  types:
+  - undefined
+  skip: false
+".after_create":
+  types:
+  - undefined
+  skip: false
+".after_create_commit":
+  types:
+  - undefined
+  skip: false
+".after_destroy":
+  types:
+  - undefined
+  skip: false
+".after_destroy_commit":
+  types:
+  - undefined
+  skip: false
+".after_find":
+  types:
+  - undefined
+  skip: false
+".after_initialize":
+  types:
+  - undefined
+  skip: false
+".after_rollback":
+  types:
+  - undefined
+  skip: false
+".after_rollback_without_transaction_enrollment":
+  types:
+  - undefined
+  skip: false
+".after_save":
+  types:
+  - undefined
+  skip: false
+".after_touch":
+  types:
+  - undefined
+  skip: false
+".after_update":
+  types:
+  - undefined
+  skip: false
+".after_update_commit":
+  types:
+  - undefined
+  skip: false
+".after_validation":
+  types:
+  - undefined
+  skip: false
+".aggregate_reflections":
+  types:
+  - undefined
+  skip: false
+".aggregate_reflections=":
+  types:
+  - undefined
+  skip: false
+".aggregate_reflections?":
+  types:
+  - undefined
+  skip: false
+".all":
+  types:
+  - undefined
+  skip: false
+".allow_unsafe_raw_sql":
+  types:
+  - undefined
+  skip: false
+".allow_unsafe_raw_sql=":
+  types:
+  - undefined
+  skip: false
+".any?":
+  types:
+  - undefined
+  skip: false
+".arel_attribute":
+  types:
+  - undefined
+  skip: false
+".arel_table":
+  types:
+  - undefined
+  skip: false
+".around_create":
+  types:
+  - undefined
+  skip: false
+".around_destroy":
+  types:
+  - undefined
+  skip: false
+".around_save":
+  types:
+  - undefined
+  skip: false
+".around_update":
+  types:
+  - undefined
+  skip: false
+".attr_readonly":
+  types:
+  - undefined
+  skip: false
+".attribute":
+  types:
+  - undefined
+  skip: false
+".attribute_alias":
+  types:
+  - undefined
+  skip: false
+".attribute_alias?":
+  types:
+  - undefined
+  skip: false
+".attribute_aliases":
+  types:
+  - undefined
+  skip: false
+".attribute_aliases=":
+  types:
+  - undefined
+  skip: false
+".attribute_aliases?":
+  types:
+  - undefined
+  skip: false
+".attribute_method?":
+  types:
+  - undefined
+  skip: false
+".attribute_method_affix":
+  types:
+  - undefined
+  skip: false
+".attribute_method_matchers":
+  types:
+  - undefined
+  skip: false
+".attribute_method_matchers=":
+  types:
+  - undefined
+  skip: false
+".attribute_method_matchers?":
+  types:
+  - undefined
+  skip: false
+".attribute_method_prefix":
+  types:
+  - undefined
+  skip: false
+".attribute_method_suffix":
+  types:
+  - undefined
+  skip: false
+".attribute_names":
+  types:
+  - undefined
+  skip: false
+".attribute_type_decorations":
+  types:
+  - undefined
+  skip: false
+".attribute_type_decorations=":
+  types:
+  - undefined
+  skip: false
+".attribute_type_decorations?":
+  types:
+  - undefined
+  skip: false
+".attribute_types":
+  types:
+  - undefined
+  skip: false
+".attributes_builder":
+  types:
+  - undefined
+  skip: false
+".attributes_to_define_after_schema_loads":
+  types:
+  - undefined
+  skip: false
+".attributes_to_define_after_schema_loads=":
+  types:
+  - undefined
+  skip: false
+".attributes_to_define_after_schema_loads?":
+  types:
+  - undefined
+  skip: false
+".average":
+  types:
+  - undefined
+  skip: false
+".base_class":
+  types:
+  - undefined
+  skip: false
+".before_commit":
+  types:
+  - undefined
+  skip: false
+".before_commit_without_transaction_enrollment":
+  types:
+  - undefined
+  skip: false
+".before_create":
+  types:
+  - undefined
+  skip: false
+".before_destroy":
+  types:
+  - undefined
+  skip: false
+".before_remove_const":
+  types:
+  - undefined
+  skip: false
+".before_save":
+  types:
+  - undefined
+  skip: false
+".before_update":
+  types:
+  - undefined
+  skip: false
+".before_validation":
+  types:
+  - undefined
+  skip: false
+".belongs_to":
+  types:
+  - undefined
+  skip: false
+".belongs_to_required_by_default":
+  types:
+  - undefined
+  skip: false
+".belongs_to_required_by_default=":
+  types:
+  - undefined
+  skip: false
+".benchmark":
+  types:
+  - undefined
+  skip: false
+".cache":
+  types:
+  - undefined
+  skip: false
+".cache_timestamp_format":
+  types:
+  - undefined
+  skip: false
+".cache_timestamp_format=":
+  types:
+  - undefined
+  skip: false
+".cache_timestamp_format?":
+  types:
+  - undefined
+  skip: false
+".cache_versioning":
+  types:
+  - undefined
+  skip: false
+".cache_versioning=":
+  types:
+  - undefined
+  skip: false
+".cache_versioning?":
+  types:
+  - undefined
+  skip: false
+".calculate":
+  types:
+  - undefined
+  skip: false
+".class_method_defined_within?":
+  types:
+  - undefined
+  skip: false
+".clear_active_connections!":
+  types:
+  - undefined
+  skip: false
+".clear_all_connections!":
+  types:
+  - undefined
+  skip: false
+".clear_cache!":
+  types:
+  - undefined
+  skip: false
+".clear_reflections_cache":
+  types:
+  - undefined
+  skip: false
+".clear_reloadable_connections!":
+  types:
+  - undefined
+  skip: false
+".clear_validators!":
+  types:
+  - undefined
+  skip: false
+".collecting_queries_for_explain":
+  types:
+  - undefined
+  skip: false
+".collection_cache_key":
+  types:
+  - undefined
+  skip: false
+".column_defaults":
+  types:
+  - undefined
+  skip: false
+".column_for_attribute":
+  types:
+  - undefined
+  skip: false
+".column_names":
+  types:
+  - undefined
+  skip: false
+".columns":
+  types:
+  - undefined
+  skip: false
+".columns_hash":
+  types:
+  - undefined
+  skip: false
+".composed_of":
+  types:
+  - undefined
+  skip: false
+".configurations":
+  types:
+  - undefined
+  skip: false
+".configurations=":
+  types:
+  - undefined
+  skip: false
+".connected?":
+  types:
+  - undefined
+  skip: false
+".connection":
+  types:
+  - undefined
+  skip: false
+".connection_config":
+  types:
+  - undefined
+  skip: false
+".connection_handler":
+  types:
+  - undefined
+  skip: false
+".connection_handler=":
+  types:
+  - undefined
+  skip: false
+".connection_pool":
+  types:
+  - undefined
+  skip: false
+".connection_specification_name":
+  types:
+  - undefined
+  skip: false
+".connection_specification_name=":
+  types:
+  - undefined
+  skip: false
+".content_columns":
+  types:
+  - undefined
+  skip: false
+".count":
+  types:
+  - undefined
+  skip: false
+".count_by_sql":
+  types:
+  - undefined
+  skip: false
+".create":
+  types:
+  - undefined
+  skip: false
+".create!":
+  types:
+  - undefined
+  skip: false
+".create_with":
+  types:
+  - undefined
+  skip: false
+".current_scope":
+  types:
+  - undefined
+  skip: false
+".current_scope=":
+  types:
+  - undefined
+  skip: false
+".dangerous_attribute_method?":
+  types:
+  - undefined
+  skip: false
+".dangerous_class_method?":
+  types:
+  - undefined
+  skip: false
+".decorate_attribute_type":
+  types:
+  - undefined
+  skip: false
+".decorate_matching_attribute_types":
+  types:
+  - undefined
+  skip: false
+".decrement_counter":
+  types:
+  - undefined
+  skip: false
+".default_connection_handler":
+  types:
+  - undefined
+  skip: false
+".default_connection_handler=":
+  types:
+  - undefined
+  skip: false
+".default_connection_handler?":
+  types:
+  - undefined
+  skip: false
+".default_extensions":
+  types:
+  - undefined
+  skip: false
+".default_scope_override":
+  types:
+  - undefined
+  skip: false
+".default_scope_override=":
+  types:
+  - undefined
+  skip: false
+".default_scoped":
+  types:
+  - undefined
+  skip: false
+".default_scopes":
+  types:
+  - undefined
+  skip: false
+".default_scopes=":
+  types:
+  - undefined
+  skip: false
+".default_timezone":
+  types:
+  - undefined
+  skip: false
+".default_timezone=":
+  types:
+  - undefined
+  skip: false
+".define_attribute":
+  types:
+  - undefined
+  skip: false
+".define_attribute_method":
+  types:
+  - undefined
+  skip: false
+".define_attribute_methods":
+  types:
+  - undefined
+  skip: false
+".define_callbacks":
+  types:
+  - undefined
+  skip: false
+".define_model_callbacks":
+  types:
+  - undefined
+  skip: false
+".defined_enums":
+  types:
+  - undefined
+  skip: false
+".defined_enums=":
+  types:
+  - undefined
+  skip: false
+".defined_enums?":
+  types:
+  - undefined
+  skip: false
+".delete":
+  types:
+  - undefined
+  skip: false
+".delete_all":
+  types:
+  - undefined
+  skip: false
+".descends_from_active_record?":
+  types:
+  - undefined
+  skip: false
+".destroy":
+  types:
+  - undefined
+  skip: false
+".destroy_all":
+  types:
+  - undefined
+  skip: false
+".direct_descendants":
+  types:
+  - undefined
+  skip: false
+".distinct":
+  types:
+  - undefined
+  skip: false
+".dump_schema_after_migration":
+  types:
+  - undefined
+  skip: false
+".dump_schema_after_migration=":
+  types:
+  - undefined
+  skip: false
+".dump_schemas":
+  types:
+  - undefined
+  skip: false
+".dump_schemas=":
+  types:
+  - undefined
+  skip: false
+".eager_load":
+  types:
+  - undefined
+  skip: false
+".enforce_raw_sql_whitelist":
+  types:
+  - undefined
+  skip: false
+".enum":
+  types:
+  - undefined
+  skip: false
+".error_on_ignored_order":
+  types:
+  - undefined
+  skip: false
+".error_on_ignored_order=":
+  types:
+  - undefined
+  skip: false
+".establish_connection":
+  types:
+  - undefined
+  skip: false
+".except":
+  types:
+  - undefined
+  skip: false
+".exec_explain":
+  types:
+  - undefined
+  skip: false
+".exists?":
+  types:
+  - undefined
+  skip: false
+".expand_hash_conditions_for_aggregates_with_deprecation":
+  types:
+  - undefined
+  skip: false
+".extending":
+  types:
+  - undefined
+  skip: false
+".fifth":
+  types:
+  - undefined
+  skip: false
+".fifth!":
+  types:
+  - undefined
+  skip: false
+".find":
+  types:
+  - undefined
+  skip: false
+".find_by":
+  types:
+  - undefined
+  skip: false
+".find_by!":
+  types:
+  - undefined
+  skip: false
+".find_by_sql":
+  types:
+  - undefined
+  skip: false
+".find_each":
+  types:
+  - undefined
+  skip: false
+".find_in_batches":
+  types:
+  - undefined
+  skip: false
+".find_or_create_by":
+  types:
+  - undefined
+  skip: false
+".find_or_create_by!":
+  types:
+  - undefined
+  skip: false
+".find_or_initialize_by":
+  types:
+  - undefined
+  skip: false
+".finder_needs_type_condition?":
+  types:
+  - undefined
+  skip: false
+".first":
+  types:
+  - undefined
+  skip: false
+".first!":
+  types:
+  - undefined
+  skip: false
+".first_or_create":
+  types:
+  - undefined
+  skip: false
+".first_or_create!":
+  types:
+  - undefined
+  skip: false
+".first_or_initialize":
+  types:
+  - undefined
+  skip: false
+".flush_idle_connections!":
+  types:
+  - undefined
+  skip: false
+".forty_two":
+  types:
+  - undefined
+  skip: false
+".forty_two!":
+  types:
+  - undefined
+  skip: false
+".fourth":
+  types:
+  - undefined
+  skip: false
+".fourth!":
+  types:
+  - undefined
+  skip: false
+".from":
+  types:
+  - undefined
+  skip: false
+".full_table_name_prefix":
+  types:
+  - undefined
+  skip: false
+".full_table_name_suffix":
+  types:
+  - undefined
+  skip: false
+".generate_unique_secure_token":
+  types:
+  - undefined
+  skip: false
+".generated_association_methods":
+  types:
+  - undefined
+  skip: false
+".get_primary_key":
+  types:
+  - undefined
+  skip: false
+".group":
+  types:
+  - undefined
+  skip: false
+".has_and_belongs_to_many":
+  types:
+  - undefined
+  skip: false
+".has_attribute?":
+  types:
+  - undefined
+  skip: false
+".has_many":
+  types:
+  - undefined
+  skip: false
+".has_many_attached":
+  types:
+  - undefined
+  skip: false
+".has_one":
+  types:
+  - undefined
+  skip: false
+".has_one_attached":
+  types:
+  - undefined
+  skip: false
+".has_secure_password":
+  types:
+  - undefined
+  skip: false
+".has_secure_token":
+  types:
+  - undefined
+  skip: false
+".having":
+  types:
+  - undefined
+  skip: false
+".human_attribute_name":
+  types:
+  - undefined
+  skip: false
+".i18n_scope":
+  types:
+  - undefined
+  skip: false
+".ids":
+  types:
+  - undefined
+  skip: false
+".ignored_columns":
+  types:
+  - undefined
+  skip: false
+".ignored_columns=":
+  types:
+  - undefined
+  skip: false
+".in_batches":
+  types:
+  - undefined
+  skip: false
+".include_root_in_json":
+  types:
+  - undefined
+  skip: false
+".include_root_in_json=":
+  types:
+  - undefined
+  skip: false
+".include_root_in_json?":
+  types:
+  - undefined
+  skip: false
+".includes":
+  types:
+  - undefined
+  skip: false
+".increment_counter":
+  types:
+  - undefined
+  skip: false
+".index_nested_attribute_errors":
+  types:
+  - undefined
+  skip: false
+".index_nested_attribute_errors=":
+  types:
+  - undefined
+  skip: false
+".inheritance_column":
+  types:
+  - undefined
+  skip: false
+".inheritance_column=":
+  types:
+  - undefined
+  skip: false
+".initialize_find_by_cache":
+  types:
+  - undefined
+  skip: false
+".initialize_generated_modules":
+  types:
+  - undefined
+  skip: false
+".initialize_relation_delegate_cache":
+  types:
+  - undefined
+  skip: false
+".instance_method_already_implemented?":
+  types:
+  - undefined
+  skip: false
+".instantiate":
+  types:
+  - undefined
+  skip: false
+".internal_metadata_table_name":
+  types:
+  - undefined
+  skip: false
+".internal_metadata_table_name=":
+  types:
+  - undefined
+  skip: false
+".internal_metadata_table_name?":
+  types:
+  - undefined
+  skip: false
+".joins":
+  types:
+  - undefined
+  skip: false
+".last":
+  types:
+  - undefined
+  skip: false
+".last!":
+  types:
+  - undefined
+  skip: false
+".left_joins":
+  types:
+  - undefined
+  skip: false
+".left_outer_joins":
+  types:
+  - undefined
+  skip: false
+".limit":
+  types:
+  - undefined
+  skip: false
+".local_stored_attributes":
+  types:
+  - undefined
+  skip: false
+".local_stored_attributes=":
+  types:
+  - undefined
+  skip: false
+".lock":
+  types:
+  - undefined
+  skip: false
+".lock_optimistically":
+  types:
+  - undefined
+  skip: false
+".lock_optimistically=":
+  types:
+  - undefined
+  skip: false
+".lock_optimistically?":
+  types:
+  - undefined
+  skip: false
+".locking_column":
+  types:
+  - undefined
+  skip: false
+".locking_column=":
+  types:
+  - undefined
+  skip: false
+".locking_enabled?":
+  types:
+  - undefined
+  skip: false
+".logger":
+  types:
+  - undefined
+  skip: false
+".logger=":
+  types:
+  - undefined
+  skip: false
+".lookup_ancestors":
+  types:
+  - undefined
+  skip: false
+".maintain_test_schema":
+  types:
+  - undefined
+  skip: false
+".maintain_test_schema=":
+  types:
+  - undefined
+  skip: false
+".many?":
+  types:
+  - undefined
+  skip: false
+".maximum":
+  types:
+  - undefined
+  skip: false
+".merge":
+  types:
+  - undefined
+  skip: false
+".method_defined_within?":
+  types:
+  - undefined
+  skip: false
+".minimum":
+  types:
+  - undefined
+  skip: false
+".model_name":
+  types:
+  - undefined
+  skip: false
+".nested_attributes_options":
+  types:
+  - undefined
+  skip: false
+".nested_attributes_options=":
+  types:
+  - undefined
+  skip: false
+".nested_attributes_options?":
+  types:
+  - undefined
+  skip: false
+".next_sequence_value":
+  types:
+  - undefined
+  skip: false
+".no_touching":
+  types:
+  - undefined
+  skip: false
+".none":
+  types:
+  - undefined
+  skip: false
+".none?":
+  types:
+  - undefined
+  skip: false
+".normalize_callback_params":
+  types:
+  - undefined
+  skip: false
+".offset":
+  types:
+  - undefined
+  skip: false
+".one?":
+  types:
+  - undefined
+  skip: false
+".or":
+  types:
+  - undefined
+  skip: false
+".order":
+  types:
+  - undefined
+  skip: false
+".partial_writes":
+  types:
+  - undefined
+  skip: false
+".partial_writes=":
+  types:
+  - undefined
+  skip: false
+".partial_writes?":
+  types:
+  - undefined
+  skip: false
+".pluck":
+  types:
+  - undefined
+  skip: false
+".pluralize_table_names":
+  types:
+  - undefined
+  skip: false
+".pluralize_table_names=":
+  types:
+  - undefined
+  skip: false
+".pluralize_table_names?":
+  types:
+  - undefined
+  skip: false
+".polymorphic_name":
+  types:
+  - undefined
+  skip: false
+".predicate_builder":
+  types:
+  - undefined
+  skip: false
+".prefetch_primary_key?":
+  types:
+  - undefined
+  skip: false
+".preload":
+  types:
+  - undefined
+  skip: false
+".primary_key":
+  types:
+  - undefined
+  skip: false
+".primary_key=":
+  types:
+  - undefined
+  skip: false
+".primary_key_prefix_type":
+  types:
+  - undefined
+  skip: false
+".primary_key_prefix_type=":
+  types:
+  - undefined
+  skip: false
+".protected_environments":
+  types:
+  - undefined
+  skip: false
+".protected_environments=":
+  types:
+  - undefined
+  skip: false
+".quoted_primary_key":
+  types:
+  - undefined
+  skip: false
+".quoted_table_name":
+  types:
+  - undefined
+  skip: false
+".readonly":
+  types:
+  - undefined
+  skip: false
+".readonly_attributes":
+  types:
+  - undefined
+  skip: false
+".record_timestamps":
+  types:
+  - undefined
+  skip: false
+".record_timestamps=":
+  types:
+  - undefined
+  skip: false
+".record_timestamps?":
+  types:
+  - undefined
+  skip: false
+".references":
+  types:
+  - undefined
+  skip: false
+".reflect_on_aggregation":
+  types:
+  - undefined
+  skip: false
+".reflect_on_all_aggregations":
+  types:
+  - undefined
+  skip: false
+".reflect_on_all_associations":
+  types:
+  - undefined
+  skip: false
+".reflect_on_all_autosave_associations":
+  types:
+  - undefined
+  skip: false
+".reflect_on_association":
+  types:
+  - undefined
+  skip: false
+".reflections":
+  types:
+  - undefined
+  skip: false
+".relation_delegate_class":
+  types:
+  - undefined
+  skip: false
+".remove_connection":
+  types:
+  - undefined
+  skip: false
+".reorder":
+  types:
+  - undefined
+  skip: false
+".reset_callbacks":
+  types:
+  - undefined
+  skip: false
+".reset_column_information":
+  types:
+  - undefined
+  skip: false
+".reset_counters":
+  types:
+  - undefined
+  skip: false
+".reset_locking_column":
+  types:
+  - undefined
+  skip: false
+".reset_primary_key":
+  types:
+  - undefined
+  skip: false
+".reset_sequence_name":
+  types:
+  - undefined
+  skip: false
+".reset_table_name":
+  types:
+  - undefined
+  skip: false
+".retrieve_connection":
+  types:
+  - undefined
+  skip: false
+".rewhere":
+  types:
+  - undefined
+  skip: false
+".sanitize_sql":
+  types:
+  - undefined
+  skip: false
+".sanitize_sql_array":
+  types:
+  - undefined
+  skip: false
+".sanitize_sql_for_assignment":
+  types:
+  - undefined
+  skip: false
+".sanitize_sql_for_conditions":
+  types:
+  - undefined
+  skip: false
+".sanitize_sql_for_order":
+  types:
+  - undefined
+  skip: false
+".sanitize_sql_hash_for_assignment":
+  types:
+  - undefined
+  skip: false
+".sanitize_sql_like":
+  types:
+  - undefined
+  skip: false
+".schema_format":
+  types:
+  - undefined
+  skip: false
+".schema_format=":
+  types:
+  - undefined
+  skip: false
+".schema_migrations_table_name":
+  types:
+  - undefined
+  skip: false
+".schema_migrations_table_name=":
+  types:
+  - undefined
+  skip: false
+".schema_migrations_table_name?":
+  types:
+  - undefined
+  skip: false
+".scope":
+  types:
+  - undefined
+  skip: false
+".scope_attributes":
+  types:
+  - undefined
+  skip: false
+".scope_attributes?":
+  types:
+  - undefined
+  skip: false
+".scope_for_association":
+  types:
+  - undefined
+  skip: false
+".second":
+  types:
+  - undefined
+  skip: false
+".second!":
+  types:
+  - undefined
+  skip: false
+".second_to_last":
+  types:
+  - undefined
+  skip: false
+".second_to_last!":
+  types:
+  - undefined
+  skip: false
+".select":
+  types:
+  - undefined
+  skip: false
+".sequence_name":
+  types:
+  - undefined
+  skip: false
+".sequence_name=":
+  types:
+  - undefined
+  skip: false
+".serialize":
+  types:
+  - undefined
+  skip: false
+".set_callback":
+  types:
+  - undefined
+  skip: false
+".skip_callback":
+  types:
+  - undefined
+  skip: false
+".skip_time_zone_conversion_for_attributes":
+  types:
+  - undefined
+  skip: false
+".skip_time_zone_conversion_for_attributes=":
+  types:
+  - undefined
+  skip: false
+".skip_time_zone_conversion_for_attributes?":
+  types:
+  - undefined
+  skip: false
+".sqlite3_connection":
+  types:
+  - undefined
+  skip: false
+".sti_name":
+  types:
+  - undefined
+  skip: false
+".store":
+  types:
+  - undefined
+  skip: false
+".store_accessor":
+  types:
+  - undefined
+  skip: false
+".store_full_sti_class":
+  types:
+  - undefined
+  skip: false
+".store_full_sti_class=":
+  types:
+  - undefined
+  skip: false
+".store_full_sti_class?":
+  types:
+  - undefined
+  skip: false
+".stored_attributes":
+  types:
+  - undefined
+  skip: false
+".sum":
+  types:
+  - undefined
+  skip: false
+".suppress":
+  types:
+  - undefined
+  skip: false
+".table_exists?":
+  types:
+  - undefined
+  skip: false
+".table_name":
+  types:
+  - undefined
+  skip: false
+".table_name=":
+  types:
+  - undefined
+  skip: false
+".table_name_prefix":
+  types:
+  - undefined
+  skip: false
+".table_name_prefix=":
+  types:
+  - undefined
+  skip: false
+".table_name_prefix?":
+  types:
+  - undefined
+  skip: false
+".table_name_suffix":
+  types:
+  - undefined
+  skip: false
+".table_name_suffix=":
+  types:
+  - undefined
+  skip: false
+".table_name_suffix?":
+  types:
+  - undefined
+  skip: false
+".take":
+  types:
+  - undefined
+  skip: false
+".take!":
+  types:
+  - undefined
+  skip: false
+".third":
+  types:
+  - undefined
+  skip: false
+".third!":
+  types:
+  - undefined
+  skip: false
+".third_to_last":
+  types:
+  - undefined
+  skip: false
+".third_to_last!":
+  types:
+  - undefined
+  skip: false
+".time_zone_aware_attributes":
+  types:
+  - undefined
+  skip: false
+".time_zone_aware_attributes=":
+  types:
+  - undefined
+  skip: false
+".time_zone_aware_types":
+  types:
+  - undefined
+  skip: false
+".time_zone_aware_types=":
+  types:
+  - undefined
+  skip: false
+".time_zone_aware_types?":
+  types:
+  - undefined
+  skip: false
+".timestamped_migrations":
+  types:
+  - undefined
+  skip: false
+".timestamped_migrations=":
+  types:
+  - undefined
+  skip: false
+".to_adapter":
+  types:
+  - undefined
+  skip: false
+".touch_attributes_with_time":
+  types:
+  - undefined
+  skip: false
+".transaction":
+  types:
+  - undefined
+  skip: false
+".type_caster":
+  types:
+  - undefined
+  skip: false
+".type_for_attribute":
+  types:
+  - undefined
+  skip: false
+".uncached":
+  types:
+  - undefined
+  skip: false
+".undefine_attribute_methods":
+  types:
+  - undefined
+  skip: false
+".unscope":
+  types:
+  - undefined
+  skip: false
+".unscoped":
+  types:
+  - undefined
+  skip: false
+".update":
+  types:
+  - undefined
+  skip: false
+".update_all":
+  types:
+  - undefined
+  skip: false
+".update_counters":
+  types:
+  - undefined
+  skip: false
+".validate":
+  types:
+  - undefined
+  skip: false
+".validates":
+  types:
+  - undefined
+  skip: false
+".validates!":
+  types:
+  - undefined
+  skip: false
+".validates_absence_of":
+  types:
+  - undefined
+  skip: false
+".validates_acceptance_of":
+  types:
+  - undefined
+  skip: false
+".validates_associated":
+  types:
+  - undefined
+  skip: false
+".validates_confirmation_of":
+  types:
+  - undefined
+  skip: false
+".validates_each":
+  types:
+  - undefined
+  skip: false
+".validates_exclusion_of":
+  types:
+  - undefined
+  skip: false
+".validates_format_of":
+  types:
+  - undefined
+  skip: false
+".validates_inclusion_of":
+  types:
+  - undefined
+  skip: false
+".validates_length_of":
+  types:
+  - undefined
+  skip: false
+".validates_numericality_of":
+  types:
+  - undefined
+  skip: false
+".validates_presence_of":
+  types:
+  - undefined
+  skip: false
+".validates_size_of":
+  types:
+  - undefined
+  skip: false
+".validates_uniqueness_of":
+  types:
+  - undefined
+  skip: false
+".validates_with":
+  types:
+  - undefined
+  skip: false
+".validators":
+  types:
+  - undefined
+  skip: false
+".validators_on":
+  types:
+  - undefined
+  skip: false
+".verbose_query_logs":
+  types:
+  - undefined
+  skip: false
+".verbose_query_logs=":
+  types:
+  - undefined
+  skip: false
+".warn_on_records_fetched_greater_than":
+  types:
+  - undefined
+  skip: false
+".warn_on_records_fetched_greater_than=":
+  types:
+  - undefined
+  skip: false
+".where":
+  types:
+  - undefined
+  skip: false
+".yaml_encoder":
+  types:
+  - undefined
+  skip: false
+"#[]":
+  types:
+  - undefined
+  skip: false
+"#[]=":
+  types:
+  - undefined
+  skip: false
+"#accessed_fields":
+  types:
+  - undefined
+  skip: false
+"#add_to_transaction":
+  types:
+  - undefined
+  skip: false
+"#aggregate_reflections":
+  types:
+  - undefined
+  skip: false
+"#aggregate_reflections?":
+  types:
+  - undefined
+  skip: false
+"#allow_unsafe_raw_sql":
+  types:
+  - undefined
+  skip: false
+"#assign_attributes":
+  types:
+  - undefined
+  skip: false
+"#association":
+  types:
+  - undefined
+  skip: false
+"#association_cached?":
+  types:
+  - undefined
+  skip: false
+"#attribute_aliases":
+  types:
+  - undefined
+  skip: false
+"#attribute_aliases?":
+  types:
+  - undefined
+  skip: false
+"#attribute_before_last_save":
+  types:
+  - undefined
+  skip: false
+"#attribute_change_to_be_saved":
+  types:
+  - undefined
+  skip: false
+"#attribute_changed?":
+  types:
+  - undefined
+  skip: false
+"#attribute_changed_in_place?":
+  types:
+  - undefined
+  skip: false
+"#attribute_for_inspect":
+  types:
+  - undefined
+  skip: false
+"#attribute_in_database":
+  types:
+  - undefined
+  skip: false
+"#attribute_method_matchers":
+  types:
+  - undefined
+  skip: false
+"#attribute_method_matchers?":
+  types:
+  - undefined
+  skip: false
+"#attribute_missing":
+  types:
+  - undefined
+  skip: false
+"#attribute_names":
+  types:
+  - undefined
+  skip: false
+"#attribute_present?":
+  types:
+  - undefined
+  skip: false
+"#attribute_previously_changed?":
+  types:
+  - undefined
+  skip: false
+"#attribute_was":
+  types:
+  - undefined
+  skip: false
+"#attributes":
+  types:
+  - undefined
+  skip: false
+"#attributes=":
+  types:
+  - undefined
+  skip: false
+"#attributes_before_type_cast":
+  types:
+  - undefined
+  skip: false
+"#attributes_in_database":
+  types:
+  - undefined
+  skip: false
+"#becomes":
+  types:
+  - undefined
+  skip: false
+"#becomes!":
+  types:
+  - undefined
+  skip: false
+"#before_committed!":
+  types:
+  - undefined
+  skip: false
+"#cache_key":
+  types:
+  - undefined
+  skip: false
+"#cache_key_with_version":
+  types:
+  - undefined
+  skip: false
+"#cache_timestamp_format":
+  types:
+  - undefined
+  skip: false
+"#cache_timestamp_format?":
+  types:
+  - undefined
+  skip: false
+"#cache_version":
+  types:
+  - undefined
+  skip: false
+"#cache_versioning":
+  types:
+  - undefined
+  skip: false
+"#cache_versioning?":
+  types:
+  - undefined
+  skip: false
+"#changed":
+  types:
+  - undefined
+  skip: false
+"#changed?":
+  types:
+  - undefined
+  skip: false
+"#changed_attribute_names_to_save":
+  types:
+  - undefined
+  skip: false
+"#changed_attributes":
+  types:
+  - undefined
+  skip: false
+"#changed_for_autosave?":
+  types:
+  - undefined
+  skip: false
+"#changes":
+  types:
+  - undefined
+  skip: false
+"#changes_applied":
+  types:
+  - undefined
+  skip: false
+"#changes_to_save":
+  types:
+  - undefined
+  skip: false
+"#clear_attribute_changes":
+  types:
+  - undefined
+  skip: false
+"#clear_changes_information":
+  types:
+  - undefined
+  skip: false
+"#column_for_attribute":
+  types:
+  - undefined
+  skip: false
+"#committed!":
+  types:
+  - undefined
+  skip: false
+"#connection_handler":
+  types:
+  - undefined
+  skip: false
+"#decrement":
+  types:
+  - undefined
+  skip: false
+"#decrement!":
+  types:
+  - undefined
+  skip: false
+"#default_connection_handler":
+  types:
+  - undefined
+  skip: false
+"#default_connection_handler?":
+  types:
+  - undefined
+  skip: false
+"#default_scope_override":
+  types:
+  - undefined
+  skip: false
+"#default_scopes":
+  types:
+  - undefined
+  skip: false
+"#default_timezone":
+  types:
+  - undefined
+  skip: false
+"#defined_enums":
+  types:
+  - undefined
+  skip: false
+"#defined_enums?":
+  types:
+  - undefined
+  skip: false
+"#delete":
+  types:
+  - undefined
+  skip: false
+"#destroy":
+  types:
+  - undefined
+  skip: false
+"#destroy!":
+  types:
+  - undefined
+  skip: false
+"#destroyed?":
+  types:
+  - undefined
+  skip: false
+"#destroyed_by_association":
+  types:
+  - undefined
+  skip: false
+"#destroyed_by_association=":
+  types:
+  - undefined
+  skip: false
+"#dump_schema_after_migration":
+  types:
+  - undefined
+  skip: false
+"#dump_schemas":
+  types:
+  - undefined
+  skip: false
+"#encode_with":
+  types:
+  - undefined
+  skip: false
+"#error_on_ignored_order":
+  types:
+  - undefined
+  skip: false
+"#errors":
+  types:
+  - undefined
+  skip: false
+"#from_json":
+  types:
+  - undefined
+  skip: false
+"#has_attribute?":
+  types:
+  - undefined
+  skip: false
+"#has_changes_to_save?":
+  types:
+  - undefined
+  skip: false
+"#id":
+  types:
+  - undefined
+  skip: false
+"#id=":
+  types:
+  - undefined
+  skip: false
+"#id?":
+  types:
+  - undefined
+  skip: false
+"#id_before_type_cast":
+  types:
+  - undefined
+  skip: false
+"#id_in_database":
+  types:
+  - undefined
+  skip: false
+"#id_was":
+  types:
+  - undefined
+  skip: false
+"#include_root_in_json":
+  types:
+  - undefined
+  skip: false
+"#include_root_in_json?":
+  types:
+  - undefined
+  skip: false
+"#increment":
+  types:
+  - undefined
+  skip: false
+"#increment!":
+  types:
+  - undefined
+  skip: false
+"#index_nested_attribute_errors":
+  types:
+  - undefined
+  skip: false
+"#init_with":
+  types:
+  - undefined
+  skip: false
+"#initialize_internals_callback":
+  types:
+  - undefined
+  skip: false
+"#invalid?":
+  types:
+  - undefined
+  skip: false
+"#lock!":
+  types:
+  - undefined
+  skip: false
+"#lock_optimistically":
+  types:
+  - undefined
+  skip: false
+"#lock_optimistically?":
+  types:
+  - undefined
+  skip: false
+"#locking_enabled?":
+  types:
+  - undefined
+  skip: false
+"#logger":
+  types:
+  - undefined
+  skip: false
+"#mark_for_destruction":
+  types:
+  - undefined
+  skip: false
+"#marked_for_destruction?":
+  types:
+  - undefined
+  skip: false
+"#method_missing":
+  types:
+  - undefined
+  skip: false
+"#model_name":
+  types:
+  - undefined
+  skip: false
+"#nested_attributes_options":
+  types:
+  - undefined
+  skip: false
+"#nested_attributes_options?":
+  types:
+  - undefined
+  skip: false
+"#new_record?":
+  types:
+  - undefined
+  skip: false
+"#no_touching?":
+  types:
+  - undefined
+  skip: false
+"#partial_writes":
+  types:
+  - undefined
+  skip: false
+"#partial_writes?":
+  types:
+  - undefined
+  skip: false
+"#persisted?":
+  types:
+  - undefined
+  skip: false
+"#pluralize_table_names":
+  types:
+  - undefined
+  skip: false
+"#pluralize_table_names?":
+  types:
+  - undefined
+  skip: false
+"#populate_with_current_scope_attributes":
+  types:
+  - undefined
+  skip: false
+"#previous_changes":
+  types:
+  - undefined
+  skip: false
+"#primary_key_prefix_type":
+  types:
+  - undefined
+  skip: false
+"#query_attribute":
+  types:
+  - undefined
+  skip: false
+"#read_attribute":
+  types:
+  - undefined
+  skip: false
+"#read_attribute_before_type_cast":
+  types:
+  - undefined
+  skip: false
+"#read_attribute_for_serialization":
+  types:
+  - undefined
+  skip: false
+"#read_attribute_for_validation":
+  types:
+  - undefined
+  skip: false
+"#readonly!":
+  types:
+  - undefined
+  skip: false
+"#readonly?":
+  types:
+  - undefined
+  skip: false
+"#record_timestamps":
+  types:
+  - undefined
+  skip: false
+"#record_timestamps=":
+  types:
+  - undefined
+  skip: false
+"#record_timestamps?":
+  types:
+  - undefined
+  skip: false
+"#reload":
+  types:
+  - undefined
+  skip: false
+"#respond_to_without_attributes?":
+  types:
+  - undefined
+  skip: false
+"#restore_attributes":
+  types:
+  - undefined
+  skip: false
+"#rollback_active_record_state!":
+  types:
+  - undefined
+  skip: false
+"#rolledback!":
+  types:
+  - undefined
+  skip: false
+"#run_callbacks":
+  types:
+  - undefined
+  skip: false
+"#save":
+  types:
+  - undefined
+  skip: false
+"#save!":
+  types:
+  - undefined
+  skip: false
+"#saved_change_to_attribute":
+  types:
+  - undefined
+  skip: false
+"#saved_change_to_attribute?":
+  types:
+  - undefined
+  skip: false
+"#saved_changes":
+  types:
+  - undefined
+  skip: false
+"#saved_changes?":
+  types:
+  - undefined
+  skip: false
+"#schema_format":
+  types:
+  - undefined
+  skip: false
+"#serializable_hash":
+  types:
+  - undefined
+  skip: false
+"#skip_time_zone_conversion_for_attributes":
+  types:
+  - undefined
+  skip: false
+"#skip_time_zone_conversion_for_attributes?":
+  types:
+  - undefined
+  skip: false
+"#slice":
+  types:
+  - undefined
+  skip: false
+"#store_full_sti_class":
+  types:
+  - undefined
+  skip: false
+"#store_full_sti_class?":
+  types:
+  - undefined
+  skip: false
+"#table_name_prefix":
+  types:
+  - undefined
+  skip: false
+"#table_name_prefix?":
+  types:
+  - undefined
+  skip: false
+"#table_name_suffix":
+  types:
+  - undefined
+  skip: false
+"#table_name_suffix?":
+  types:
+  - undefined
+  skip: false
+"#time_zone_aware_attributes":
+  types:
+  - undefined
+  skip: false
+"#time_zone_aware_types":
+  types:
+  - undefined
+  skip: false
+"#time_zone_aware_types?":
+  types:
+  - undefined
+  skip: false
+"#timestamped_migrations":
+  types:
+  - undefined
+  skip: false
+"#to_gid":
+  types:
+  - undefined
+  skip: false
+"#to_gid_param":
+  types:
+  - undefined
+  skip: false
+"#to_global_id":
+  types:
+  - undefined
+  skip: false
+"#to_key":
+  types:
+  - undefined
+  skip: false
+"#to_model":
+  types:
+  - undefined
+  skip: false
+"#to_partial_path":
+  types:
+  - undefined
+  skip: false
+"#to_sgid":
+  types:
+  - undefined
+  skip: false
+"#to_sgid_param":
+  types:
+  - undefined
+  skip: false
+"#to_signed_global_id":
+  types:
+  - undefined
+  skip: false
+"#toggle":
+  types:
+  - undefined
+  skip: false
+"#toggle!":
+  types:
+  - undefined
+  skip: false
+"#touch":
+  types:
+  - undefined
+  skip: false
+"#touch_later":
+  types:
+  - undefined
+  skip: false
+"#transaction":
+  types:
+  - undefined
+  skip: false
+"#type_for_attribute":
+  types:
+  - undefined
+  skip: false
+"#update":
+  types:
+  - undefined
+  skip: false
+"#update!":
+  types:
+  - undefined
+  skip: false
+"#update_attribute":
+  types:
+  - undefined
+  skip: false
+"#update_attributes":
+  types:
+  - undefined
+  skip: false
+"#update_attributes!":
+  types:
+  - undefined
+  skip: false
+"#update_column":
+  types:
+  - undefined
+  skip: false
+"#update_columns":
+  types:
+  - undefined
+  skip: false
+"#valid?":
+  types:
+  - undefined
+  skip: false
+"#validate":
+  types:
+  - undefined
+  skip: false
+"#validate!":
+  types:
+  - undefined
+  skip: false
+"#validates_absence_of":
+  types:
+  - undefined
+  skip: false
+"#validates_acceptance_of":
+  types:
+  - undefined
+  skip: false
+"#validates_confirmation_of":
+  types:
+  - undefined
+  skip: false
+"#validates_exclusion_of":
+  types:
+  - undefined
+  skip: false
+"#validates_format_of":
+  types:
+  - undefined
+  skip: false
+"#validates_inclusion_of":
+  types:
+  - undefined
+  skip: false
+"#validates_length_of":
+  types:
+  - undefined
+  skip: false
+"#validates_numericality_of":
+  types:
+  - undefined
+  skip: false
+"#validates_presence_of":
+  types:
+  - undefined
+  skip: false
+"#validates_size_of":
+  types:
+  - undefined
+  skip: false
+"#validates_with":
+  types:
+  - undefined
+  skip: false
+"#validation_context":
+  types:
+  - undefined
+  skip: false
+"#verbose_query_logs":
+  types:
+  - undefined
+  skip: false
+"#warn_on_records_fetched_greater_than":
+  types:
+  - undefined
+  skip: false
+"#will_save_change_to_attribute?":
+  types:
+  - undefined
+  skip: false
+"#with_lock":
+  types:
+  - undefined
+  skip: false
+"#with_transaction_returning_status":
+  types:
+  - undefined
+  skip: false
+"#write_attribute":
+  types:
+  - undefined
+  skip: false
