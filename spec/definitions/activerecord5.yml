@@ -90,7 +90,7 @@
 ".all":
   types:
   - undefined
-  skip: true
+  skip: false
 ".allow_unsafe_raw_sql":
   types:
   - undefined
@@ -474,7 +474,7 @@
 ".default_extensions":
   types:
   - undefined
-  skip: true
+  skip: false
 ".default_scope_override":
   types:
   - undefined
@@ -486,7 +486,7 @@
 ".default_scoped":
   types:
   - undefined
-  skip: true
+  skip: false
 ".default_scopes":
   types:
   - undefined
@@ -1243,7 +1243,7 @@
 ".scope":
   types:
   - undefined
-  skip: true
+  skip: false
 ".scope_attributes":
   types:
   - undefined
@@ -1255,7 +1255,7 @@
 ".scope_for_association":
   types:
   - undefined
-  skip: true
+  skip: false
 ".second":
   types:
   - undefined

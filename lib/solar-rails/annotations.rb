@@ -24,6 +24,7 @@
 #     extend ActiveRecord::Inheritance::ClassMethods
 #     extend ActiveRecord::ModelSchema::ClassMethods
 #     extend ActiveRecord::Transactions::ClassMethods
+#     extend ActiveRecord::Scoping::Named::ClassMethods
 #     include ActiveRecord::Persistence
 #   end
 # @!override ActiveRecord::FinderMethods#find
