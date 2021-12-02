@@ -104,8 +104,8 @@ module Helpers
     map
   end
 
-  def assert_public_instance_method(query, return_type, &block)
-    pin = find_pin(query)
+  def assert_public_instance_method(map, query, return_type, &block)
+    pin = find_pin(query, map)
     expect(pin).to_not be_nil
     expect(pin.scope).to eq(:instance)
     expect(pin.return_type.tag).to eq(return_type)

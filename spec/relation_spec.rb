@@ -4,8 +4,6 @@ RSpec.describe SolarRails::Relation do
   let(:api_map) { Solargraph::ApiMap.new }
 
   before do
-    allow(File).to receive(:read).and_call_original
-    allow(File).to receive(:read).with("db/schema.rb").and_return("")
     Solargraph::Convention.register SolarRails::Convention
   end
 
@@ -17,14 +15,14 @@ RSpec.describe SolarRails::Relation do
       end
     RUBY
 
-    assert_public_instance_method("Transaction#account", "Account") do |pin|
+    assert_public_instance_method(api_map, "Transaction#account", "Account") do |pin|
       expect(pin.location.range.to_hash).to eq({
         :start => { :line => 1, :character => 0 },
         :end => { :line=>1, :character => 8 }
       })
     end
 
-    assert_public_instance_method("Transaction#category", "Category")
+    assert_public_instance_method(api_map, "Transaction#category", "Category")
   end
 
   it "generates methods for plural associations" do
@@ -36,10 +34,12 @@ RSpec.describe SolarRails::Relation do
     RUBY
 
     assert_public_instance_method(
+      api_map,
       "Account#transactions",
       "ActiveRecord::Associations::CollectionProxy<Transaction>"
     )
     assert_public_instance_method(
+      api_map,
       "Account#things",
       "ActiveRecord::Associations::CollectionProxy<Thing>"
     )

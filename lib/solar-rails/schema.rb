@@ -19,7 +19,12 @@ module SolarRails
       @instance ||= self.new
     end
 
+    def initialize
+      @schema_present = File.exist?("db/schema.rb")
+    end
+
     def process(source_map, ns)
+      return [] unless @schema_present
       return [] unless source_map.filename.include?("app/models")
 
       table_name = infer_table_name(ns)

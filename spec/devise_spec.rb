@@ -4,8 +4,6 @@ RSpec.describe SolarRails::Devise do
   let(:api_map) { Solargraph::ApiMap.new }
 
   before do
-    allow(File).to receive(:read).and_call_original
-    allow(File).to receive(:read).with("db/schema.rb").and_return("")
     Solargraph::Convention.register SolarRails::Convention
   end
 
