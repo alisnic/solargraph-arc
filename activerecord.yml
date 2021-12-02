@@ -1,3 +1,0 @@
-.where:
-  types: ["self", "ActiveRecord::Relation", "ActiveRecord::QueryMethods::WhereChain"]
-  skip: false

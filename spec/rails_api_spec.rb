@@ -51,7 +51,7 @@ RSpec.describe SolarRails::RailsApi do
 
   it "provides completions for ActiveRecord::Base" do
     map = use_workspace "./spec/rails5"
-    assert_matches_definitions(map, "ActiveRecord::Base", :activerecord5)
+    assert_matches_definitions(map, "ActiveRecord::Base", :activerecord5, print_stats: true)
   end
 
   it "provides Rails Model api" do

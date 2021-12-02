@@ -14,215 +14,215 @@
 ".accepts_nested_attributes_for":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_commit":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_commit_without_transaction_enrollment":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_create":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_create_commit":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_destroy":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_destroy_commit":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_find":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_initialize":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_rollback":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_rollback_without_transaction_enrollment":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_save":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_touch":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_update":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_update_commit":
   types:
   - undefined
-  skip: false
+  skip: true
 ".after_validation":
   types:
   - undefined
-  skip: false
+  skip: true
 ".aggregate_reflections":
   types:
   - undefined
-  skip: false
+  skip: true
 ".aggregate_reflections=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".aggregate_reflections?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".all":
   types:
   - undefined
-  skip: false
+  skip: true
 ".allow_unsafe_raw_sql":
   types:
   - undefined
-  skip: false
+  skip: true
 ".allow_unsafe_raw_sql=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".any?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".arel_attribute":
   types:
   - undefined
-  skip: false
+  skip: true
 ".arel_table":
   types:
   - undefined
-  skip: false
+  skip: true
 ".around_create":
   types:
   - undefined
-  skip: false
+  skip: true
 ".around_destroy":
   types:
   - undefined
-  skip: false
+  skip: true
 ".around_save":
   types:
   - undefined
-  skip: false
+  skip: true
 ".around_update":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attr_readonly":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_alias":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_alias?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_aliases":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_aliases=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_aliases?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_method?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_method_affix":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_method_matchers":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_method_matchers=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_method_matchers?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_method_prefix":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_method_suffix":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_names":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_type_decorations":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_type_decorations=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_type_decorations?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attribute_types":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attributes_builder":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attributes_to_define_after_schema_loads":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attributes_to_define_after_schema_loads=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".attributes_to_define_after_schema_loads?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".average":
   types:
   - undefined
-  skip: false
+  skip: true
 ".base_class":
   types:
   - undefined
@@ -230,35 +230,35 @@
 ".before_commit":
   types:
   - undefined
-  skip: false
+  skip: true
 ".before_commit_without_transaction_enrollment":
   types:
   - undefined
-  skip: false
+  skip: true
 ".before_create":
   types:
   - undefined
-  skip: false
+  skip: true
 ".before_destroy":
   types:
   - undefined
-  skip: false
+  skip: true
 ".before_remove_const":
   types:
   - undefined
-  skip: false
+  skip: true
 ".before_save":
   types:
   - undefined
-  skip: false
+  skip: true
 ".before_update":
   types:
   - undefined
-  skip: false
+  skip: true
 ".before_validation":
   types:
   - undefined
-  skip: false
+  skip: true
 ".belongs_to":
   types:
   - undefined
@@ -266,11 +266,11 @@
 ".belongs_to_required_by_default":
   types:
   - undefined
-  skip: false
+  skip: true
 ".belongs_to_required_by_default=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".benchmark":
   types:
   - undefined
@@ -282,43 +282,43 @@
 ".cache_timestamp_format":
   types:
   - undefined
-  skip: false
+  skip: true
 ".cache_timestamp_format=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".cache_timestamp_format?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".cache_versioning":
   types:
   - undefined
-  skip: false
+  skip: true
 ".cache_versioning=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".cache_versioning?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".calculate":
   types:
   - undefined
-  skip: false
+  skip: true
 ".class_method_defined_within?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".clear_active_connections!":
   types:
   - undefined
-  skip: false
+  skip: true
 ".clear_all_connections!":
   types:
   - undefined
-  skip: false
+  skip: true
 ".clear_cache!":
   types:
   - undefined
@@ -326,15 +326,15 @@
 ".clear_reflections_cache":
   types:
   - undefined
-  skip: false
+  skip: true
 ".clear_reloadable_connections!":
   types:
   - undefined
-  skip: false
+  skip: true
 ".clear_validators!":
   types:
   - undefined
-  skip: false
+  skip: true
 ".collecting_queries_for_explain":
   types:
   - undefined
@@ -346,35 +346,35 @@
 ".column_defaults":
   types:
   - undefined
-  skip: false
+  skip: true
 ".column_for_attribute":
   types:
   - undefined
-  skip: false
+  skip: true
 ".column_names":
   types:
   - undefined
-  skip: false
+  skip: true
 ".columns":
   types:
   - undefined
-  skip: false
+  skip: true
 ".columns_hash":
   types:
   - undefined
-  skip: false
+  skip: true
 ".composed_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".configurations":
   types:
   - undefined
-  skip: false
+  skip: true
 ".configurations=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".connected?":
   types:
   - undefined
@@ -390,11 +390,11 @@
 ".connection_handler":
   types:
   - undefined
-  skip: false
+  skip: true
 ".connection_handler=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".connection_pool":
   types:
   - undefined
@@ -410,11 +410,11 @@
 ".content_columns":
   types:
   - undefined
-  skip: false
+  skip: true
 ".count":
   types:
   - undefined
-  skip: false
+  skip: true
 ".count_by_sql":
   types:
   - undefined
@@ -422,11 +422,11 @@
 ".create":
   types:
   - undefined
-  skip: false
+  skip: true
 ".create!":
   types:
   - undefined
-  skip: false
+  skip: true
 ".create_with":
   types:
   - undefined
@@ -434,115 +434,115 @@
 ".current_scope":
   types:
   - undefined
-  skip: false
+  skip: true
 ".current_scope=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".dangerous_attribute_method?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".dangerous_class_method?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".decorate_attribute_type":
   types:
   - undefined
-  skip: false
+  skip: true
 ".decorate_matching_attribute_types":
   types:
   - undefined
-  skip: false
+  skip: true
 ".decrement_counter":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_connection_handler":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_connection_handler=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_connection_handler?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_extensions":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_scope_override":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_scope_override=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_scoped":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_scopes":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_scopes=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_timezone":
   types:
   - undefined
-  skip: false
+  skip: true
 ".default_timezone=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".define_attribute":
   types:
   - undefined
-  skip: false
+  skip: true
 ".define_attribute_method":
   types:
   - undefined
-  skip: false
+  skip: true
 ".define_attribute_methods":
   types:
   - undefined
-  skip: false
+  skip: true
 ".define_callbacks":
   types:
   - undefined
-  skip: false
+  skip: true
 ".define_model_callbacks":
   types:
   - undefined
-  skip: false
+  skip: true
 ".defined_enums":
   types:
   - undefined
-  skip: false
+  skip: true
 ".defined_enums=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".defined_enums?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".delete":
   types:
   - undefined
-  skip: false
+  skip: true
 ".delete_all":
   types:
   - undefined
-  skip: false
+  skip: true
 ".descends_from_active_record?":
   types:
   - undefined
@@ -550,11 +550,11 @@
 ".destroy":
   types:
   - undefined
-  skip: false
+  skip: true
 ".destroy_all":
   types:
   - undefined
-  skip: false
+  skip: true
 ".direct_descendants":
   types:
   - undefined
@@ -566,19 +566,19 @@
 ".dump_schema_after_migration":
   types:
   - undefined
-  skip: false
+  skip: true
 ".dump_schema_after_migration=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".dump_schemas":
   types:
   - undefined
-  skip: false
+  skip: true
 ".dump_schemas=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".eager_load":
   types:
   - undefined
@@ -586,7 +586,7 @@
 ".enforce_raw_sql_whitelist":
   types:
   - undefined
-  skip: false
+  skip: true
 ".enum":
   types:
   - undefined
@@ -594,11 +594,11 @@
 ".error_on_ignored_order":
   types:
   - undefined
-  skip: false
+  skip: true
 ".error_on_ignored_order=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".establish_connection":
   types:
   - undefined
@@ -606,7 +606,7 @@
 ".except":
   types:
   - undefined
-  skip: false
+  skip: true
 ".exec_explain":
   types:
   - undefined
@@ -618,7 +618,7 @@
 ".expand_hash_conditions_for_aggregates_with_deprecation":
   types:
   - undefined
-  skip: false
+  skip: true
 ".extending":
   types:
   - undefined
@@ -633,7 +633,8 @@
   skip: false
 ".find":
   types:
-  - undefined
+  - self
+  - Array<self>
   skip: false
 ".find_by":
   types:
@@ -650,23 +651,23 @@
 ".find_each":
   types:
   - undefined
-  skip: false
+  skip: true
 ".find_in_batches":
   types:
   - undefined
-  skip: false
+  skip: true
 ".find_or_create_by":
   types:
   - undefined
-  skip: false
+  skip: true
 ".find_or_create_by!":
   types:
   - undefined
-  skip: false
+  skip: true
 ".find_or_initialize_by":
   types:
   - undefined
-  skip: false
+  skip: true
 ".finder_needs_type_condition?":
   types:
   - undefined
@@ -682,19 +683,19 @@
 ".first_or_create":
   types:
   - undefined
-  skip: false
+  skip: true
 ".first_or_create!":
   types:
   - undefined
-  skip: false
+  skip: true
 ".first_or_initialize":
   types:
   - undefined
-  skip: false
+  skip: true
 ".flush_idle_connections!":
   types:
   - undefined
-  skip: false
+  skip: true
 ".forty_two":
   types:
   - undefined
@@ -718,23 +719,23 @@
 ".full_table_name_prefix":
   types:
   - undefined
-  skip: false
+  skip: true
 ".full_table_name_suffix":
   types:
   - undefined
-  skip: false
+  skip: true
 ".generate_unique_secure_token":
   types:
   - undefined
-  skip: false
+  skip: true
 ".generated_association_methods":
   types:
   - undefined
-  skip: false
+  skip: true
 ".get_primary_key":
   types:
   - undefined
-  skip: false
+  skip: true
 ".group":
   types:
   - undefined
@@ -746,7 +747,7 @@
 ".has_attribute?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".has_many":
   types:
   - undefined
@@ -754,7 +755,7 @@
 ".has_many_attached":
   types:
   - undefined
-  skip: false
+  skip: true
 ".has_one":
   types:
   - undefined
@@ -762,15 +763,15 @@
 ".has_one_attached":
   types:
   - undefined
-  skip: false
+  skip: true
 ".has_secure_password":
   types:
   - undefined
-  skip: false
+  skip: true
 ".has_secure_token":
   types:
   - undefined
-  skip: false
+  skip: true
 ".having":
   types:
   - undefined
@@ -786,31 +787,31 @@
 ".ids":
   types:
   - undefined
-  skip: false
+  skip: true
 ".ignored_columns":
   types:
   - undefined
-  skip: false
+  skip: true
 ".ignored_columns=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".in_batches":
   types:
   - undefined
-  skip: false
+  skip: true
 ".include_root_in_json":
   types:
   - undefined
-  skip: false
+  skip: true
 ".include_root_in_json=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".include_root_in_json?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".includes":
   types:
   - undefined
@@ -818,31 +819,31 @@
 ".increment_counter":
   types:
   - undefined
-  skip: false
+  skip: true
 ".index_nested_attribute_errors":
   types:
   - undefined
-  skip: false
+  skip: true
 ".index_nested_attribute_errors=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".inheritance_column":
   types:
   - undefined
-  skip: false
+  skip: true
 ".inheritance_column=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".initialize_find_by_cache":
   types:
   - undefined
-  skip: false
+  skip: true
 ".initialize_generated_modules":
   types:
   - undefined
-  skip: false
+  skip: true
 ".initialize_relation_delegate_cache":
   types:
   - undefined
@@ -850,23 +851,23 @@
 ".instance_method_already_implemented?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".instantiate":
   types:
   - undefined
-  skip: false
+  skip: true
 ".internal_metadata_table_name":
   types:
   - undefined
-  skip: false
+  skip: true
 ".internal_metadata_table_name=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".internal_metadata_table_name?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".joins":
   types:
   - undefined
@@ -894,11 +895,11 @@
 ".local_stored_attributes":
   types:
   - undefined
-  skip: false
+  skip: true
 ".local_stored_attributes=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".lock":
   types:
   - undefined
@@ -906,35 +907,35 @@
 ".lock_optimistically":
   types:
   - undefined
-  skip: false
+  skip: true
 ".lock_optimistically=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".lock_optimistically?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".locking_column":
   types:
   - undefined
-  skip: false
+  skip: true
 ".locking_column=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".locking_enabled?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".logger":
   types:
   - undefined
-  skip: false
+  skip: true
 ".logger=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".lookup_ancestors":
   types:
   - undefined
@@ -942,31 +943,31 @@
 ".maintain_test_schema":
   types:
   - undefined
-  skip: false
+  skip: true
 ".maintain_test_schema=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".many?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".maximum":
   types:
   - undefined
-  skip: false
+  skip: true
 ".merge":
   types:
   - undefined
-  skip: false
+  skip: true
 ".method_defined_within?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".minimum":
   types:
   - undefined
-  skip: false
+  skip: true
 ".model_name":
   types:
   - undefined
@@ -974,23 +975,23 @@
 ".nested_attributes_options":
   types:
   - undefined
-  skip: false
+  skip: true
 ".nested_attributes_options=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".nested_attributes_options?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".next_sequence_value":
   types:
   - undefined
-  skip: false
+  skip: true
 ".no_touching":
   types:
   - undefined
-  skip: false
+  skip: true
 ".none":
   types:
   - undefined
@@ -998,11 +999,11 @@
 ".none?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".normalize_callback_params":
   types:
   - undefined
-  skip: false
+  skip: true
 ".offset":
   types:
   - undefined
@@ -1010,7 +1011,7 @@
 ".one?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".or":
   types:
   - undefined
@@ -1022,31 +1023,31 @@
 ".partial_writes":
   types:
   - undefined
-  skip: false
+  skip: true
 ".partial_writes=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".partial_writes?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".pluck":
   types:
   - undefined
-  skip: false
+  skip: true
 ".pluralize_table_names":
   types:
   - undefined
-  skip: false
+  skip: true
 ".pluralize_table_names=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".pluralize_table_names?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".polymorphic_name":
   types:
   - undefined
@@ -1054,11 +1055,11 @@
 ".predicate_builder":
   types:
   - undefined
-  skip: false
+  skip: true
 ".prefetch_primary_key?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".preload":
   types:
   - undefined
@@ -1066,35 +1067,35 @@
 ".primary_key":
   types:
   - undefined
-  skip: false
+  skip: true
 ".primary_key=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".primary_key_prefix_type":
   types:
   - undefined
-  skip: false
+  skip: true
 ".primary_key_prefix_type=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".protected_environments":
   types:
   - undefined
-  skip: false
+  skip: true
 ".protected_environments=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".quoted_primary_key":
   types:
   - undefined
-  skip: false
+  skip: true
 ".quoted_table_name":
   types:
   - undefined
-  skip: false
+  skip: true
 ".readonly":
   types:
   - undefined
@@ -1102,19 +1103,19 @@
 ".readonly_attributes":
   types:
   - undefined
-  skip: false
+  skip: true
 ".record_timestamps":
   types:
   - undefined
-  skip: false
+  skip: true
 ".record_timestamps=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".record_timestamps?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".references":
   types:
   - undefined
@@ -1122,27 +1123,27 @@
 ".reflect_on_aggregation":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reflect_on_all_aggregations":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reflect_on_all_associations":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reflect_on_all_autosave_associations":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reflect_on_association":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reflections":
   types:
   - undefined
-  skip: false
+  skip: true
 ".relation_delegate_class":
   types:
   - undefined
@@ -1158,31 +1159,31 @@
 ".reset_callbacks":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reset_column_information":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reset_counters":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reset_locking_column":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reset_primary_key":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reset_sequence_name":
   types:
   - undefined
-  skip: false
+  skip: true
 ".reset_table_name":
   types:
   - undefined
-  skip: false
+  skip: true
 ".retrieve_connection":
   types:
   - undefined
@@ -1194,67 +1195,67 @@
 ".sanitize_sql":
   types:
   - undefined
-  skip: false
+  skip: true
 ".sanitize_sql_array":
   types:
   - undefined
-  skip: false
+  skip: true
 ".sanitize_sql_for_assignment":
   types:
   - undefined
-  skip: false
+  skip: true
 ".sanitize_sql_for_conditions":
   types:
   - undefined
-  skip: false
+  skip: true
 ".sanitize_sql_for_order":
   types:
   - undefined
-  skip: false
+  skip: true
 ".sanitize_sql_hash_for_assignment":
   types:
   - undefined
-  skip: false
+  skip: true
 ".sanitize_sql_like":
   types:
   - undefined
-  skip: false
+  skip: true
 ".schema_format":
   types:
   - undefined
-  skip: false
+  skip: true
 ".schema_format=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".schema_migrations_table_name":
   types:
   - undefined
-  skip: false
+  skip: true
 ".schema_migrations_table_name=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".schema_migrations_table_name?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".scope":
   types:
   - undefined
-  skip: false
+  skip: true
 ".scope_attributes":
   types:
   - undefined
-  skip: false
+  skip: true
 ".scope_attributes?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".scope_for_association":
   types:
   - undefined
-  skip: false
+  skip: true
 ".second":
   types:
   - undefined
@@ -1278,35 +1279,35 @@
 ".sequence_name":
   types:
   - undefined
-  skip: false
+  skip: true
 ".sequence_name=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".serialize":
   types:
   - undefined
-  skip: false
+  skip: true
 ".set_callback":
   types:
   - undefined
-  skip: false
+  skip: true
 ".skip_callback":
   types:
   - undefined
-  skip: false
+  skip: true
 ".skip_time_zone_conversion_for_attributes":
   types:
   - undefined
-  skip: false
+  skip: true
 ".skip_time_zone_conversion_for_attributes=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".skip_time_zone_conversion_for_attributes?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".sqlite3_connection":
   types:
   - undefined
@@ -1318,71 +1319,71 @@
 ".store":
   types:
   - undefined
-  skip: false
+  skip: true
 ".store_accessor":
   types:
   - undefined
-  skip: false
+  skip: true
 ".store_full_sti_class":
   types:
   - undefined
-  skip: false
+  skip: true
 ".store_full_sti_class=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".store_full_sti_class?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".stored_attributes":
   types:
   - undefined
-  skip: false
+  skip: true
 ".sum":
   types:
   - undefined
-  skip: false
+  skip: true
 ".suppress":
   types:
   - undefined
-  skip: false
+  skip: true
 ".table_exists?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".table_name":
   types:
   - undefined
-  skip: false
+  skip: true
 ".table_name=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".table_name_prefix":
   types:
   - undefined
-  skip: false
+  skip: true
 ".table_name_prefix=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".table_name_prefix?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".table_name_suffix":
   types:
   - undefined
-  skip: false
+  skip: true
 ".table_name_suffix=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".table_name_suffix?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".take":
   types:
   - undefined
@@ -1410,51 +1411,51 @@
 ".time_zone_aware_attributes":
   types:
   - undefined
-  skip: false
+  skip: true
 ".time_zone_aware_attributes=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".time_zone_aware_types":
   types:
   - undefined
-  skip: false
+  skip: true
 ".time_zone_aware_types=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".time_zone_aware_types?":
   types:
   - undefined
-  skip: false
+  skip: true
 ".timestamped_migrations":
   types:
   - undefined
-  skip: false
+  skip: true
 ".timestamped_migrations=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".to_adapter":
   types:
   - undefined
-  skip: false
+  skip: true
 ".touch_attributes_with_time":
   types:
   - undefined
-  skip: false
+  skip: true
 ".transaction":
   types:
   - undefined
-  skip: false
+  skip: true
 ".type_caster":
   types:
   - undefined
-  skip: false
+  skip: true
 ".type_for_attribute":
   types:
   - undefined
-  skip: false
+  skip: true
 ".uncached":
   types:
   - undefined
@@ -1462,7 +1463,7 @@
 ".undefine_attribute_methods":
   types:
   - undefined
-  skip: false
+  skip: true
 ".unscope":
   types:
   - undefined
@@ -1470,119 +1471,121 @@
 ".unscoped":
   types:
   - undefined
-  skip: false
+  skip: true
 ".update":
   types:
   - undefined
-  skip: false
+  skip: true
 ".update_all":
   types:
   - undefined
-  skip: false
+  skip: true
 ".update_counters":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validate":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates!":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_absence_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_acceptance_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_associated":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_confirmation_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_each":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_exclusion_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_format_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_inclusion_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_length_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_numericality_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_presence_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_size_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_uniqueness_of":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validates_with":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validators":
   types:
   - undefined
-  skip: false
+  skip: true
 ".validators_on":
   types:
   - undefined
-  skip: false
+  skip: true
 ".verbose_query_logs":
   types:
   - undefined
-  skip: false
+  skip: true
 ".verbose_query_logs=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".warn_on_records_fetched_greater_than":
   types:
   - undefined
-  skip: false
+  skip: true
 ".warn_on_records_fetched_greater_than=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".where":
   types:
-  - undefined
+  - self
+  - ActiveRecord::Relation
+  - ActiveRecord::QueryMethods::WhereChain
   skip: false
 ".yaml_encoder":
   types:
   - undefined
-  skip: false
+  skip: true
 "#[]":
   types:
   - undefined
@@ -1602,15 +1605,15 @@
 "#aggregate_reflections":
   types:
   - undefined
-  skip: false
+  skip: true
 "#aggregate_reflections?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#allow_unsafe_raw_sql":
   types:
   - undefined
-  skip: false
+  skip: true
 "#assign_attributes":
   types:
   - undefined
@@ -1626,27 +1629,27 @@
 "#attribute_aliases":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attribute_aliases?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attribute_before_last_save":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attribute_change_to_be_saved":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attribute_changed?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attribute_changed_in_place?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attribute_for_inspect":
   types:
   - undefined
@@ -1654,15 +1657,15 @@
 "#attribute_in_database":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attribute_method_matchers":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attribute_method_matchers?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attribute_missing":
   types:
   - undefined
@@ -1678,11 +1681,11 @@
 "#attribute_previously_changed?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attribute_was":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attributes":
   types:
   - undefined
@@ -1694,11 +1697,11 @@
 "#attributes_before_type_cast":
   types:
   - undefined
-  skip: false
+  skip: true
 "#attributes_in_database":
   types:
   - undefined
-  skip: false
+  skip: true
 "#becomes":
   types:
   - undefined
@@ -1722,11 +1725,11 @@
 "#cache_timestamp_format":
   types:
   - undefined
-  skip: false
+  skip: true
 "#cache_timestamp_format?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#cache_version":
   types:
   - undefined
@@ -1734,27 +1737,27 @@
 "#cache_versioning":
   types:
   - undefined
-  skip: false
+  skip: true
 "#cache_versioning?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#changed":
   types:
   - undefined
-  skip: false
+  skip: true
 "#changed?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#changed_attribute_names_to_save":
   types:
   - undefined
-  skip: false
+  skip: true
 "#changed_attributes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#changed_for_autosave?":
   types:
   - undefined
@@ -1762,27 +1765,27 @@
 "#changes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#changes_applied":
   types:
   - undefined
-  skip: false
+  skip: true
 "#changes_to_save":
   types:
   - undefined
-  skip: false
+  skip: true
 "#clear_attribute_changes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#clear_changes_information":
   types:
   - undefined
-  skip: false
+  skip: true
 "#column_for_attribute":
   types:
   - undefined
-  skip: false
+  skip: true
 "#committed!":
   types:
   - undefined
@@ -1802,31 +1805,31 @@
 "#default_connection_handler":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_connection_handler?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_scope_override":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_scopes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_timezone":
   types:
   - undefined
-  skip: false
+  skip: true
 "#defined_enums":
   types:
   - undefined
-  skip: false
+  skip: true
 "#defined_enums?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#delete":
   types:
   - undefined
@@ -1854,11 +1857,11 @@
 "#dump_schema_after_migration":
   types:
   - undefined
-  skip: false
+  skip: true
 "#dump_schemas":
   types:
   - undefined
-  skip: false
+  skip: true
 "#encode_with":
   types:
   - undefined
@@ -1866,7 +1869,7 @@
 "#error_on_ignored_order":
   types:
   - undefined
-  skip: false
+  skip: true
 "#errors":
   types:
   - undefined
@@ -1882,39 +1885,39 @@
 "#has_changes_to_save?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#id":
   types:
   - undefined
-  skip: false
+  skip: true
 "#id=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#id?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#id_before_type_cast":
   types:
   - undefined
-  skip: false
+  skip: true
 "#id_in_database":
   types:
   - undefined
-  skip: false
+  skip: true
 "#id_was":
   types:
   - undefined
-  skip: false
+  skip: true
 "#include_root_in_json":
   types:
   - undefined
-  skip: false
+  skip: true
 "#include_root_in_json?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#increment":
   types:
   - undefined
@@ -1926,7 +1929,7 @@
 "#index_nested_attribute_errors":
   types:
   - undefined
-  skip: false
+  skip: true
 "#init_with":
   types:
   - undefined
@@ -1946,11 +1949,11 @@
 "#lock_optimistically":
   types:
   - undefined
-  skip: false
+  skip: true
 "#lock_optimistically?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#locking_enabled?":
   types:
   - undefined
@@ -1958,7 +1961,7 @@
 "#logger":
   types:
   - undefined
-  skip: false
+  skip: true
 "#mark_for_destruction":
   types:
   - undefined
@@ -1974,15 +1977,15 @@
 "#model_name":
   types:
   - undefined
-  skip: false
+  skip: true
 "#nested_attributes_options":
   types:
   - undefined
-  skip: false
+  skip: true
 "#nested_attributes_options?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#new_record?":
   types:
   - undefined
@@ -1994,11 +1997,11 @@
 "#partial_writes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#partial_writes?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#persisted?":
   types:
   - undefined
@@ -2006,11 +2009,11 @@
 "#pluralize_table_names":
   types:
   - undefined
-  skip: false
+  skip: true
 "#pluralize_table_names?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#populate_with_current_scope_attributes":
   types:
   - undefined
@@ -2018,23 +2021,23 @@
 "#previous_changes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#primary_key_prefix_type":
   types:
   - undefined
-  skip: false
+  skip: true
 "#query_attribute":
   types:
   - undefined
-  skip: false
+  skip: true
 "#read_attribute":
   types:
   - undefined
-  skip: false
+  skip: true
 "#read_attribute_before_type_cast":
   types:
   - undefined
-  skip: false
+  skip: true
 "#read_attribute_for_serialization":
   types:
   - undefined
@@ -2054,15 +2057,15 @@
 "#record_timestamps":
   types:
   - undefined
-  skip: false
+  skip: true
 "#record_timestamps=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#record_timestamps?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#reload":
   types:
   - undefined
@@ -2074,7 +2077,7 @@
 "#restore_attributes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#rollback_active_record_state!":
   types:
   - undefined
@@ -2086,7 +2089,7 @@
 "#run_callbacks":
   types:
   - undefined
-  skip: false
+  skip: true
 "#save":
   types:
   - undefined
@@ -2098,23 +2101,23 @@
 "#saved_change_to_attribute":
   types:
   - undefined
-  skip: false
+  skip: true
 "#saved_change_to_attribute?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#saved_changes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#saved_changes?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#schema_format":
   types:
   - undefined
-  skip: false
+  skip: true
 "#serializable_hash":
   types:
   - undefined
@@ -2122,11 +2125,11 @@
 "#skip_time_zone_conversion_for_attributes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#skip_time_zone_conversion_for_attributes?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#slice":
   types:
   - undefined
@@ -2134,55 +2137,55 @@
 "#store_full_sti_class":
   types:
   - undefined
-  skip: false
+  skip: true
 "#store_full_sti_class?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#table_name_prefix":
   types:
   - undefined
-  skip: false
+  skip: true
 "#table_name_prefix?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#table_name_suffix":
   types:
   - undefined
-  skip: false
+  skip: true
 "#table_name_suffix?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#time_zone_aware_attributes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#time_zone_aware_types":
   types:
   - undefined
-  skip: false
+  skip: true
 "#time_zone_aware_types?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#timestamped_migrations":
   types:
   - undefined
-  skip: false
+  skip: true
 "#to_gid":
   types:
   - undefined
-  skip: false
+  skip: true
 "#to_gid_param":
   types:
   - undefined
-  skip: false
+  skip: true
 "#to_global_id":
   types:
   - undefined
-  skip: false
+  skip: true
 "#to_key":
   types:
   - undefined
@@ -2198,15 +2201,15 @@
 "#to_sgid":
   types:
   - undefined
-  skip: false
+  skip: true
 "#to_sgid_param":
   types:
   - undefined
-  skip: false
+  skip: true
 "#to_signed_global_id":
   types:
   - undefined
-  skip: false
+  skip: true
 "#toggle":
   types:
   - undefined
@@ -2230,7 +2233,7 @@
 "#type_for_attribute":
   types:
   - undefined
-  skip: false
+  skip: true
 "#update":
   types:
   - undefined
@@ -2265,7 +2268,7 @@
   skip: false
 "#validate":
   types:
-  - undefined
+  - Boolean
   skip: false
 "#validate!":
   types:
@@ -2274,43 +2277,43 @@
 "#validates_absence_of":
   types:
   - undefined
-  skip: false
+  skip: true
 "#validates_acceptance_of":
   types:
   - undefined
-  skip: false
+  skip: true
 "#validates_confirmation_of":
   types:
   - undefined
-  skip: false
+  skip: true
 "#validates_exclusion_of":
   types:
   - undefined
-  skip: false
+  skip: true
 "#validates_format_of":
   types:
   - undefined
-  skip: false
+  skip: true
 "#validates_inclusion_of":
   types:
   - undefined
-  skip: false
+  skip: true
 "#validates_length_of":
   types:
   - undefined
-  skip: false
+  skip: true
 "#validates_numericality_of":
   types:
   - undefined
-  skip: false
+  skip: true
 "#validates_presence_of":
   types:
   - undefined
-  skip: false
+  skip: true
 "#validates_size_of":
   types:
   - undefined
-  skip: false
+  skip: true
 "#validates_with":
   types:
   - undefined
@@ -2318,19 +2321,19 @@
 "#validation_context":
   types:
   - undefined
-  skip: false
+  skip: true
 "#verbose_query_logs":
   types:
   - undefined
-  skip: false
+  skip: true
 "#warn_on_records_fetched_greater_than":
   types:
   - undefined
-  skip: false
+  skip: true
 "#will_save_change_to_attribute?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#with_lock":
   types:
   - undefined
@@ -2342,4 +2345,4 @@
 "#write_attribute":
   types:
   - undefined
-  skip: false
+  skip: true
