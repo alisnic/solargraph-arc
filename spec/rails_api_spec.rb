@@ -54,37 +54,8 @@ RSpec.describe SolarRails::RailsApi do
     assert_matches_definitions(map, "ActiveRecord::Base", :activerecord5, print_stats: true)
   end
 
-  it "provides Rails Model api" do
-    map = use_workspace "./spec/rails5" do |root|
-      root.write_file 'app/models/model.rb', <<~EOS
-        class ApplicationRecord < ActiveRecord::Base
-          self.abstract_class = true
-        end
-
-        class Model < ActiveRecord::Base
-        end
-        Model.find
-        Model.whe
-        Model.where.not(foo: "bar").whe
-        Model.sel
-        Model.ord
-      EOS
-    end
-
-    filename = './app/models/model.rb'
-
-    binding.pry
-    # map.get_methods("Model", scope: :class, visibility: [:public])
-    expect(completions_for(map, filename, [6, 9]))
-      .to include("find" => ["self", "Array<self>"])
-
-    expect(completions_for(map, filename, [7, 8]))
-      .to include("where" => ["self", "ActiveRecord::Relation", "ActiveRecord::QueryMethods::WhereChain"])
-
-    # expect(completions_for(map, filename, [8, 30]))
-    #   .to include("where" => ["self", "ActiveRecord::Relation", "ActiveRecord::QueryMethods::WhereChain"])
-
-    pp completions_for(map, filename, [9, 9])
-    pp completions_for(map, filename, [10, 9])
+  it "provides completions for ActionController::Base" do
+    map = use_workspace "./spec/rails5"
+    assert_matches_definitions(map, "ActionController::Base", :actioncontroller5, print_stats: true)
   end
 end

@@ -3,24 +3,47 @@ require File.join(Dir.pwd, ARGV.first, 'config/environment')
 class Model < ActiveRecord::Base
 end
 
-instance_methods = (ActiveRecord::Base.instance_methods(true) - Object.methods).sort.reject {|m| m.to_s.start_with?("_") || !Model.new.respond_to?(m) }
-
-class_methods = (ActiveRecord::Base.methods(true) - Object.methods).sort.reject {|m| m.to_s.start_with?("_") || !ActiveRecord::Base.respond_to?(m) }
-
-result = {}
-
-class_methods.each do |meth|
-  result[".#{meth}"] = {
-    types: ["undefined"],
-    skip:  false
-  }
+def own_instance_methods(klass, test=klass.new)
+  (klass.instance_methods(true) - Object.methods)
+    .sort
+    .reject {|m| m.to_s.start_with?("_") || !test.respond_to?(m) }
 end
 
-instance_methods.each do |meth|
-  result["##{meth}"] = {
-    types: ["undefined"],
-    skip:  false
-  }
+def own_class_methods(klass)
+  (ActiveRecord::Base.methods(true) - Object.methods)
+    .sort
+    .reject {|m| m.to_s.start_with?("_") || !klass.respond_to?(m) }
 end
 
-File.write("definitions.yml", result.deep_stringify_keys.to_yaml)
+def build_report(class_methods, instance_methods)
+  result = {}
+
+  class_methods.each do |meth|
+    result[".#{meth}"] = {
+      types: ["undefined"],
+      skip:  false
+    }
+  end
+
+  instance_methods.each do |meth|
+    result["##{meth}"] = {
+      types: ["undefined"],
+      skip:  false
+    }
+  end
+
+  result
+end
+
+report = build_report(
+  own_class_methods(ActiveRecord::Base),
+  own_instance_methods(ActiveRecord::Base, Model.new)
+)
+
+# File.write("activerecord.yml", result.deep_stringify_keys.to_yaml)
+
+report = build_report(
+  own_class_methods(ActionController::Base),
+  own_instance_methods(ActionController::Base)
+)
+File.write("actioncontroller.yml", report.deep_stringify_keys.to_yaml)
