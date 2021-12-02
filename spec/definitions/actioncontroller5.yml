@@ -10,11 +10,11 @@
 ".logger":
   types:
   - undefined
-  skip: false
+  skip: true
 ".logger=":
   types:
   - undefined
-  skip: false
+  skip: true
 ".normalize_callback_params":
   types:
   - undefined
@@ -34,11 +34,11 @@
 "#action_has_layout=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#action_has_layout?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#action_methods":
   types:
   - undefined
@@ -50,35 +50,35 @@
 "#action_name=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#after_sign_in_path_for":
   types:
   - undefined
-  skip: false
+  skip: true
 "#after_sign_out_path_for":
   types:
   - undefined
-  skip: false
+  skip: true
 "#alert":
   types:
   - undefined
-  skip: false
+  skip: true
 "#allow_forgery_protection":
   types:
   - undefined
-  skip: false
+  skip: true
 "#allow_forgery_protection=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#allow_params_authentication!":
   types:
   - undefined
-  skip: false
+  skip: true
 "#any_templates?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#append_view_path":
   types:
   - undefined
@@ -86,43 +86,43 @@
 "#asset_host":
   types:
   - undefined
-  skip: false
+  skip: true
 "#asset_host=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#assets_dir":
   types:
   - undefined
-  skip: false
+  skip: true
 "#assets_dir=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#authenticate_or_request_with_http_basic":
   types:
   - undefined
-  skip: false
+  skip: true
 "#authenticate_or_request_with_http_digest":
   types:
   - undefined
-  skip: false
+  skip: true
 "#authenticate_or_request_with_http_token":
   types:
   - undefined
-  skip: false
+  skip: true
 "#authenticate_with_http_basic":
   types:
   - undefined
-  skip: false
+  skip: true
 "#authenticate_with_http_digest":
   types:
   - undefined
-  skip: false
+  skip: true
 "#authenticate_with_http_token":
   types:
   - undefined
-  skip: false
+  skip: true
 "#available_action?":
   types:
   - undefined
@@ -130,23 +130,23 @@
 "#benchmark":
   types:
   - undefined
-  skip: false
+  skip: true
 "#bypass_sign_in":
   types:
   - undefined
-  skip: false
+  skip: true
 "#cache_store":
   types:
   - undefined
-  skip: false
+  skip: true
 "#cache_store=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#combined_fragment_cache_key":
   types:
   - undefined
-  skip: false
+  skip: true
 "#config":
   types:
   - undefined
@@ -154,11 +154,11 @@
 "#content_type":
   types:
   - undefined
-  skip: false
+  skip: true
 "#content_type=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#controller_name":
   types:
   - undefined
@@ -170,55 +170,55 @@
 "#db_runtime":
   types:
   - undefined
-  skip: false
+  skip: true
 "#db_runtime=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_asset_host_protocol":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_asset_host_protocol=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_form_builder":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_protect_from_forgery":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_protect_from_forgery=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_render":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_static_extension":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_static_extension=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_url_options":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_url_options=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#default_url_options?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#details_for_lookup":
   types:
   - undefined
@@ -226,11 +226,11 @@
 "#devise_controller?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#devise_parameter_sanitizer":
   types:
   - undefined
-  skip: false
+  skip: true
 "#dispatch":
   types:
   - undefined
@@ -238,79 +238,79 @@
 "#edit_polymorphic_path":
   types:
   - undefined
-  skip: false
+  skip: true
 "#edit_polymorphic_url":
   types:
   - undefined
-  skip: false
+  skip: true
 "#enable_fragment_cache_logging":
   types:
   - undefined
-  skip: false
+  skip: true
 "#enable_fragment_cache_logging=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#etag_with_template_digest":
   types:
   - undefined
-  skip: false
+  skip: true
 "#etag_with_template_digest=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#etag_with_template_digest?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#etaggers":
   types:
   - undefined
-  skip: false
+  skip: true
 "#etaggers=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#etaggers?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#expire_fragment":
   types:
   - undefined
-  skip: false
+  skip: true
 "#expires_in":
   types:
   - undefined
-  skip: false
+  skip: true
 "#expires_now":
   types:
   - undefined
-  skip: false
+  skip: true
 "#flash":
   types:
-  - undefined
+  - ActionDispatch::Flash::FlashHash
   skip: false
 "#force_ssl_redirect":
   types:
   - undefined
-  skip: false
+  skip: true
 "#forgery_protection_origin_check":
   types:
   - undefined
-  skip: false
+  skip: true
 "#forgery_protection_origin_check=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#forgery_protection_strategy":
   types:
   - undefined
-  skip: false
+  skip: true
 "#forgery_protection_strategy=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#formats":
   types:
   - undefined
@@ -318,31 +318,31 @@
 "#formats=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#fragment_cache_key":
   types:
   - undefined
-  skip: false
+  skip: true
 "#fragment_cache_keys":
   types:
   - undefined
-  skip: false
+  skip: true
 "#fragment_cache_keys=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#fragment_cache_keys?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#fragment_exist?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#fresh_when":
   types:
   - undefined
-  skip: false
+  skip: true
 "#full_url_for":
   types:
   - undefined
@@ -350,111 +350,111 @@
 "#handle_unverified_request":
   types:
   - undefined
-  skip: false
+  skip: true
 "#handler_for_rescue":
   types:
   - undefined
-  skip: false
+  skip: true
 "#head":
   types:
   - undefined
-  skip: false
+  skip: true
 "#headers":
   types:
   - undefined
-  skip: false
+  skip: true
 "#helpers":
   types:
   - undefined
-  skip: false
+  skip: true
 "#helpers_path":
   types:
   - undefined
-  skip: false
+  skip: true
 "#helpers_path=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#helpers_path?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#http_cache_forever":
   types:
   - undefined
-  skip: false
+  skip: true
 "#include_all_helpers":
   types:
   - undefined
-  skip: false
+  skip: true
 "#include_all_helpers=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#include_all_helpers?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#instrument_fragment_cache":
   types:
   - undefined
-  skip: false
+  skip: true
 "#is_flashing_format?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#is_navigational_format?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#javascripts_dir":
   types:
   - undefined
-  skip: false
+  skip: true
 "#javascripts_dir=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#l":
   types:
   - undefined
-  skip: false
+  skip: true
 "#locale":
   types:
   - undefined
-  skip: false
+  skip: true
 "#locale=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#localize":
   types:
   - undefined
-  skip: false
+  skip: true
 "#location":
   types:
   - undefined
-  skip: false
+  skip: true
 "#location=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#log_warning_on_csrf_failure":
   types:
   - undefined
-  skip: false
+  skip: true
 "#log_warning_on_csrf_failure=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#logger":
   types:
   - undefined
-  skip: false
+  skip: true
 "#logger=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#lookup_context":
   types:
   - undefined
@@ -462,7 +462,7 @@
 "#main_app":
   types:
   - undefined
-  skip: false
+  skip: true
 "#method_for_action":
   types:
   - undefined
@@ -470,42 +470,42 @@
 "#middleware_stack":
   types:
   - undefined
-  skip: false
+  skip: true
 "#middleware_stack=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#middleware_stack?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#mimes_for_respond_to":
   types:
   - undefined
-  skip: false
+  skip: true
 "#mimes_for_respond_to=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#mimes_for_respond_to?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#new_polymorphic_path":
   types:
   - undefined
-  skip: false
+  skip: true
 "#new_polymorphic_url":
   types:
   - undefined
-  skip: false
+  skip: true
 "#notice":
   types:
   - undefined
-  skip: false
+  skip: true
 "#params":
   types:
-  - undefined
+  - ActionController::Parameters
   skip: false
 "#params=":
   types:
@@ -514,19 +514,19 @@
 "#per_form_csrf_tokens":
   types:
   - undefined
-  skip: false
+  skip: true
 "#per_form_csrf_tokens=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#perform_caching":
   types:
   - undefined
-  skip: false
+  skip: true
 "#perform_caching=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#performed?":
   types:
   - undefined
@@ -550,7 +550,7 @@
 "#read_fragment":
   types:
   - undefined
-  skip: false
+  skip: true
 "#redirect_back":
   types:
   - undefined
@@ -562,11 +562,11 @@
 "#relative_url_root":
   types:
   - undefined
-  skip: false
+  skip: true
 "#relative_url_root=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#render":
   types:
   - undefined
@@ -585,52 +585,52 @@
   skip: false
 "#request":
   types:
-  - undefined
+  - ActionDispatch::Request
   skip: false
 "#request=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#request_forgery_protection_token":
   types:
   - undefined
-  skip: false
+  skip: true
 "#request_forgery_protection_token=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#request_format":
   types:
   - undefined
-  skip: false
+  skip: true
 "#request_http_basic_authentication":
   types:
   - undefined
-  skip: false
+  skip: true
 "#request_http_digest_authentication":
   types:
   - undefined
-  skip: false
+  skip: true
 "#request_http_token_authentication":
   types:
   - undefined
-  skip: false
+  skip: true
 "#rescue_handlers":
   types:
   - undefined
-  skip: false
+  skip: true
 "#rescue_handlers=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#rescue_handlers?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#rescue_with_handler":
   types:
   - undefined
-  skip: false
+  skip: true
 "#reset_session":
   types:
   - undefined
@@ -642,27 +642,27 @@
 "#respond_with":
   types:
   - undefined
-  skip: false
+  skip: true
 "#responder":
   types:
   - undefined
-  skip: false
+  skip: true
 "#responder=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#responder?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#response":
   types:
-  - undefined
+  - ActionDispatch::Response
   skip: false
 "#response=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#response_body":
   types:
   - undefined
@@ -682,7 +682,7 @@
 "#run_callbacks":
   types:
   - undefined
-  skip: false
+  skip: true
 "#send_action":
   types:
   - undefined
@@ -690,14 +690,14 @@
 "#send_data":
   types:
   - undefined
-  skip: false
+  skip: true
 "#send_file":
   types:
   - undefined
-  skip: false
+  skip: true
 "#session":
   types:
-  - undefined
+  - ActionDispatch::Request::Session
   skip: false
 "#set_request!":
   types:
@@ -710,71 +710,71 @@
 "#show_detailed_exceptions?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#sign_in":
   types:
   - undefined
-  skip: false
+  skip: true
 "#sign_in_and_redirect":
   types:
   - undefined
-  skip: false
+  skip: true
 "#sign_out":
   types:
   - undefined
-  skip: false
+  skip: true
 "#sign_out_all_scopes":
   types:
   - undefined
-  skip: false
+  skip: true
 "#sign_out_and_redirect":
   types:
   - undefined
-  skip: false
+  skip: true
 "#signed_in?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#signed_in_root_path":
   types:
   - undefined
-  skip: false
+  skip: true
 "#stale?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#status":
   types:
   - undefined
-  skip: false
+  skip: true
 "#status=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#store_location_for":
   types:
   - undefined
-  skip: false
+  skip: true
 "#stored_location_for":
   types:
   - undefined
-  skip: false
+  skip: true
 "#stylesheets_dir":
   types:
   - undefined
-  skip: false
+  skip: true
 "#stylesheets_dir=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#t":
   types:
   - undefined
-  skip: false
+  skip: true
 "#template_exists?":
   types:
   - undefined
-  skip: false
+  skip: true
 "#to_a":
   types:
   - undefined
@@ -782,7 +782,7 @@
 "#translate":
   types:
   - undefined
-  skip: false
+  skip: true
 "#url_for":
   types:
   - undefined
@@ -794,7 +794,7 @@
 "#urlsafe_csrf_tokens":
   types:
   - undefined
-  skip: false
+  skip: true
 "#view_assigns":
   types:
   - undefined
@@ -802,40 +802,40 @@
 "#view_cache_dependencies":
   types:
   - undefined
-  skip: false
+  skip: true
 "#view_context":
   types:
   - undefined
-  skip: false
+  skip: true
 "#view_context_class":
   types:
   - undefined
-  skip: false
+  skip: true
 "#view_context_class=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#view_paths":
   types:
   - undefined
-  skip: false
+  skip: true
 "#view_renderer":
   types:
   - undefined
-  skip: false
+  skip: true
 "#view_runtime":
   types:
   - undefined
-  skip: false
+  skip: true
 "#view_runtime=":
   types:
   - undefined
-  skip: false
+  skip: true
 "#warden":
   types:
   - undefined
-  skip: false
+  skip: true
 "#write_fragment":
   types:
   - undefined
-  skip: false
+  skip: true
