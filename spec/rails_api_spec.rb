@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe SolarRails::RailsApi do
-  let(:api_map) { Solargraph::ApiMap.new }
-
   before do
     Solargraph::Convention.register SolarRails::Convention
   end
