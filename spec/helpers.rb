@@ -7,8 +7,43 @@ module Helpers
     source
   end
 
-  def assert_matches_definitions(class_name, defition_name)
-    #
+  def assert_matches_definitions(map, class_name, defition_name, update: false)
+    definitions = YAML.load_file("spec/definitions/#{defition_name}.yml")
+
+    class_methods = map.get_methods(
+      class_name,
+      scope: :class, visibility: [:public, :protected, :private]
+    )
+
+    instance_methods = map.get_methods(
+      class_name,
+      scope: :instance, visibility: [:public, :protected, :private]
+    )
+
+    definitions.each do |meth, data|
+      pin = if meth.start_with?(".")
+        class_methods.find {|p| p.name == meth[1..-1] }
+      elsif meth.start_with?("#")
+        instance_methods.find {|p| p.name == meth[1..-1] }
+      end
+
+      if pin
+        assert_entry_valid(pin, data)
+      else
+        # expect(pin).to be_present, "expected to find completion for #{meth}"
+        # puts "#{meth} was not found in completions"
+      end
+    end
+  end
+
+  def assert_entry_valid(pin, data, update: false)
+    effective_type = pin.return_type.map(&:tag)
+    specified_type = data["types"]
+
+    expect(effective_type).to(
+      eq(specified_type),
+      "#{pin.path} return type is wrong. Expected #{specified_type}, got: #{effective_type}"
+    )
   end
 
   def callstack
@@ -33,7 +68,7 @@ module Helpers
     map      = nil
 
     Dir.chdir folder do
-      yield injector
+      yield injector if block_given?
       map = Solargraph::ApiMap.load("./")
       injector.files.each {|f| File.delete(f) }
     end
