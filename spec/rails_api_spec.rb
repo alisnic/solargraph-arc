@@ -24,6 +24,26 @@ RSpec.describe SolarRails::RailsApi do
       .to include("respond_to", "redirect_to", "response", "request", "render")
   end
 
+  it "can auto-complete inside migrations" do
+    map = use_workspace "./spec/rails5" do |root|
+      root.write_file 'db/migrate/20130502114652_create_things.rb', <<~EOS
+        class CreateThings < ActiveRecord::Migration[5.2]
+          def self.up
+            crea
+          end
+
+          def change
+            crea
+          end
+        end
+      EOS
+    end
+
+    filename = './db/migrate/20130502114652_create_things.rb'
+    expect(completion_at(filename, [2, 7], map)).to include("create_table")
+    expect(completion_at(filename, [6, 7], map)).to include("create_table")
+  end
+
   it "provides completions for ActiveRecord::Base" do
     map = use_workspace "./spec/rails5"
 

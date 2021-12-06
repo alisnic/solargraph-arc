@@ -15,7 +15,7 @@ module SolarRails
   class Convention < Solargraph::Convention::Base
     def global yard_map
       Solargraph::Environ.new(
-        pins: SolarRails::RailsApi.instance.process(yard_map)
+        pins: SolarRails::RailsApi.instance.global(yard_map)
       )
     end
 
@@ -30,6 +30,7 @@ module SolarRails
       pins += Autoload.instance.process(source_map, ns, ds)
       pins += Devise.instance.process(source_map, ns)
       pins += Delegate.instance.process(source_map, ns)
+      pins += RailsApi.instance.local(source_map, ns)
 
       Solargraph::Environ.new(pins: pins)
     end

@@ -4,7 +4,7 @@ module SolarRails
       @instance ||= self.new
     end
 
-    def process yard_map
+    def global yard_map
       ann    = File.read(File.dirname(__FILE__) + "/annotations.rb")
       source = Solargraph::Source.load_string(ann, "annotations.rb")
       map    = Solargraph::SourceMap.map(source)
@@ -48,6 +48,23 @@ module SolarRails
       ]
 
       map.pins + definitions + overrides
+    end
+
+    def local(source_map, ns)
+      return [] unless source_map.filename.include?("db/migrate")
+
+      [
+        Util.build_module_include(
+          ns,
+          "ActiveRecord::ConnectionAdapters::SchemaStatements",
+          Util.build_location(source_map.source.node, ns.filename)
+        ),
+        Util.build_module_extend(
+          ns,
+          "ActiveRecord::ConnectionAdapters::SchemaStatements",
+          Util.build_location(source_map.source.node, ns.filename)
+        )
+      ]
     end
   end
 end

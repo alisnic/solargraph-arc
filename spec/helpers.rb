@@ -135,6 +135,10 @@ module Helpers
     map.pins.select {|p| p.filename }
   end
 
+  def file_pins(filename, map)
+    map.pins.select {|p| p.filename && p.filename.include?(filename) }
+  end
+
   def methods_for(pin: nil, path: nil)
     pin ||= find_pin(path)
     api_map.get_complex_type_methods(pin.return_type)

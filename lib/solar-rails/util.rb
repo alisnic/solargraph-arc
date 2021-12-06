@@ -21,6 +21,14 @@ module SolarRails
       )
     end
 
+    def self.build_module_extend(ns, module_name, location)
+      Solargraph::Pin::Reference::Extend.new(
+        closure:  ns,
+        name:     module_name,
+        location: location
+      )
+    end
+
     def self.dummy_location(path)
       Solargraph::Location.new(
         path,
