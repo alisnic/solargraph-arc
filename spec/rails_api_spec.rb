@@ -39,6 +39,23 @@ RSpec.describe SolarRails::RailsApi do
     expect(completion_at(filename, [1, 5], map)).to include("resource")
   end
 
+  it "can auto-complete inside mailers" do
+    map = use_workspace "./spec/rails5" do |root|
+      root.write_file 'app/mailers/test_mailer.rb', <<~EOS
+        class TestMailer < ActionMailer::Base
+          defa
+          def welcome_email
+            ma
+          end
+        end
+      EOS
+    end
+
+    filename = './app/mailers/test_mailer.rb'
+    pp completion_at(filename, [1, 6], map)
+    pp completion_at(filename, [3, 6], map)
+  end
+
   it "can auto-complete inside migrations" do
     map = use_workspace "./spec/rails5" do |root|
       root.write_file 'db/migrate/20130502114652_create_things.rb', <<~EOS
