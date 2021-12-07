@@ -7,43 +7,58 @@ def own_instance_methods(klass, test=klass.new)
   (klass.instance_methods(true) - Object.methods)
     .sort
     .reject {|m| m.to_s.start_with?("_") || !test.respond_to?(m) }
+    .map {|m| klass.instance_method(m) }
+    .select {|m| m.source_location && m.source_location.first.include?("gem") }
 end
 
 def own_class_methods(klass)
   (ActiveRecord::Base.methods(true) - Object.methods)
     .sort
     .reject {|m| m.to_s.start_with?("_") || !klass.respond_to?(m) }
+    .map {|m| klass.method(m) }
+    .select {|m| m.source_location && m.source_location.first.include?("gem") }
 end
 
-def build_report(class_methods, instance_methods)
+def build_report(klass, test: klass.new)
   result = {}
+  distribution = {}
 
-  class_methods.each do |meth|
-    result[".#{meth}"] = {
+  own_class_methods(klass).each do |meth|
+    distribution[meth.source_location.first] ||= []
+    distribution[meth.source_location.first] << ".#{meth.name}"
+
+    result["#{klass.to_s}.#{meth.name}"] = {
       types: ["undefined"],
       skip:  false
     }
   end
 
-  instance_methods.each do |meth|
-    result["##{meth}"] = {
+  own_instance_methods(klass, test).each do |meth|
+    distribution[meth.source_location.first] ||= []
+    distribution[meth.source_location.first] << "##{meth.name}"
+
+    result["#{klass.to_s}##{meth.name}"] = {
       types: ["undefined"],
       skip:  false
     }
   end
 
+  pp distribution
   result
 end
 
-report = build_report(
-  own_class_methods(ActiveRecord::Base),
-  own_instance_methods(ActiveRecord::Base, Model.new)
-)
+# report = build_report(ActiveRecord::Base, test: Model.new)
+# report = build_report(ActionController::Base)
+report = build_report(String)
+
+binding.pry
+
 
 # File.write("activerecord.yml", result.deep_stringify_keys.to_yaml)
 
-report = build_report(
-  own_class_methods(ActionController::Base),
-  own_instance_methods(ActionController::Base)
-)
-File.write("actioncontroller.yml", report.deep_stringify_keys.to_yaml)
+# report = build_report(
+#   ActionController::Base,
+#   own_class_methods(ActionController::Base),
+#   own_instance_methods(ActionController::Base)
+# )
+# File.write("actioncontroller.yml", report.deep_stringify_keys.to_yaml)
