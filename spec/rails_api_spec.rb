@@ -52,8 +52,8 @@ RSpec.describe SolarRails::RailsApi do
     end
 
     filename = './app/mailers/test_mailer.rb'
-    pp completion_at(filename, [1, 6], map)
-    pp completion_at(filename, [3, 6], map)
+    expect(completion_at(filename, [1, 6], map)).to include("default")
+    expect(completion_at(filename, [3, 6], map)).to include("mail")
   end
 
   it "can auto-complete inside migrations" do
