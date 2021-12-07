@@ -24,6 +24,21 @@ RSpec.describe SolarRails::RailsApi do
       .to include("respond_to", "redirect_to", "response", "request", "render")
   end
 
+  xit "can auto-complete inside routes" do
+    Solargraph.logger.level = Logger::DEBUG
+
+    map = use_workspace "./spec/rails5" do |root|
+      root.write_file 'config/routes.rb', <<~EOS
+        Rails.application.routes.draw do
+          res
+        end
+      EOS
+    end
+
+    filename = './config/routes.rb'
+    expect(completion_at(filename, [1, 5], map)).to include("resource")
+  end
+
   it "can auto-complete inside migrations" do
     map = use_workspace "./spec/rails5" do |root|
       root.write_file 'db/migrate/20130502114652_create_things.rb', <<~EOS

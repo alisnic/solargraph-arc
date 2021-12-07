@@ -139,13 +139,13 @@ module Helpers
     map.pins.select {|p| p.filename && p.filename.include?(filename) }
   end
 
-  def methods_for(pin: nil, path: nil)
-    pin ||= find_pin(path)
-    api_map.get_complex_type_methods(pin.return_type)
+  def methods_for(pin: nil, path: nil, map: api_map)
+    pin ||= find_pin(path, map)
+    map.get_complex_type_methods(pin.return_type)
   end
 
-  def local_methods_for(pin: nil, path: nil)
-    methods_for(pin: pin, path: path).select {|m| m.filename }
+  def local_methods_for(pin: nil, path: nil, map: api_map)
+    methods_for(pin: pin, path: path, map: map).select {|m| m.filename }
   end
 
   def completion_at(filename, position, map=api_map)
