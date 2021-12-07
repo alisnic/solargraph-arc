@@ -24,18 +24,26 @@ RSpec.describe SolarRails::RailsApi do
       .to include("respond_to", "redirect_to", "response", "request", "render")
   end
 
-  xit "can auto-complete inside routes" do
+  it "can auto-complete inside routes" do
     Solargraph.logger.level = Logger::DEBUG
 
     map = use_workspace "./spec/rails5" do |root|
       root.write_file 'config/routes.rb', <<~EOS
+        Rails.app
         Rails.application.routes.draw do
           res
         end
       EOS
     end
 
+    expect(find_pin("Rails.application", map).return_type.tag)
+      .to eq("Rails::Application")
+
+    expect(find_pin("Rails::Application#routes", map).return_type.tag)
+      .to eq("ActionDispatch::Routing::RouteSet")
+
     filename = './config/routes.rb'
+    binding.pry
     expect(completion_at(filename, [1, 5], map)).to include("resource")
   end
 

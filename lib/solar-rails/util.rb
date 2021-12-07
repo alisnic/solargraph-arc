@@ -1,14 +1,19 @@
 module SolarRails
   module Util
-    def self.build_public_method(ns, name, types: nil, location:, attribute: false)
+    def self.build_public_method(ns, name, types: nil, yieldtypes: nil, location: nil, attribute: false, scope: :instance)
       opts = {
         name:      name,
         location:  location,
         closure:   ns,
-        scope:     :instance,
+        scope:     scope,
         attribute: attribute
       }
-      opts[:comments] = "@return [#{types.join(',')}]" if types
+
+      comments = []
+      comments << "@return [#{types.join(',')}]" if types
+      comments << "@yieldself [#{yieldtypes.join(',')}]" if yieldtypes
+
+      opts[:comments] = comments.join("\n")
 
       Solargraph::Pin::Method.new(opts)
     end

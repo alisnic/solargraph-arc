@@ -4,6 +4,7 @@ module SolarRails
 
     RUBY_TYPES = {
       decimal: 'BigDecimal',
+      float: 'BigDecimal',
       integer: 'Integer',
       date: 'Date',
       datetime: 'ActiveSupport::TimeWithZone',
