@@ -638,7 +638,8 @@
   skip: false
 ".find_by":
   types:
-  - undefined
+  - self
+  - nil
   skip: false
 ".find_by!":
   types:
