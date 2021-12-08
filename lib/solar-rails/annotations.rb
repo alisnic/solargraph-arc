@@ -17,6 +17,27 @@
 #     extend AbstractController::Callbacks::ClassMethods
 #     extend ActionController::RequestForgeryProtection::ClassMethods
 #   end
+#   class ActionDispatch::Routing::Mapper
+#     include ActionDispatch::Routing::Mapper::Base
+#     include ActionDispatch::Routing::Mapper::HttpHelpers
+#     include ActionDispatch::Routing::Mapper::Redirection
+#     include ActionDispatch::Routing::Mapper::Scoping
+#     include ActionDispatch::Routing::Mapper::Concerns
+#     include ActionDispatch::Routing::Mapper::Resources
+#     include ActionDispatch::Routing::Mapper::CustomUrls
+#   end
+#   class Rails
+#     # @return [Rails::Application]
+#     def self.application; end
+#   end
+#   class Rails::Application
+#     # @return [ActionDispatch::Routing::RouteSet]
+#     def routes; end
+#   end
+#   class ActionDispatch::Routing::RouteSet
+#     # @yieldself [ActionDispatch::Routing::Mapper]
+#     def draw; end
+#   end
 #   class ActiveRecord::Base
 #     extend ActiveRecord::QueryMethods
 #     extend ActiveRecord::FinderMethods

@@ -25,26 +25,20 @@ RSpec.describe SolarRails::RailsApi do
   end
 
   it "can auto-complete inside routes" do
-    Solargraph.logger.level = Logger::DEBUG
-
     map = use_workspace "./spec/rails5" do |root|
       root.write_file 'config/routes.rb', <<~EOS
-        Rails.app
         Rails.application.routes.draw do
           res
+          resource :things do
+            res
+          end
         end
       EOS
     end
 
-    expect(find_pin("Rails.application", map).return_type.tag)
-      .to eq("Rails::Application")
-
-    expect(find_pin("Rails::Application#routes", map).return_type.tag)
-      .to eq("ActionDispatch::Routing::RouteSet")
-
     filename = './config/routes.rb'
-    binding.pry
-    expect(completion_at(filename, [1, 5], map)).to include("resource")
+    expect(completion_at(filename, [1, 5], map)).to include("resources")
+    expect(completion_at(filename, [3, 7], map)).to include("resources")
   end
 
   it "can auto-complete inside mailers" do
@@ -84,13 +78,24 @@ RSpec.describe SolarRails::RailsApi do
     expect(completion_at(filename, [6, 7], map)).to include("create_table")
   end
 
+  it "provides completions for ActionDispatch::Routing::Mapper" do
+    map = use_workspace "./spec/rails5"
+
+    assert_matches_definitions(
+      map,
+      "ActionDispatch::Routing::Mapper",
+      "rails5/routes",
+      print_stats: true
+    )
+  end
+
   it "provides completions for ActiveRecord::Base" do
     map = use_workspace "./spec/rails5"
 
     assert_matches_definitions(
       map,
       "ActiveRecord::Base",
-      :activerecord5,
+      "rails5/activerecord",
       print_stats: true
     )
   end
@@ -100,7 +105,7 @@ RSpec.describe SolarRails::RailsApi do
     assert_matches_definitions(
       map,
       "ActionController::Base",
-      :actioncontroller5,
+      "rails5/actioncontroller",
       print_stats: true
     )
   end

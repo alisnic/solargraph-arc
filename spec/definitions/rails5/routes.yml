@@ -1,0 +1,185 @@
+---
+ActionDispatch::Routing::Mapper#as:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#authenticate:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#authenticated:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#collection:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#concerns:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#constraints:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#constraints_for:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#controller:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#default_url_options:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#default_url_options=:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#defaults:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#delete:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#devise_confirmation:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#devise_for:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#devise_omniauth_callback:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#devise_password:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#devise_registration:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#devise_scope:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#devise_session:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#devise_unlock:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#direct:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#get:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#has_named_route?:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#match:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#member:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#mount:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#namespace:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#nested:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#patch:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#post:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#put:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#raise_no_devise_method_error!:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#raise_no_secret_key:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#redirect:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#resolve:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#resource:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#resources:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#resources_path_names:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#root:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#scope:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#set_omniauth_path_prefix!:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#shallow:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#shallow?:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#unauthenticated:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#with_default_scope:
+  types:
+  - undefined
+  skip: false
+ActionDispatch::Routing::Mapper#with_devise_exclusive_scope:
+  types:
+  - undefined
+  skip: false

@@ -6,7 +6,7 @@ end
 def own_instance_methods(klass, test=klass.new)
   (klass.instance_methods(true) - Object.methods)
     .sort
-    .reject {|m| m.to_s.start_with?("_") || !test.respond_to?(m) }
+    .reject {|m| m.to_s.start_with?("_") || (test && !test.respond_to?(m)) }
     .map {|m| klass.instance_method(m) }
     .select {|m| m.source_location && m.source_location.first.include?("gem") }
 end
@@ -49,7 +49,11 @@ end
 
 # report = build_report(ActiveRecord::Base, test: Model.new)
 # report = build_report(ActionController::Base)
-report = build_report(String)
+# report = build_report(String)
+
+Rails.application.routes.draw do
+  pp build_report(self.class, test: false)
+end
 
 binding.pry
 

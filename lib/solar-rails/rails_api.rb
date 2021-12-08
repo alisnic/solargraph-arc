@@ -20,24 +20,7 @@ module SolarRails
         gates: ["ActionController::Base"]
       )
 
-      # rails = Solargraph::Pin::Namespace.new(name: "Rails")
-      app = Solargraph::Pin::Namespace.new(
-        name:    "Rails::Application"
-        # closure: rails
-      )
-
-      # routeset = Solargraph::Pin::Namespace.new(
-      #   name:  "ActionDispatch::Routing::RouteSet",
-      #   gates: ["ActionDispatch::Routing::RouteSet"]
-      # )
-
       definitions = [
-        # Util.build_public_method(
-        #   rails,
-        #   "application",
-        #   scope: :class,
-        #   types: ["Rails::Application"]
-        # ),
         Util.build_public_method(
           ns,
           "response",
@@ -60,12 +43,6 @@ module SolarRails
           ns,
           "flash",
           types: ["ActionDispatch::Flash::FlashHash"],
-          location: Util.dummy_location("whatever.rb")
-        ),
-        Util.build_public_method(
-          app,
-          "routes",
-          types: ["ActionDispatch::Routing::RouteSet"],
           location: Util.dummy_location("whatever.rb")
         ),
         Solargraph::Pin::Reference::Override.from_comment(

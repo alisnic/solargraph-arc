@@ -26,6 +26,10 @@ module Helpers
     definitions.each do |meth, data|
       next skipped +=1 if data["skip"] && !update
 
+      unless meth.start_with?(".") || meth.start_with?("#")
+        meth = meth.gsub(class_name, "")
+      end
+
       pin = if meth.start_with?(".")
         class_methods.find {|p| p.name == meth[1..-1] }
       elsif meth.start_with?("#")
