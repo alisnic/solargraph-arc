@@ -49,11 +49,11 @@ end
 
 # report = build_report(ActiveRecord::Base, test: Model.new)
 # report = build_report(ActionController::Base)
-# report = build_report(String)
+report = build_report(ActiveJob::Base)
 
-Rails.application.routes.draw do
-  pp build_report(self.class, test: false)
-end
+# Rails.application.routes.draw do
+#   pp build_report(self.class, test: false)
+# end
 
 binding.pry
 

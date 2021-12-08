@@ -1,0 +1,157 @@
+---
+ActiveJob::Base.define_callbacks:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base.direct_descendants:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base.logger:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base.logger=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base.normalize_callback_params:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base.reset_callbacks:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base.set_callback:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base.skip_callback:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#arguments:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#arguments=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#deserialize:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#enqueue:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#executions:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#executions=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#handler_for_rescue:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#job_id:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#job_id=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#locale:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#locale=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#logger:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#logger=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#perform:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#perform_now:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#priority:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#priority=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#provider_job_id:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#provider_job_id=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#queue_name:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#queue_name=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#rescue_handlers:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#rescue_handlers=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#rescue_handlers?:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#rescue_with_handler:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#retry_job:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#run_callbacks:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#scheduled_at:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#scheduled_at=:
+  types:
+  - undefined
+  skip: true
+ActiveJob::Base#serialize:
+  types:
+  - undefined
+  skip: false
+ActiveJob::Base#serialized_arguments=:
+  types:
+  - undefined
+  skip: true

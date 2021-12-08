@@ -10,6 +10,7 @@ require_relative './solar-rails/devise.rb'
 require_relative './solar-rails/walker.rb'
 require_relative './solar-rails/rails_api.rb'
 require_relative './solar-rails/delegate.rb'
+require_relative './solar-rails/storage.rb'
 
 module SolarRails
   class Convention < Solargraph::Convention::Base
@@ -27,6 +28,7 @@ module SolarRails
 
       pins += Schema.instance.process(source_map, ns)
       pins += Relation.instance.process(source_map, ns)
+      pins += Storage.instance.process(source_map, ns)
       pins += Autoload.instance.process(source_map, ns, ds)
       pins += Devise.instance.process(source_map, ns)
       pins += Delegate.instance.process(source_map, ns)

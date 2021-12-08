@@ -78,6 +78,17 @@ RSpec.describe SolarRails::RailsApi do
     expect(completion_at(filename, [6, 7], map)).to include("create_table")
   end
 
+  it "provides completions for ActiveJob::Base" do
+    map = use_workspace "./spec/rails5"
+
+    assert_matches_definitions(
+      map,
+      "ActiveJob::Base",
+      "rails5/activejob",
+      print_stats: true
+    )
+  end
+
   it "provides completions for ActionDispatch::Routing::Mapper" do
     map = use_workspace "./spec/rails5"
 
