@@ -13,6 +13,10 @@ require_relative './solar-rails/delegate.rb'
 require_relative './solar-rails/storage.rb'
 
 module SolarRails
+  class NodeParser
+    extend Solargraph::Parser::Legacy::ClassMethods
+  end
+
   class Convention < Solargraph::Convention::Base
     def global yard_map
       Solargraph::Environ.new(
@@ -25,6 +29,8 @@ module SolarRails
       pins = []
       ds   = source_map.document_symbols.select {|n| n.is_a?(Solargraph::Pin::Namespace) }
       ns   = ds.first
+
+      return EMPTY_ENVIRON unless ns
 
       pins += Schema.instance.process(source_map, ns)
       pins += Relation.instance.process(source_map, ns)

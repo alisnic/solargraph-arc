@@ -21,8 +21,7 @@ module SolarRails
     private
 
     def process_model(source_map, ns)
-      ast    = source_map.source.node
-      walker = Walker.new(ast)
+      walker = Walker.from_source(source_map.source)
       pins   = []
 
       walker.on :send, [nil, :devise] do |ast|
@@ -55,11 +54,13 @@ module SolarRails
       ]
 
       pins + @seen_devise_closures.map do |model_ns|
+        ast = Walker.normalize_ast(source_map.source)
+
         Util.build_public_method(
           ns,
           "current_#{model_ns.name.underscore}",
           types: [model_ns.name, "nil"],
-          location: Util.build_location(source_map.source.node, ns.filename)
+          location: Util.build_location(ast, ns.filename)
         )
       end
     end

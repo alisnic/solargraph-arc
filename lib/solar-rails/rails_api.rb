@@ -56,17 +56,18 @@ module SolarRails
 
     def local(source_map, ns)
       return [] unless source_map.filename.include?("db/migrate")
+      node = Walker.normalize_ast(source_map.source)
 
       [
         Util.build_module_include(
           ns,
           "ActiveRecord::ConnectionAdapters::SchemaStatements",
-          Util.build_location(source_map.source.node, ns.filename)
+          Util.build_location(node, ns.filename)
         ),
         Util.build_module_extend(
           ns,
           "ActiveRecord::ConnectionAdapters::SchemaStatements",
-          Util.build_location(source_map.source.node, ns.filename)
+          Util.build_location(node, ns.filename)
         )
       ]
     end

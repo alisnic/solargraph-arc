@@ -7,8 +7,7 @@ module SolarRails
     def process(source_map, ns)
       return [] unless source_map.filename.include?("app/models")
 
-      ast    = source_map.source.node
-      walker = Walker.new(ast)
+      walker = Walker.from_source(source_map.source)
       pins   = []
 
       walker.on :send, [nil, :has_one_attached] do |ast|

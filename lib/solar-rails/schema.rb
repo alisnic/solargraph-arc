@@ -49,7 +49,7 @@ module SolarRails
 
     def schema
       @extracted_schema ||= begin
-        ast = Solargraph::Parser.parse_with_comments(File.read("db/schema.rb"), "db/schema.rb")
+        ast = NodeParser.parse(File.read("db/schema.rb"), "db/schema.rb")
         extract_schema(ast)
       end
     end
