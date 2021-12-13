@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe SolarRails::Schema do
   let(:schema) do
-    <<-RUBY
+    <<~RUBY
       ActiveRecord::Schema.define(version: 2021_10_20_084658) do
 
         enable_extension "pg_trgm"
@@ -41,7 +41,7 @@ RSpec.describe SolarRails::Schema do
     assert_public_instance_method(map, "Account#extra", "Hash") do |pin|
       expect(pin.location.range.to_hash).to eq({
         :start => { :line => 5, :character => 0 },
-        :end => { :line => 5, :character => 10 }
+        :end => { :line => 5, :character => 4 }
       })
     end
 
