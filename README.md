@@ -14,6 +14,12 @@ database columns, which requires an additonal gem. This plugin just parses db/sc
 
 After all the rough edges are ironed out, I will attempt to upstream this approach in solargraph-rails
 
+# Supported Ruby/Rails versions
+
+This gem is tested on:
+- Ruby 2.5, 2.6, and 2.7
+- Rails 5.2.6 and Rails 6.1.4
+
 # Usage
 
 1. clone repo somewhere `git clone git@github.com:alisnic/solar-rails.git`

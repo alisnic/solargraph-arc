@@ -1,8 +1,6 @@
 module Helpers
   def load_string(filename, str)
-    source = build_source(filename, str)
-    # map = Solargraph::SourceMap.map(source)
-    # api_map.catalog Solargraph::Bench.new(source_maps: [map])
+    source = Solargraph::Source.load_string(str, filename)
     api_map.map(source)
     source
   end
@@ -80,10 +78,6 @@ module Helpers
     end
   end
 
-  def callstack
-    caller.reject {|f| f.include?("pry") || f.include?("rspec") }
-  end
-
   class Injector
     attr_reader :files
     def initialize(folder)
@@ -119,10 +113,6 @@ module Helpers
     yield pin if block_given?
   end
 
-  def build_source(filename, str)
-    Solargraph::Source.load_string(str, filename)
-  end
-
   def find_pin(path, map=api_map)
     find_pins(path, map).first
   end
@@ -131,25 +121,8 @@ module Helpers
     map.pins.select {|p| p.path == path }
   end
 
-  def search_pins(name, map=api_map)
-    map.pins.select {|p| p.path && p.path.include?(name) }
-  end
-
   def local_pins(map=api_map)
     map.pins.select {|p| p.filename }
-  end
-
-  def file_pins(filename, map)
-    map.pins.select {|p| p.filename && p.filename.include?(filename) }
-  end
-
-  def methods_for(pin: nil, path: nil, map: api_map)
-    pin ||= find_pin(path, map)
-    map.get_complex_type_methods(pin.return_type)
-  end
-
-  def local_methods_for(pin: nil, path: nil, map: api_map)
-    methods_for(pin: pin, path: path, map: map).select {|m| m.filename }
   end
 
   def completion_at(filename, position, map=api_map)
