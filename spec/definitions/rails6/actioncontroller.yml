@@ -14,11 +14,11 @@ ActionController::Base.inherited:
 ActionController::Base.logger:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base.logger=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base.normalize_callback_params:
   types:
   - undefined
@@ -38,7 +38,7 @@ ActionController::Base.skip_callback:
 ActionController::Base#action_has_layout?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#action_methods:
   types:
   - undefined
@@ -50,35 +50,35 @@ ActionController::Base#action_name:
 ActionController::Base#action_name=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#after_sign_in_path_for:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#after_sign_out_path_for:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#alert:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#allow_forgery_protection:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#allow_forgery_protection=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#allow_params_authentication!:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#any_templates?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#append_view_path:
   types:
   - undefined
@@ -86,43 +86,43 @@ ActionController::Base#append_view_path:
 ActionController::Base#asset_host:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#asset_host=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#assets_dir:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#assets_dir=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#authenticate_or_request_with_http_basic:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#authenticate_or_request_with_http_digest:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#authenticate_or_request_with_http_token:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#authenticate_with_http_basic:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#authenticate_with_http_digest:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#authenticate_with_http_token:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#available_action?:
   types:
   - undefined
@@ -130,23 +130,23 @@ ActionController::Base#available_action?:
 ActionController::Base#benchmark:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#bypass_sign_in:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#cache_store:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#cache_store=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#combined_fragment_cache_key:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#config:
   types:
   - undefined
@@ -154,11 +154,11 @@ ActionController::Base#config:
 ActionController::Base#content_type:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#content_type=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#controller_name:
   types:
   - undefined
@@ -170,47 +170,47 @@ ActionController::Base#controller_path:
 ActionController::Base#default_asset_host_protocol:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#default_asset_host_protocol=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#default_form_builder:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#default_protect_from_forgery:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#default_protect_from_forgery=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#default_render:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#default_static_extension:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#default_static_extension=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#default_url_options:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#default_url_options=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#default_url_options?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#details_for_lookup:
   types:
   - undefined
@@ -218,11 +218,11 @@ ActionController::Base#details_for_lookup:
 ActionController::Base#devise_controller?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#devise_parameter_sanitizer:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#dispatch:
   types:
   - undefined
@@ -230,75 +230,75 @@ ActionController::Base#dispatch:
 ActionController::Base#edit_polymorphic_path:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#edit_polymorphic_url:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#enable_fragment_cache_logging:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#enable_fragment_cache_logging=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#etag_with_template_digest:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#etag_with_template_digest=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#etag_with_template_digest?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#etaggers:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#etaggers=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#etaggers?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#expire_fragment:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#expires_in:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#expires_now:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#flash:
   types:
-  - undefined
+  - ActionDispatch::Flash::FlashHash
   skip: false
 ActionController::Base#forgery_protection_origin_check:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#forgery_protection_origin_check=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#forgery_protection_strategy:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#forgery_protection_strategy=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#formats:
   types:
   - undefined
@@ -306,27 +306,27 @@ ActionController::Base#formats:
 ActionController::Base#formats=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#fragment_cache_keys:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#fragment_cache_keys=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#fragment_cache_keys?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#fragment_exist?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#fresh_when:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#full_url_for:
   types:
   - undefined
@@ -334,115 +334,115 @@ ActionController::Base#full_url_for:
 ActionController::Base#handle_unverified_request:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#handler_for_rescue:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#head:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#headers:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#helpers:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#helpers_path:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#helpers_path=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#helpers_path?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#http_basic_authenticate_or_request_with:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#http_cache_forever:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#include_all_helpers:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#include_all_helpers=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#include_all_helpers?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#instrument_fragment_cache:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#is_flashing_format?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#is_navigational_format?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#javascripts_dir:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#javascripts_dir=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#l:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#locale:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#locale=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#localize:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#location:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#location=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#log_warning_on_csrf_failure:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#log_warning_on_csrf_failure=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#logger:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#logger=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#lookup_context:
   types:
   - undefined
@@ -450,11 +450,11 @@ ActionController::Base#lookup_context:
 ActionController::Base#main_app:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#media_type:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#method_for_action:
   types:
   - undefined
@@ -462,42 +462,42 @@ ActionController::Base#method_for_action:
 ActionController::Base#middleware_stack:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#middleware_stack=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#middleware_stack?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#mimes_for_respond_to:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#mimes_for_respond_to=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#mimes_for_respond_to?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#new_polymorphic_path:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#new_polymorphic_url:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#notice:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#params:
   types:
-  - undefined
+  - ActionController::Parameters
   skip: false
 ActionController::Base#params=:
   types:
@@ -506,19 +506,19 @@ ActionController::Base#params=:
 ActionController::Base#per_form_csrf_tokens:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#per_form_csrf_tokens=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#perform_caching:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#perform_caching=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#performed?:
   types:
   - undefined
@@ -542,15 +542,15 @@ ActionController::Base#process:
 ActionController::Base#raise_on_missing_translations:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#raise_on_missing_translations=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#read_fragment:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#redirect_back:
   types:
   - undefined
@@ -562,11 +562,11 @@ ActionController::Base#redirect_to:
 ActionController::Base#relative_url_root:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#relative_url_root=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#render:
   types:
   - undefined
@@ -585,52 +585,52 @@ ActionController::Base#rendered_format:
   skip: false
 ActionController::Base#request:
   types:
-  - undefined
+  - ActionDispatch::Request
   skip: false
 ActionController::Base#request=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#request_forgery_protection_token:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#request_forgery_protection_token=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#request_format:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#request_http_basic_authentication:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#request_http_digest_authentication:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#request_http_token_authentication:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#rescue_handlers:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#rescue_handlers=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#rescue_handlers?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#rescue_with_handler:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#reset_session:
   types:
   - undefined
@@ -642,27 +642,27 @@ ActionController::Base#respond_to:
 ActionController::Base#respond_with:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#responder:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#responder=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#responder?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#response:
   types:
-  - undefined
+  - ActionDispatch::Response
   skip: false
 ActionController::Base#response=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#response_body:
   types:
   - undefined
@@ -682,7 +682,7 @@ ActionController::Base#route_for:
 ActionController::Base#run_callbacks:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#send_action:
   types:
   - undefined
@@ -690,14 +690,14 @@ ActionController::Base#send_action:
 ActionController::Base#send_data:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#send_file:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#session:
   types:
-  - undefined
+  - ActionDispatch::Request::Session
   skip: false
 ActionController::Base#set_request!:
   types:
@@ -710,71 +710,71 @@ ActionController::Base#set_response!:
 ActionController::Base#show_detailed_exceptions?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#sign_in:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#sign_in_and_redirect:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#sign_out:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#sign_out_all_scopes:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#sign_out_and_redirect:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#signed_in?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#signed_in_root_path:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#stale?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#status:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#status=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#store_location_for:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#stored_location_for:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#stylesheets_dir:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#stylesheets_dir=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#t:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#template_exists?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#to_a:
   types:
   - undefined
@@ -782,7 +782,7 @@ ActionController::Base#to_a:
 ActionController::Base#translate:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#url_for:
   types:
   - undefined
@@ -794,7 +794,7 @@ ActionController::Base#url_options:
 ActionController::Base#urlsafe_csrf_tokens:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#view_assigns:
   types:
   - undefined
@@ -802,28 +802,28 @@ ActionController::Base#view_assigns:
 ActionController::Base#view_cache_dependencies:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#view_context:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#view_context_class:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#view_paths:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#view_renderer:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#warden:
   types:
   - undefined
-  skip: false
+  skip: true
 ActionController::Base#write_fragment:
   types:
   - undefined
-  skip: false
+  skip: true

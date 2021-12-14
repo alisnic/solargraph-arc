@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-RSpec.describe SolarRails::RailsApi do
+RSpec.describe "Rails 6 API" do
   before do
     Solargraph::Convention.register SolarRails::Convention
   end
 
   it "it provides Rails controller api" do
-    map = use_workspace "./spec/rails5" do |root|
+    map = use_workspace "./spec/rails6" do |root|
       root.write_file 'app/controllers/things_controller.rb', <<~EOS
         class ThingsController < ActionController::Base
           res
@@ -25,7 +25,7 @@ RSpec.describe SolarRails::RailsApi do
   end
 
   it "can auto-complete inside routes" do
-    map = use_workspace "./spec/rails5" do |root|
+    map = use_workspace "./spec/rails6" do |root|
       root.write_file 'config/routes.rb', <<~EOS
         Rails.application.routes.draw do
           res
@@ -42,7 +42,7 @@ RSpec.describe SolarRails::RailsApi do
   end
 
   it "can auto-complete inside mailers" do
-    map = use_workspace "./spec/rails5" do |root|
+    map = use_workspace "./spec/rails6" do |root|
       root.write_file 'app/mailers/test_mailer.rb', <<~EOS
         class TestMailer < ActionMailer::Base
           defa
@@ -59,7 +59,7 @@ RSpec.describe SolarRails::RailsApi do
   end
 
   it "can auto-complete inside migrations" do
-    map = use_workspace "./spec/rails5" do |root|
+    map = use_workspace "./spec/rails6" do |root|
       root.write_file 'db/migrate/20130502114652_create_things.rb', <<~EOS
         class CreateThings < ActiveRecord::Migration[5.2]
           def self.up
@@ -79,44 +79,44 @@ RSpec.describe SolarRails::RailsApi do
   end
 
   it "provides completions for ActiveJob::Base" do
-    map = use_workspace "./spec/rails5"
+    map = use_workspace "./spec/rails6"
 
     assert_matches_definitions(
       map,
       "ActiveJob::Base",
-      "rails5/activejob",
+      "rails6/activejob",
       print_stats: true
     )
   end
 
   it "provides completions for ActionDispatch::Routing::Mapper" do
-    map = use_workspace "./spec/rails5"
+    map = use_workspace "./spec/rails6"
 
     assert_matches_definitions(
       map,
       "ActionDispatch::Routing::Mapper",
-      "rails5/routes",
+      "rails6/routes",
       print_stats: true
     )
   end
 
   it "provides completions for ActiveRecord::Base" do
-    map = use_workspace "./spec/rails5"
+    map = use_workspace "./spec/rails6"
 
     assert_matches_definitions(
       map,
       "ActiveRecord::Base",
-      "rails5/activerecord",
+      "rails6/activerecord",
       print_stats: true
     )
   end
 
   it "provides completions for ActionController::Base" do
-    map = use_workspace "./spec/rails5"
+    map = use_workspace "./spec/rails6"
     assert_matches_definitions(
       map,
       "ActionController::Base",
-      "rails5/actioncontroller",
+      "rails6/actioncontroller",
       print_stats: true
     )
   end

@@ -2,11 +2,11 @@
 ActiveJob::Base.define_callbacks:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base.direct_descendants:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base.inherited:
   types:
   - undefined
@@ -14,27 +14,27 @@ ActiveJob::Base.inherited:
 ActiveJob::Base.logger:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base.logger=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base.normalize_callback_params:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base.reset_callbacks:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base.set_callback:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base.skip_callback:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base#arguments:
   types:
   - undefined
@@ -98,11 +98,11 @@ ActiveJob::Base#locale=:
 ActiveJob::Base#logger:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base#logger=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base#perform:
   types:
   - undefined
@@ -130,7 +130,7 @@ ActiveJob::Base#provider_job_id=:
 ActiveJob::Base#queue_adapter:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base#queue_name:
   types:
   - undefined
@@ -142,27 +142,27 @@ ActiveJob::Base#queue_name=:
 ActiveJob::Base#queue_name_prefix:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base#queue_name_prefix=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base#queue_name_prefix?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base#rescue_handlers:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base#rescue_handlers=:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base#rescue_handlers?:
   types:
   - undefined
-  skip: false
+  skip: true
 ActiveJob::Base#rescue_with_handler:
   types:
   - undefined
