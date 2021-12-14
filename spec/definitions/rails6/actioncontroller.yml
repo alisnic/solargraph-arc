@@ -1,0 +1,829 @@
+---
+ActionController::Base.define_callbacks:
+  types:
+  - undefined
+  skip: false
+ActionController::Base.direct_descendants:
+  types:
+  - undefined
+  skip: false
+ActionController::Base.inherited:
+  types:
+  - undefined
+  skip: false
+ActionController::Base.logger:
+  types:
+  - undefined
+  skip: false
+ActionController::Base.logger=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base.normalize_callback_params:
+  types:
+  - undefined
+  skip: false
+ActionController::Base.reset_callbacks:
+  types:
+  - undefined
+  skip: false
+ActionController::Base.set_callback:
+  types:
+  - undefined
+  skip: false
+ActionController::Base.skip_callback:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#action_has_layout?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#action_methods:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#action_name:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#action_name=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#after_sign_in_path_for:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#after_sign_out_path_for:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#alert:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#allow_forgery_protection:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#allow_forgery_protection=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#allow_params_authentication!:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#any_templates?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#append_view_path:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#asset_host:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#asset_host=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#assets_dir:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#assets_dir=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#authenticate_or_request_with_http_basic:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#authenticate_or_request_with_http_digest:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#authenticate_or_request_with_http_token:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#authenticate_with_http_basic:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#authenticate_with_http_digest:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#authenticate_with_http_token:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#available_action?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#benchmark:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#bypass_sign_in:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#cache_store:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#cache_store=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#combined_fragment_cache_key:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#config:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#content_type:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#content_type=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#controller_name:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#controller_path:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_asset_host_protocol:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_asset_host_protocol=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_form_builder:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_protect_from_forgery:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_protect_from_forgery=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_render:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_static_extension:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_static_extension=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_url_options:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_url_options=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#default_url_options?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#details_for_lookup:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#devise_controller?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#devise_parameter_sanitizer:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#dispatch:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#edit_polymorphic_path:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#edit_polymorphic_url:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#enable_fragment_cache_logging:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#enable_fragment_cache_logging=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#etag_with_template_digest:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#etag_with_template_digest=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#etag_with_template_digest?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#etaggers:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#etaggers=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#etaggers?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#expire_fragment:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#expires_in:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#expires_now:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#flash:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#forgery_protection_origin_check:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#forgery_protection_origin_check=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#forgery_protection_strategy:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#forgery_protection_strategy=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#formats:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#formats=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#fragment_cache_keys:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#fragment_cache_keys=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#fragment_cache_keys?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#fragment_exist?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#fresh_when:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#full_url_for:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#handle_unverified_request:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#handler_for_rescue:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#head:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#headers:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#helpers:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#helpers_path:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#helpers_path=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#helpers_path?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#http_basic_authenticate_or_request_with:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#http_cache_forever:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#include_all_helpers:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#include_all_helpers=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#include_all_helpers?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#instrument_fragment_cache:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#is_flashing_format?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#is_navigational_format?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#javascripts_dir:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#javascripts_dir=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#l:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#locale:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#locale=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#localize:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#location:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#location=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#log_warning_on_csrf_failure:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#log_warning_on_csrf_failure=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#logger:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#logger=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#lookup_context:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#main_app:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#media_type:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#method_for_action:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#middleware_stack:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#middleware_stack=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#middleware_stack?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#mimes_for_respond_to:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#mimes_for_respond_to=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#mimes_for_respond_to?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#new_polymorphic_path:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#new_polymorphic_url:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#notice:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#params:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#params=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#per_form_csrf_tokens:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#per_form_csrf_tokens=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#perform_caching:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#perform_caching=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#performed?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#polymorphic_path:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#polymorphic_url:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#prepend_view_path:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#process:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#raise_on_missing_translations:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#raise_on_missing_translations=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#read_fragment:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#redirect_back:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#redirect_to:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#relative_url_root:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#relative_url_root=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#render:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#render_to_body:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#render_to_string:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#rendered_format:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#request:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#request=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#request_forgery_protection_token:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#request_forgery_protection_token=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#request_format:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#request_http_basic_authentication:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#request_http_digest_authentication:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#request_http_token_authentication:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#rescue_handlers:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#rescue_handlers=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#rescue_handlers?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#rescue_with_handler:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#reset_session:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#respond_to:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#respond_with:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#responder:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#responder=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#responder?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#response:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#response=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#response_body:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#response_body=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#response_code:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#route_for:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#run_callbacks:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#send_action:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#send_data:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#send_file:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#session:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#set_request!:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#set_response!:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#show_detailed_exceptions?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#sign_in:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#sign_in_and_redirect:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#sign_out:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#sign_out_all_scopes:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#sign_out_and_redirect:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#signed_in?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#signed_in_root_path:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#stale?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#status:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#status=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#store_location_for:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#stored_location_for:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#stylesheets_dir:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#stylesheets_dir=:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#t:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#template_exists?:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#to_a:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#translate:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#url_for:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#url_options:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#urlsafe_csrf_tokens:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#view_assigns:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#view_cache_dependencies:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#view_context:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#view_context_class:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#view_paths:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#view_renderer:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#warden:
+  types:
+  - undefined
+  skip: false
+ActionController::Base#write_fragment:
+  types:
+  - undefined
+  skip: false

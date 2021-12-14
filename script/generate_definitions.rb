@@ -47,13 +47,19 @@ def build_report(klass, test: klass.new)
   result
 end
 
-# report = build_report(ActiveRecord::Base, test: Model.new)
-# report = build_report(ActionController::Base)
-report = build_report(ActiveJob::Base)
+report = build_report(ActiveRecord::Base, test: Model.new)
+File.write("activerecord.yml", report.deep_stringify_keys.to_yaml)
 
-# Rails.application.routes.draw do
-#   pp build_report(self.class, test: false)
-# end
+report = build_report(ActionController::Base)
+File.write("actioncontroller.yml", report.deep_stringify_keys.to_yaml)
+
+report = build_report(ActiveJob::Base)
+File.write("activejob.yml", report.deep_stringify_keys.to_yaml)
+
+Rails.application.routes.draw do
+  report = build_report(self.class, test: false)
+  File.write("routes.yml", report.deep_stringify_keys.to_yaml)
+end
 
 binding.pry
 
