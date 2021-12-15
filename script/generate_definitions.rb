@@ -57,20 +57,6 @@ def build_report(klass, test: klass.new)
   result
 end
 
-# report = build_report(ActiveRecord::Base, test: Model.new)
-# File.write("activerecord.yml", report.deep_stringify_keys.to_yaml)
-#
-# report = build_report(ActionController::Base)
-# File.write("actioncontroller.yml", report.deep_stringify_keys.to_yaml)
-#
-# report = build_report(ActiveJob::Base)
-# File.write("activejob.yml", report.deep_stringify_keys.to_yaml)
-#
-# Rails.application.routes.draw do
-#   report = build_report(self.class, test: false)
-#   File.write("routes.yml", report.deep_stringify_keys.to_yaml)
-# end
-
 def core_ext_report(klass, test=klass.new)
   result = {}
   distribution = {}
@@ -104,21 +90,35 @@ def core_ext_report(klass, test=klass.new)
   result
 end
 
-[Array, String, Time, Date, Class, DateTime, File, Hash, Integer, Kernel].each do |klass|
-  test = case klass
-  when Time
-    Time.now
-  when Date
-    Date.today
-  when File
-    false
-  else
-    klass.new rescue false
-  end
+report = build_report(ActiveRecord::Base, test: Model.new)
+File.write("activerecord.yml", report.deep_stringify_keys.to_yaml)
 
-  report = core_ext_report(klass, test=test)
-  File.write("#{klass.to_s}.yml", report.deep_stringify_keys.to_yaml)
+report = build_report(ActionController::Base)
+File.write("actioncontroller.yml", report.deep_stringify_keys.to_yaml)
+
+report = build_report(ActiveJob::Base)
+File.write("activejob.yml", report.deep_stringify_keys.to_yaml)
+
+Rails.application.routes.draw do
+  report = build_report(self.class, test: false)
+  File.write("routes.yml", report.deep_stringify_keys.to_yaml)
 end
+
+# [Array, String, Time, Date, Class, DateTime, File, Hash, Integer, Kernel].each do |klass|
+#   test = case klass
+#   when Time
+#     Time.now
+#   when Date
+#     Date.today
+#   when File
+#     false
+#   else
+#     klass.new rescue false
+#   end
+#
+#   report = core_ext_report(klass, test=test)
+#   File.write("#{klass.to_s}.yml", report.deep_stringify_keys.to_yaml)
+# end
 
 binding.pry
 

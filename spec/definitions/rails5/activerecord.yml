@@ -1,2349 +1,2761 @@
 ---
-".abstract_class":
+ActiveRecord::Base.===:
   types:
   - undefined
   skip: false
-".abstract_class=":
+ActiveRecord::Base.`:
   types:
   - undefined
   skip: false
-".abstract_class?":
+ActiveRecord::Base.abstract_class:
   types:
   - undefined
   skip: false
-".accepts_nested_attributes_for":
-  types:
-  - undefined
-  skip: true
-".after_commit":
+ActiveRecord::Base.abstract_class=:
   types:
   - undefined
   skip: false
-".after_commit_without_transaction_enrollment":
+ActiveRecord::Base.abstract_class?:
   types:
   - undefined
   skip: false
-".after_create":
+ActiveRecord::Base.accepts_nested_attributes_for:
   types:
   - undefined
   skip: true
-".after_create_commit":
-  types:
-  - undefined
-  skip: false
-".after_destroy":
-  types:
-  - undefined
-  skip: true
-".after_destroy_commit":
+ActiveRecord::Base.acts_like?:
   types:
   - undefined
   skip: false
-".after_find":
-  types:
-  - undefined
-  skip: true
-".after_initialize":
-  types:
-  - undefined
-  skip: true
-".after_rollback":
+ActiveRecord::Base.after_commit:
   types:
   - undefined
   skip: false
-".after_rollback_without_transaction_enrollment":
+ActiveRecord::Base.after_commit_without_transaction_enrollment:
   types:
   - undefined
   skip: false
-".after_save":
+ActiveRecord::Base.after_create:
   types:
   - undefined
   skip: true
-".after_touch":
-  types:
-  - undefined
-  skip: true
-".after_update":
-  types:
-  - undefined
-  skip: true
-".after_update_commit":
+ActiveRecord::Base.after_create_commit:
   types:
   - undefined
   skip: false
-".after_validation":
+ActiveRecord::Base.after_destroy:
   types:
   - undefined
   skip: true
-".aggregate_reflections":
-  types:
-  - undefined
-  skip: true
-".aggregate_reflections=":
-  types:
-  - undefined
-  skip: true
-".aggregate_reflections?":
-  types:
-  - undefined
-  skip: true
-".all":
+ActiveRecord::Base.after_destroy_commit:
   types:
   - undefined
   skip: false
-".allow_unsafe_raw_sql":
+ActiveRecord::Base.after_find:
   types:
   - undefined
   skip: true
-".allow_unsafe_raw_sql=":
+ActiveRecord::Base.after_initialize:
   types:
   - undefined
   skip: true
-".any?":
-  types:
-  - undefined
-  skip: true
-".arel_attribute":
-  types:
-  - undefined
-  skip: true
-".arel_table":
-  types:
-  - undefined
-  skip: true
-".around_create":
-  types:
-  - undefined
-  skip: true
-".around_destroy":
-  types:
-  - undefined
-  skip: true
-".around_save":
-  types:
-  - undefined
-  skip: true
-".around_update":
-  types:
-  - undefined
-  skip: true
-".attr_readonly":
-  types:
-  - undefined
-  skip: true
-".attribute":
-  types:
-  - undefined
-  skip: true
-".attribute_alias":
-  types:
-  - undefined
-  skip: true
-".attribute_alias?":
-  types:
-  - undefined
-  skip: true
-".attribute_aliases":
-  types:
-  - undefined
-  skip: true
-".attribute_aliases=":
-  types:
-  - undefined
-  skip: true
-".attribute_aliases?":
-  types:
-  - undefined
-  skip: true
-".attribute_method?":
-  types:
-  - undefined
-  skip: true
-".attribute_method_affix":
-  types:
-  - undefined
-  skip: true
-".attribute_method_matchers":
-  types:
-  - undefined
-  skip: true
-".attribute_method_matchers=":
-  types:
-  - undefined
-  skip: true
-".attribute_method_matchers?":
-  types:
-  - undefined
-  skip: true
-".attribute_method_prefix":
-  types:
-  - undefined
-  skip: true
-".attribute_method_suffix":
-  types:
-  - undefined
-  skip: true
-".attribute_names":
-  types:
-  - undefined
-  skip: true
-".attribute_type_decorations":
-  types:
-  - undefined
-  skip: true
-".attribute_type_decorations=":
-  types:
-  - undefined
-  skip: true
-".attribute_type_decorations?":
-  types:
-  - undefined
-  skip: true
-".attribute_types":
+ActiveRecord::Base.after_rollback:
   types:
   - undefined
   skip: false
-".attributes_builder":
+ActiveRecord::Base.after_rollback_without_transaction_enrollment:
   types:
   - undefined
   skip: false
-".attributes_to_define_after_schema_loads":
+ActiveRecord::Base.after_save:
   types:
   - undefined
   skip: true
-".attributes_to_define_after_schema_loads=":
+ActiveRecord::Base.after_touch:
   types:
   - undefined
   skip: true
-".attributes_to_define_after_schema_loads?":
+ActiveRecord::Base.after_update:
   types:
   - undefined
   skip: true
-".average":
-  types:
-  - undefined
-  skip: true
-".base_class":
+ActiveRecord::Base.after_update_commit:
   types:
   - undefined
   skip: false
-".before_commit":
+ActiveRecord::Base.after_validation:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.aggregate_reflections:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.aggregate_reflections=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.aggregate_reflections?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.alias_attribute:
   types:
   - undefined
   skip: false
-".before_commit_without_transaction_enrollment":
+ActiveRecord::Base.all:
   types:
   - undefined
   skip: false
-".before_create":
+ActiveRecord::Base.allocate:
+  types:
+  - self
+  skip: false
+ActiveRecord::Base.allow_unsafe_raw_sql:
   types:
   - undefined
   skip: true
-".before_destroy":
+ActiveRecord::Base.allow_unsafe_raw_sql=:
   types:
   - undefined
   skip: true
-".before_remove_const":
-  types:
-  - undefined
-  skip: true
-".before_save":
-  types:
-  - undefined
-  skip: true
-".before_update":
-  types:
-  - undefined
-  skip: true
-".before_validation":
-  types:
-  - undefined
-  skip: true
-".belongs_to":
+ActiveRecord::Base.anonymous?:
   types:
   - undefined
   skip: false
-".belongs_to_required_by_default":
+ActiveRecord::Base.any?:
   types:
   - undefined
   skip: true
-".belongs_to_required_by_default=":
+ActiveRecord::Base.arel_attribute:
   types:
   - undefined
   skip: true
-".benchmark":
+ActiveRecord::Base.arel_table:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.around_create:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.around_destroy:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.around_save:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.around_update:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.as_json:
   types:
   - undefined
   skip: false
-".cache":
+ActiveRecord::Base.attr_internal:
   types:
   - undefined
   skip: false
-".cache_timestamp_format":
-  types:
-  - undefined
-  skip: true
-".cache_timestamp_format=":
-  types:
-  - undefined
-  skip: true
-".cache_timestamp_format?":
-  types:
-  - undefined
-  skip: true
-".cache_versioning":
-  types:
-  - undefined
-  skip: true
-".cache_versioning=":
-  types:
-  - undefined
-  skip: true
-".cache_versioning?":
-  types:
-  - undefined
-  skip: true
-".calculate":
-  types:
-  - undefined
-  skip: true
-".class_method_defined_within?":
-  types:
-  - undefined
-  skip: true
-".clear_active_connections!":
-  types:
-  - undefined
-  skip: true
-".clear_all_connections!":
-  types:
-  - undefined
-  skip: true
-".clear_cache!":
+ActiveRecord::Base.attr_internal_accessor:
   types:
   - undefined
   skip: false
-".clear_reflections_cache":
-  types:
-  - undefined
-  skip: true
-".clear_reloadable_connections!":
-  types:
-  - undefined
-  skip: true
-".clear_validators!":
-  types:
-  - undefined
-  skip: true
-".collecting_queries_for_explain":
+ActiveRecord::Base.attr_internal_reader:
   types:
   - undefined
   skip: false
-".collection_cache_key":
+ActiveRecord::Base.attr_internal_writer:
   types:
   - undefined
   skip: false
-".column_defaults":
+ActiveRecord::Base.attr_readonly:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_alias:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_alias?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_aliases:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_aliases=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_aliases?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_method?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_method_affix:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_method_matchers:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_method_matchers=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_method_matchers?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_method_prefix:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_method_suffix:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_names:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_type_decorations:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_type_decorations=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_type_decorations?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attribute_types:
   types:
   - undefined
   skip: false
-".column_for_attribute":
-  types:
-  - undefined
-  skip: true
-".column_names":
+ActiveRecord::Base.attributes_builder:
   types:
   - undefined
   skip: false
-".columns":
+ActiveRecord::Base.attributes_to_define_after_schema_loads:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attributes_to_define_after_schema_loads=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.attributes_to_define_after_schema_loads?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.average:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.base_class:
   types:
   - undefined
   skip: false
-".columns_hash":
+ActiveRecord::Base.before_commit:
   types:
   - undefined
   skip: false
-".composed_of":
-  types:
-  - undefined
-  skip: true
-".configurations":
-  types:
-  - undefined
-  skip: true
-".configurations=":
-  types:
-  - undefined
-  skip: true
-".connected?":
+ActiveRecord::Base.before_commit_without_transaction_enrollment:
   types:
   - undefined
   skip: false
-".connection":
+ActiveRecord::Base.before_create:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.before_destroy:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.before_remove_const:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.before_save:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.before_update:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.before_validation:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.belongs_to:
   types:
   - undefined
   skip: false
-".connection_config":
+ActiveRecord::Base.belongs_to_required_by_default:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.belongs_to_required_by_default=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.benchmark:
   types:
   - undefined
   skip: false
-".connection_handler":
+ActiveRecord::Base.blank?:
   types:
-  - undefined
-  skip: true
-".connection_handler=":
-  types:
-  - undefined
-  skip: true
-".connection_pool":
+  - 'true'
+  - 'false'
+  skip: false
+ActiveRecord::Base.cache:
   types:
   - undefined
   skip: false
-".connection_specification_name":
+ActiveRecord::Base.cache_timestamp_format:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.cache_timestamp_format=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.cache_timestamp_format?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.cache_versioning:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.cache_versioning=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.cache_versioning?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.calculate:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.cattr_accessor:
   types:
   - undefined
   skip: false
-".connection_specification_name=":
+ActiveRecord::Base.cattr_reader:
   types:
   - undefined
   skip: false
-".content_columns":
+ActiveRecord::Base.cattr_writer:
   types:
   - undefined
   skip: false
-".count":
-  types:
-  - undefined
-  skip: true
-".count_by_sql":
+ActiveRecord::Base.class_attribute:
   types:
   - undefined
   skip: false
-".create":
+ActiveRecord::Base.class_method_defined_within?:
   types:
   - undefined
   skip: true
-".create!":
+ActiveRecord::Base.clear_active_connections!:
   types:
   - undefined
   skip: true
-".create_with":
+ActiveRecord::Base.clear_all_connections!:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.clear_cache!:
   types:
   - undefined
   skip: false
-".current_scope":
+ActiveRecord::Base.clear_reflections_cache:
   types:
   - undefined
   skip: true
-".current_scope=":
+ActiveRecord::Base.clear_reloadable_connections!:
   types:
   - undefined
   skip: true
-".dangerous_attribute_method?":
+ActiveRecord::Base.clear_validators!:
   types:
   - undefined
   skip: true
-".dangerous_class_method?":
-  types:
-  - undefined
-  skip: true
-".decorate_attribute_type":
-  types:
-  - undefined
-  skip: true
-".decorate_matching_attribute_types":
-  types:
-  - undefined
-  skip: true
-".decrement_counter":
-  types:
-  - undefined
-  skip: true
-".default_connection_handler":
-  types:
-  - undefined
-  skip: true
-".default_connection_handler=":
-  types:
-  - undefined
-  skip: true
-".default_connection_handler?":
-  types:
-  - undefined
-  skip: true
-".default_extensions":
+ActiveRecord::Base.collecting_queries_for_explain:
   types:
   - undefined
   skip: false
-".default_scope_override":
-  types:
-  - undefined
-  skip: true
-".default_scope_override=":
-  types:
-  - undefined
-  skip: true
-".default_scoped":
+ActiveRecord::Base.collection_cache_key:
   types:
   - undefined
   skip: false
-".default_scopes":
-  types:
-  - undefined
-  skip: true
-".default_scopes=":
-  types:
-  - undefined
-  skip: true
-".default_timezone":
-  types:
-  - undefined
-  skip: true
-".default_timezone=":
-  types:
-  - undefined
-  skip: true
-".define_attribute":
-  types:
-  - undefined
-  skip: true
-".define_attribute_method":
-  types:
-  - undefined
-  skip: true
-".define_attribute_methods":
-  types:
-  - undefined
-  skip: true
-".define_callbacks":
-  types:
-  - undefined
-  skip: true
-".define_model_callbacks":
-  types:
-  - undefined
-  skip: true
-".defined_enums":
-  types:
-  - undefined
-  skip: true
-".defined_enums=":
-  types:
-  - undefined
-  skip: true
-".defined_enums?":
-  types:
-  - undefined
-  skip: true
-".delete":
-  types:
-  - undefined
-  skip: true
-".delete_all":
-  types:
-  - undefined
-  skip: true
-".descends_from_active_record?":
+ActiveRecord::Base.column_defaults:
   types:
   - undefined
   skip: false
-".destroy":
+ActiveRecord::Base.column_for_attribute:
   types:
   - undefined
   skip: true
-".destroy_all":
-  types:
-  - undefined
-  skip: true
-".direct_descendants":
+ActiveRecord::Base.column_names:
   types:
   - undefined
   skip: false
-".distinct":
+ActiveRecord::Base.columns:
   types:
   - undefined
   skip: false
-".dump_schema_after_migration":
-  types:
-  - undefined
-  skip: true
-".dump_schema_after_migration=":
-  types:
-  - undefined
-  skip: true
-".dump_schemas":
-  types:
-  - undefined
-  skip: true
-".dump_schemas=":
-  types:
-  - undefined
-  skip: true
-".eager_load":
+ActiveRecord::Base.columns_hash:
   types:
   - undefined
   skip: false
-".enforce_raw_sql_whitelist":
+ActiveRecord::Base.composed_of:
   types:
   - undefined
   skip: true
-".enum":
+ActiveRecord::Base.concern:
   types:
   - undefined
   skip: false
-".error_on_ignored_order":
+ActiveRecord::Base.concerning:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.configurations:
   types:
   - undefined
   skip: true
-".error_on_ignored_order=":
+ActiveRecord::Base.configurations=:
   types:
   - undefined
   skip: true
-".establish_connection":
+ActiveRecord::Base.connected?:
   types:
   - undefined
   skip: false
-".except":
+ActiveRecord::Base.connection:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.connection_config:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.connection_handler:
   types:
   - undefined
   skip: true
-".exec_explain":
-  types:
-  - undefined
-  skip: false
-".exists?":
-  types:
-  - undefined
-  skip: false
-".expand_hash_conditions_for_aggregates_with_deprecation":
+ActiveRecord::Base.connection_handler=:
   types:
   - undefined
   skip: true
-".extending":
+ActiveRecord::Base.connection_pool:
   types:
   - undefined
   skip: false
-".fifth":
+ActiveRecord::Base.connection_specification_name:
   types:
   - undefined
   skip: false
-".fifth!":
+ActiveRecord::Base.connection_specification_name=:
   types:
   - undefined
   skip: false
-".find":
+ActiveRecord::Base.const_missing:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.content_columns:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.count:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.count_by_sql:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.create:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.create!:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.create_with:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.current_scope:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.current_scope=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.dangerous_attribute_method?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.dangerous_class_method?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.decorate_attribute_type:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.decorate_matching_attribute_types:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.decrement_counter:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.deep_dup:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.default_connection_handler:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.default_connection_handler=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.default_connection_handler?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.default_extensions:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.default_scope_override:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.default_scope_override=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.default_scoped:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.default_scopes:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.default_scopes=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.default_timezone:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.default_timezone=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.define_attribute:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.define_attribute_method:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.define_attribute_methods:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.define_callbacks:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.define_model_callbacks:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.defined_enums:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.defined_enums=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.defined_enums?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.delegate:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.delegate_missing_to:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.delete:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.delete_all:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.deprecate:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.descendants:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.descends_from_active_record?:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.destroy:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.destroy_all:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.direct_descendants:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.distinct:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.dump_schema_after_migration:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.dump_schema_after_migration=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.dump_schemas:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.dump_schemas=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.duplicable?:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.eager_load:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.enforce_raw_sql_whitelist:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.enum:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.error_on_ignored_order:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.error_on_ignored_order=:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.establish_connection:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.except:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.exec_explain:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.exists?:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.expand_hash_conditions_for_aggregates_with_deprecation:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.extending:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.fifth:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.fifth!:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.find:
   types:
   - self
   - Array<self>
   skip: false
-".find_by":
+ActiveRecord::Base.find_by:
   types:
   - self
   - nil
   skip: false
-".find_by!":
+ActiveRecord::Base.find_by!:
   types:
   - undefined
   skip: false
-".find_by_sql":
+ActiveRecord::Base.find_by_sql:
   types:
   - undefined
   skip: false
-".find_each":
+ActiveRecord::Base.find_each:
   types:
   - undefined
   skip: true
-".find_in_batches":
+ActiveRecord::Base.find_in_batches:
   types:
   - undefined
   skip: true
-".find_or_create_by":
+ActiveRecord::Base.find_or_create_by:
   types:
   - undefined
   skip: true
-".find_or_create_by!":
+ActiveRecord::Base.find_or_create_by!:
   types:
   - undefined
   skip: true
-".find_or_initialize_by":
+ActiveRecord::Base.find_or_initialize_by:
   types:
   - undefined
   skip: true
-".finder_needs_type_condition?":
+ActiveRecord::Base.finder_needs_type_condition?:
   types:
   - undefined
   skip: false
-".first":
+ActiveRecord::Base.first:
   types:
   - undefined
   skip: false
-".first!":
+ActiveRecord::Base.first!:
   types:
   - undefined
   skip: false
-".first_or_create":
+ActiveRecord::Base.first_or_create:
   types:
   - undefined
   skip: true
-".first_or_create!":
+ActiveRecord::Base.first_or_create!:
   types:
   - undefined
   skip: true
-".first_or_initialize":
+ActiveRecord::Base.first_or_initialize:
   types:
   - undefined
   skip: true
-".flush_idle_connections!":
+ActiveRecord::Base.flush_idle_connections!:
   types:
   - undefined
   skip: true
-".forty_two":
+ActiveRecord::Base.forty_two:
   types:
   - undefined
   skip: false
-".forty_two!":
+ActiveRecord::Base.forty_two!:
   types:
   - undefined
   skip: false
-".fourth":
+ActiveRecord::Base.fourth:
   types:
   - undefined
   skip: false
-".fourth!":
+ActiveRecord::Base.fourth!:
   types:
   - undefined
   skip: false
-".from":
+ActiveRecord::Base.from:
   types:
   - undefined
   skip: false
-".full_table_name_prefix":
+ActiveRecord::Base.full_table_name_prefix:
   types:
   - undefined
   skip: false
-".full_table_name_suffix":
+ActiveRecord::Base.full_table_name_suffix:
   types:
   - undefined
   skip: false
-".generate_unique_secure_token":
+ActiveRecord::Base.gem:
   types:
   - undefined
   skip: true
-".generated_association_methods":
+ActiveRecord::Base.generate_unique_secure_token:
   types:
   - undefined
   skip: true
-".get_primary_key":
+ActiveRecord::Base.generated_association_methods:
   types:
   - undefined
   skip: true
-".group":
+ActiveRecord::Base.get_primary_key:
   types:
   - undefined
+  skip: true
+ActiveRecord::Base.group:
+  types:
+  - undefined
   skip: false
-".has_and_belongs_to_many":
+ActiveRecord::Base.guess_for_anonymous:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.has_and_belongs_to_many:
   types:
   - undefined
   skip: false
-".has_attribute?":
+ActiveRecord::Base.has_attribute?:
   types:
   - undefined
   skip: true
-".has_many":
+ActiveRecord::Base.has_many:
   types:
   - undefined
   skip: false
-".has_many_attached":
+ActiveRecord::Base.has_many_attached:
   types:
   - undefined
   skip: true
-".has_one":
+ActiveRecord::Base.has_one:
   types:
   - undefined
   skip: false
-".has_one_attached":
+ActiveRecord::Base.has_one_attached:
   types:
   - undefined
   skip: true
-".has_secure_password":
+ActiveRecord::Base.has_secure_password:
   types:
   - undefined
   skip: true
-".has_secure_token":
+ActiveRecord::Base.has_secure_token:
   types:
   - undefined
   skip: true
-".having":
+ActiveRecord::Base.having:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.html_safe?:
   types:
   - undefined
   skip: false
-".human_attribute_name":
+ActiveRecord::Base.human_attribute_name:
   types:
   - undefined
   skip: false
-".i18n_scope":
+ActiveRecord::Base.i18n_scope:
   types:
   - undefined
   skip: false
-".ids":
+ActiveRecord::Base.ids:
   types:
   - undefined
   skip: true
-".ignored_columns":
+ActiveRecord::Base.ignored_columns:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.ignored_columns=:
   types:
   - undefined
   skip: false
-".ignored_columns=":
+ActiveRecord::Base.in?:
   types:
   - undefined
   skip: false
-".in_batches":
+ActiveRecord::Base.in_batches:
   types:
   - undefined
   skip: true
-".include_root_in_json":
+ActiveRecord::Base.include_root_in_json:
   types:
   - undefined
   skip: true
-".include_root_in_json=":
+ActiveRecord::Base.include_root_in_json=:
   types:
   - undefined
   skip: true
-".include_root_in_json?":
+ActiveRecord::Base.include_root_in_json?:
   types:
   - undefined
   skip: true
-".includes":
+ActiveRecord::Base.includes:
   types:
   - undefined
   skip: false
-".increment_counter":
+ActiveRecord::Base.increment_counter:
   types:
   - undefined
   skip: true
-".index_nested_attribute_errors":
+ActiveRecord::Base.index_nested_attribute_errors:
   types:
   - undefined
   skip: true
-".index_nested_attribute_errors=":
+ActiveRecord::Base.index_nested_attribute_errors=:
   types:
   - undefined
   skip: true
-".inheritance_column":
+ActiveRecord::Base.inheritance_column:
   types:
   - undefined
   skip: false
-".inheritance_column=":
+ActiveRecord::Base.inheritance_column=:
   types:
   - undefined
   skip: false
-".initialize_find_by_cache":
+ActiveRecord::Base.initialize_find_by_cache:
   types:
   - undefined
   skip: true
-".initialize_generated_modules":
+ActiveRecord::Base.initialize_generated_modules:
   types:
   - undefined
   skip: true
-".initialize_relation_delegate_cache":
+ActiveRecord::Base.initialize_relation_delegate_cache:
   types:
   - undefined
   skip: false
-".instance_method_already_implemented?":
+ActiveRecord::Base.inspect:
   types:
   - undefined
+  skip: false
+ActiveRecord::Base.instance_method_already_implemented?:
+  types:
+  - undefined
   skip: true
-".instantiate":
+ActiveRecord::Base.instance_values:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.instance_variable_names:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.instantiate:
   types:
   - undefined
   skip: true
-".internal_metadata_table_name":
+ActiveRecord::Base.internal_metadata_table_name:
   types:
   - undefined
   skip: true
-".internal_metadata_table_name=":
+ActiveRecord::Base.internal_metadata_table_name=:
   types:
   - undefined
   skip: true
-".internal_metadata_table_name?":
+ActiveRecord::Base.internal_metadata_table_name?:
   types:
   - undefined
   skip: true
-".joins":
+ActiveRecord::Base.joins:
   types:
   - undefined
   skip: false
-".last":
+ActiveRecord::Base.last:
   types:
   - undefined
   skip: false
-".last!":
+ActiveRecord::Base.last!:
   types:
   - undefined
   skip: false
-".left_joins":
+ActiveRecord::Base.left_joins:
   types:
   - undefined
   skip: false
-".left_outer_joins":
+ActiveRecord::Base.left_outer_joins:
   types:
   - undefined
   skip: false
-".limit":
+ActiveRecord::Base.limit:
   types:
   - undefined
   skip: false
-".local_stored_attributes":
+ActiveRecord::Base.load_dependency:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.local_stored_attributes:
   types:
   - undefined
   skip: true
-".local_stored_attributes=":
+ActiveRecord::Base.local_stored_attributes=:
   types:
   - undefined
   skip: true
-".lock":
+ActiveRecord::Base.lock:
   types:
   - undefined
   skip: false
-".lock_optimistically":
+ActiveRecord::Base.lock_optimistically:
   types:
   - undefined
   skip: true
-".lock_optimistically=":
+ActiveRecord::Base.lock_optimistically=:
   types:
   - undefined
   skip: true
-".lock_optimistically?":
+ActiveRecord::Base.lock_optimistically?:
   types:
   - undefined
   skip: true
-".locking_column":
+ActiveRecord::Base.locking_column:
   types:
   - undefined
   skip: true
-".locking_column=":
+ActiveRecord::Base.locking_column=:
   types:
   - undefined
   skip: true
-".locking_enabled?":
+ActiveRecord::Base.locking_enabled?:
   types:
   - undefined
   skip: true
-".logger":
+ActiveRecord::Base.logger:
   types:
   - undefined
   skip: true
-".logger=":
+ActiveRecord::Base.logger=:
   types:
   - undefined
   skip: true
-".lookup_ancestors":
+ActiveRecord::Base.lookup_ancestors:
   types:
   - undefined
   skip: false
-".maintain_test_schema":
+ActiveRecord::Base.maintain_test_schema:
   types:
   - undefined
   skip: true
-".maintain_test_schema=":
+ActiveRecord::Base.maintain_test_schema=:
   types:
   - undefined
   skip: true
-".many?":
+ActiveRecord::Base.many?:
   types:
   - undefined
   skip: true
-".maximum":
+ActiveRecord::Base.mattr_accessor:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.mattr_reader:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.mattr_writer:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.maximum:
   types:
   - undefined
   skip: true
-".merge":
+ActiveRecord::Base.merge:
   types:
   - undefined
   skip: true
-".method_defined_within?":
+ActiveRecord::Base.method_defined_within?:
   types:
   - undefined
   skip: true
-".minimum":
+ActiveRecord::Base.method_visibility:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.minimum:
   types:
   - undefined
   skip: true
-".model_name":
+ActiveRecord::Base.model_name:
   types:
   - undefined
   skip: false
-".nested_attributes_options":
+ActiveRecord::Base.nested_attributes_options:
   types:
   - undefined
   skip: true
-".nested_attributes_options=":
+ActiveRecord::Base.nested_attributes_options=:
   types:
   - undefined
   skip: true
-".nested_attributes_options?":
+ActiveRecord::Base.nested_attributes_options?:
   types:
   - undefined
   skip: true
-".next_sequence_value":
+ActiveRecord::Base.new:
   types:
   - undefined
   skip: false
-".no_touching":
+ActiveRecord::Base.next_sequence_value:
   types:
   - undefined
+  skip: false
+ActiveRecord::Base.no_touching:
+  types:
+  - undefined
   skip: true
-".none":
+ActiveRecord::Base.none:
   types:
   - undefined
   skip: false
-".none?":
+ActiveRecord::Base.none?:
   types:
   - undefined
   skip: true
-".normalize_callback_params":
+ActiveRecord::Base.normalize_callback_params:
   types:
   - undefined
   skip: true
-".offset":
+ActiveRecord::Base.offset:
   types:
   - undefined
   skip: false
-".one?":
+ActiveRecord::Base.one?:
   types:
   - undefined
   skip: true
-".or":
+ActiveRecord::Base.or:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.order:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.parent:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.parent_name:
   types:
   - undefined
   skip: false
-".order":
+ActiveRecord::Base.parents:
   types:
   - undefined
   skip: false
-".partial_writes":
+ActiveRecord::Base.partial_writes:
   types:
   - undefined
   skip: true
-".partial_writes=":
+ActiveRecord::Base.partial_writes=:
   types:
   - undefined
   skip: true
-".partial_writes?":
+ActiveRecord::Base.partial_writes?:
   types:
   - undefined
   skip: true
-".pluck":
+ActiveRecord::Base.pluck:
   types:
   - undefined
   skip: true
-".pluralize_table_names":
+ActiveRecord::Base.pluralize_table_names:
   types:
   - undefined
   skip: true
-".pluralize_table_names=":
+ActiveRecord::Base.pluralize_table_names=:
   types:
   - undefined
   skip: true
-".pluralize_table_names?":
+ActiveRecord::Base.pluralize_table_names?:
   types:
   - undefined
   skip: true
-".polymorphic_name":
+ActiveRecord::Base.polymorphic_name:
   types:
   - undefined
   skip: false
-".predicate_builder":
+ActiveRecord::Base.predicate_builder:
   types:
   - undefined
   skip: true
-".prefetch_primary_key?":
+ActiveRecord::Base.prefetch_primary_key?:
   types:
   - undefined
   skip: false
-".preload":
+ActiveRecord::Base.preload:
   types:
   - undefined
   skip: false
-".primary_key":
+ActiveRecord::Base.presence:
   types:
+  - Object
+  skip: false
+ActiveRecord::Base.presence_in:
+  types:
+  - Object
+  skip: false
+ActiveRecord::Base.present?:
+  types:
+  - 'true'
+  - 'false'
+  skip: false
+ActiveRecord::Base.primary_key:
+  types:
   - undefined
   skip: true
-".primary_key=":
+ActiveRecord::Base.primary_key=:
   types:
   - undefined
   skip: true
-".primary_key_prefix_type":
+ActiveRecord::Base.primary_key_prefix_type:
   types:
   - undefined
   skip: true
-".primary_key_prefix_type=":
+ActiveRecord::Base.primary_key_prefix_type=:
   types:
   - undefined
   skip: true
-".protected_environments":
+ActiveRecord::Base.protected_environments:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.protected_environments=:
   types:
   - undefined
   skip: false
-".protected_environments=":
+ActiveRecord::Base.pry:
   types:
   - undefined
   skip: false
-".quoted_primary_key":
+ActiveRecord::Base.quoted_primary_key:
   types:
   - undefined
   skip: true
-".quoted_table_name":
+ActiveRecord::Base.quoted_table_name:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.rake_extension:
   types:
   - undefined
   skip: false
-".readonly":
+ActiveRecord::Base.reachable?:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.reachable_with_deprecation?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.reachable_without_deprecation?:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.readonly:
   types:
   - undefined
   skip: false
-".readonly_attributes":
+ActiveRecord::Base.readonly_attributes:
   types:
   - undefined
   skip: true
-".record_timestamps":
+ActiveRecord::Base.record_timestamps:
   types:
   - undefined
   skip: true
-".record_timestamps=":
+ActiveRecord::Base.record_timestamps=:
   types:
   - undefined
   skip: true
-".record_timestamps?":
+ActiveRecord::Base.record_timestamps?:
   types:
   - undefined
   skip: true
-".references":
+ActiveRecord::Base.redefine_method:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.redefine_singleton_method:
   types:
   - undefined
   skip: false
-".reflect_on_aggregation":
+ActiveRecord::Base.references:
   types:
   - undefined
+  skip: false
+ActiveRecord::Base.reflect_on_aggregation:
+  types:
+  - undefined
   skip: true
-".reflect_on_all_aggregations":
+ActiveRecord::Base.reflect_on_all_aggregations:
   types:
   - undefined
   skip: true
-".reflect_on_all_associations":
+ActiveRecord::Base.reflect_on_all_associations:
   types:
   - undefined
   skip: true
-".reflect_on_all_autosave_associations":
+ActiveRecord::Base.reflect_on_all_autosave_associations:
   types:
   - undefined
   skip: true
-".reflect_on_association":
+ActiveRecord::Base.reflect_on_association:
   types:
   - undefined
   skip: true
-".reflections":
+ActiveRecord::Base.reflections:
   types:
   - undefined
   skip: true
-".relation_delegate_class":
+ActiveRecord::Base.relation_delegate_class:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.remove_connection:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.remove_possible_method:
   types:
   - undefined
   skip: false
-".remove_connection":
+ActiveRecord::Base.remove_possible_singleton_method:
   types:
   - undefined
   skip: false
-".reorder":
+ActiveRecord::Base.reorder:
   types:
   - undefined
   skip: false
-".reset_callbacks":
+ActiveRecord::Base.require_dependency:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.require_or_load:
   types:
   - undefined
   skip: true
-".reset_column_information":
+ActiveRecord::Base.reset_callbacks:
   types:
   - undefined
+  skip: true
+ActiveRecord::Base.reset_column_information:
+  types:
+  - undefined
   skip: false
-".reset_counters":
+ActiveRecord::Base.reset_counters:
   types:
   - undefined
   skip: true
-".reset_locking_column":
+ActiveRecord::Base.reset_locking_column:
   types:
   - undefined
   skip: true
-".reset_primary_key":
+ActiveRecord::Base.reset_primary_key:
   types:
   - undefined
   skip: true
-".reset_sequence_name":
+ActiveRecord::Base.reset_sequence_name:
   types:
   - undefined
   skip: false
-".reset_table_name":
+ActiveRecord::Base.reset_table_name:
   types:
   - undefined
   skip: false
-".retrieve_connection":
+ActiveRecord::Base.retrieve_connection:
   types:
   - undefined
   skip: false
-".rewhere":
+ActiveRecord::Base.rewhere:
   types:
   - undefined
   skip: false
-".sanitize_sql":
+ActiveRecord::Base.sanitize_sql:
   types:
   - undefined
   skip: true
-".sanitize_sql_array":
+ActiveRecord::Base.sanitize_sql_array:
   types:
   - undefined
   skip: true
-".sanitize_sql_for_assignment":
+ActiveRecord::Base.sanitize_sql_for_assignment:
   types:
   - undefined
   skip: true
-".sanitize_sql_for_conditions":
+ActiveRecord::Base.sanitize_sql_for_conditions:
   types:
   - undefined
   skip: true
-".sanitize_sql_for_order":
+ActiveRecord::Base.sanitize_sql_for_order:
   types:
   - undefined
   skip: true
-".sanitize_sql_hash_for_assignment":
+ActiveRecord::Base.sanitize_sql_hash_for_assignment:
   types:
   - undefined
   skip: true
-".sanitize_sql_like":
+ActiveRecord::Base.sanitize_sql_like:
   types:
   - undefined
   skip: true
-".schema_format":
+ActiveRecord::Base.schema_format:
   types:
   - undefined
   skip: true
-".schema_format=":
+ActiveRecord::Base.schema_format=:
   types:
   - undefined
   skip: true
-".schema_migrations_table_name":
+ActiveRecord::Base.schema_migrations_table_name:
   types:
   - undefined
   skip: true
-".schema_migrations_table_name=":
+ActiveRecord::Base.schema_migrations_table_name=:
   types:
   - undefined
   skip: true
-".schema_migrations_table_name?":
+ActiveRecord::Base.schema_migrations_table_name?:
   types:
   - undefined
   skip: true
-".scope":
+ActiveRecord::Base.scope:
   types:
   - undefined
   skip: false
-".scope_attributes":
+ActiveRecord::Base.scope_attributes:
   types:
   - undefined
   skip: true
-".scope_attributes?":
+ActiveRecord::Base.scope_attributes?:
   types:
   - undefined
   skip: true
-".scope_for_association":
+ActiveRecord::Base.scope_for_association:
   types:
   - undefined
   skip: false
-".second":
+ActiveRecord::Base.second:
   types:
   - undefined
   skip: false
-".second!":
+ActiveRecord::Base.second!:
   types:
   - undefined
   skip: false
-".second_to_last":
+ActiveRecord::Base.second_to_last:
   types:
   - undefined
   skip: false
-".second_to_last!":
+ActiveRecord::Base.second_to_last!:
   types:
   - undefined
   skip: false
-".select":
+ActiveRecord::Base.select:
   types:
   - undefined
   skip: false
-".sequence_name":
+ActiveRecord::Base.sequence_name:
   types:
   - undefined
   skip: false
-".sequence_name=":
+ActiveRecord::Base.sequence_name=:
   types:
   - undefined
   skip: false
-".serialize":
+ActiveRecord::Base.serialize:
   types:
   - undefined
   skip: true
-".set_callback":
+ActiveRecord::Base.set_callback:
   types:
   - undefined
   skip: true
-".skip_callback":
+ActiveRecord::Base.silence_redefinition_of_method:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.skip_callback:
   types:
   - undefined
   skip: true
-".skip_time_zone_conversion_for_attributes":
+ActiveRecord::Base.skip_time_zone_conversion_for_attributes:
   types:
   - undefined
   skip: true
-".skip_time_zone_conversion_for_attributes=":
+ActiveRecord::Base.skip_time_zone_conversion_for_attributes=:
   types:
   - undefined
   skip: true
-".skip_time_zone_conversion_for_attributes?":
+ActiveRecord::Base.skip_time_zone_conversion_for_attributes?:
   types:
   - undefined
   skip: true
-".sqlite3_connection":
+ActiveRecord::Base.sqlite3_connection:
   types:
   - undefined
   skip: false
-".sti_name":
+ActiveRecord::Base.sti_name:
   types:
   - undefined
   skip: false
-".store":
+ActiveRecord::Base.store:
   types:
   - undefined
   skip: true
-".store_accessor":
+ActiveRecord::Base.store_accessor:
   types:
   - undefined
   skip: true
-".store_full_sti_class":
+ActiveRecord::Base.store_full_sti_class:
   types:
   - undefined
   skip: true
-".store_full_sti_class=":
+ActiveRecord::Base.store_full_sti_class=:
   types:
   - undefined
   skip: true
-".store_full_sti_class?":
+ActiveRecord::Base.store_full_sti_class?:
   types:
   - undefined
   skip: true
-".stored_attributes":
+ActiveRecord::Base.stored_attributes:
   types:
   - undefined
   skip: true
-".sum":
+ActiveRecord::Base.subclasses:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.sum:
   types:
   - undefined
   skip: true
-".suppress":
+ActiveRecord::Base.suppress:
   types:
   - undefined
   skip: true
-".table_exists?":
+ActiveRecord::Base.table_exists?:
   types:
   - undefined
   skip: false
-".table_name":
+ActiveRecord::Base.table_name:
   types:
   - undefined
   skip: false
-".table_name=":
+ActiveRecord::Base.table_name=:
   types:
   - undefined
   skip: false
-".table_name_prefix":
+ActiveRecord::Base.table_name_prefix:
   types:
   - undefined
   skip: true
-".table_name_prefix=":
+ActiveRecord::Base.table_name_prefix=:
   types:
   - undefined
   skip: true
-".table_name_prefix?":
+ActiveRecord::Base.table_name_prefix?:
   types:
   - undefined
   skip: true
-".table_name_suffix":
+ActiveRecord::Base.table_name_suffix:
   types:
   - undefined
   skip: true
-".table_name_suffix=":
+ActiveRecord::Base.table_name_suffix=:
   types:
   - undefined
   skip: true
-".table_name_suffix?":
+ActiveRecord::Base.table_name_suffix?:
   types:
   - undefined
   skip: true
-".take":
+ActiveRecord::Base.take:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.take!:
   types:
   - undefined
   skip: false
-".take!":
+ActiveRecord::Base.third:
   types:
   - undefined
   skip: false
-".third":
+ActiveRecord::Base.third!:
   types:
   - undefined
   skip: false
-".third!":
+ActiveRecord::Base.third_to_last:
   types:
   - undefined
   skip: false
-".third_to_last":
+ActiveRecord::Base.third_to_last!:
   types:
   - undefined
   skip: false
-".third_to_last!":
+ActiveRecord::Base.thread_cattr_accessor:
   types:
   - undefined
   skip: false
-".time_zone_aware_attributes":
+ActiveRecord::Base.thread_cattr_reader:
   types:
   - undefined
+  skip: false
+ActiveRecord::Base.thread_cattr_writer:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.thread_mattr_accessor:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.thread_mattr_reader:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.thread_mattr_writer:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.time_zone_aware_attributes:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.time_zone_aware_attributes=:
+  types:
+  - undefined
   skip: true
-".time_zone_aware_attributes=":
+ActiveRecord::Base.time_zone_aware_types:
   types:
   - undefined
   skip: true
-".time_zone_aware_types":
+ActiveRecord::Base.time_zone_aware_types=:
   types:
   - undefined
   skip: true
-".time_zone_aware_types=":
+ActiveRecord::Base.time_zone_aware_types?:
   types:
   - undefined
   skip: true
-".time_zone_aware_types?":
+ActiveRecord::Base.timestamped_migrations:
   types:
   - undefined
   skip: true
-".timestamped_migrations":
+ActiveRecord::Base.timestamped_migrations=:
   types:
   - undefined
   skip: true
-".timestamped_migrations=":
+ActiveRecord::Base.to_adapter:
   types:
   - undefined
   skip: true
-".to_adapter":
+ActiveRecord::Base.to_json:
   types:
   - undefined
   skip: true
-".touch_attributes_with_time":
+ActiveRecord::Base.to_param:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.to_query:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.touch_attributes_with_time:
   types:
   - undefined
   skip: true
-".transaction":
+ActiveRecord::Base.transaction:
   types:
   - undefined
   skip: false
-".type_caster":
+ActiveRecord::Base.try:
   types:
   - undefined
+  skip: false
+ActiveRecord::Base.try!:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base.type_caster:
+  types:
+  - undefined
   skip: true
-".type_for_attribute":
+ActiveRecord::Base.type_for_attribute:
   types:
   - undefined
   skip: false
-".uncached":
+ActiveRecord::Base.uncached:
   types:
   - undefined
   skip: false
-".undefine_attribute_methods":
+ActiveRecord::Base.undefine_attribute_methods:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base.unloadable:
   types:
   - undefined
   skip: true
-".unscope":
+ActiveRecord::Base.unscope:
   types:
   - undefined
   skip: false
-".unscoped":
+ActiveRecord::Base.unscoped:
   types:
   - undefined
   skip: true
-".update":
+ActiveRecord::Base.update:
   types:
   - undefined
   skip: true
-".update_all":
+ActiveRecord::Base.update_all:
   types:
   - undefined
   skip: true
-".update_counters":
+ActiveRecord::Base.update_counters:
   types:
   - undefined
   skip: true
-".validate":
+ActiveRecord::Base.validate:
   types:
   - undefined
   skip: true
-".validates":
+ActiveRecord::Base.validates:
   types:
   - undefined
   skip: true
-".validates!":
+ActiveRecord::Base.validates!:
   types:
   - undefined
   skip: true
-".validates_absence_of":
+ActiveRecord::Base.validates_absence_of:
   types:
   - undefined
   skip: true
-".validates_acceptance_of":
+ActiveRecord::Base.validates_acceptance_of:
   types:
   - undefined
   skip: true
-".validates_associated":
+ActiveRecord::Base.validates_associated:
   types:
   - undefined
   skip: true
-".validates_confirmation_of":
+ActiveRecord::Base.validates_confirmation_of:
   types:
   - undefined
   skip: true
-".validates_each":
+ActiveRecord::Base.validates_each:
   types:
   - undefined
   skip: true
-".validates_exclusion_of":
+ActiveRecord::Base.validates_exclusion_of:
   types:
   - undefined
   skip: true
-".validates_format_of":
+ActiveRecord::Base.validates_format_of:
   types:
   - undefined
   skip: true
-".validates_inclusion_of":
+ActiveRecord::Base.validates_inclusion_of:
   types:
   - undefined
   skip: true
-".validates_length_of":
+ActiveRecord::Base.validates_length_of:
   types:
   - undefined
   skip: true
-".validates_numericality_of":
+ActiveRecord::Base.validates_numericality_of:
   types:
   - undefined
   skip: true
-".validates_presence_of":
+ActiveRecord::Base.validates_presence_of:
   types:
   - undefined
   skip: true
-".validates_size_of":
+ActiveRecord::Base.validates_size_of:
   types:
   - undefined
   skip: true
-".validates_uniqueness_of":
+ActiveRecord::Base.validates_uniqueness_of:
   types:
   - undefined
   skip: true
-".validates_with":
+ActiveRecord::Base.validates_with:
   types:
   - undefined
   skip: true
-".validators":
+ActiveRecord::Base.validators:
   types:
   - undefined
   skip: true
-".validators_on":
+ActiveRecord::Base.validators_on:
   types:
   - undefined
   skip: true
-".verbose_query_logs":
+ActiveRecord::Base.verbose_query_logs:
   types:
   - undefined
   skip: true
-".verbose_query_logs=":
+ActiveRecord::Base.verbose_query_logs=:
   types:
   - undefined
   skip: true
-".warn_on_records_fetched_greater_than":
+ActiveRecord::Base.warn_on_records_fetched_greater_than:
   types:
   - undefined
   skip: true
-".warn_on_records_fetched_greater_than=":
+ActiveRecord::Base.warn_on_records_fetched_greater_than=:
   types:
   - undefined
   skip: true
-".where":
+ActiveRecord::Base.where:
   types:
   - self
   - ActiveRecord::Relation
   - ActiveRecord::QueryMethods::WhereChain
   skip: false
-".yaml_encoder":
+ActiveRecord::Base.with_options:
   types:
   - undefined
   skip: false
-"#[]":
+ActiveRecord::Base.yaml_encoder:
   types:
   - undefined
   skip: false
-"#[]=":
+ActiveRecord::Base#<=>:
   types:
   - undefined
   skip: false
-"#accessed_fields":
+ActiveRecord::Base#==:
   types:
   - undefined
   skip: false
-"#add_to_transaction":
+ActiveRecord::Base#[]:
   types:
   - undefined
   skip: false
-"#aggregate_reflections":
+ActiveRecord::Base#[]=:
   types:
   - undefined
+  skip: false
+ActiveRecord::Base#`:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#accessed_fields:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#acts_like?:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#add_to_transaction:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#aggregate_reflections:
+  types:
+  - undefined
   skip: true
-"#aggregate_reflections?":
+ActiveRecord::Base#aggregate_reflections?:
   types:
   - undefined
   skip: true
-"#allow_unsafe_raw_sql":
+ActiveRecord::Base#allow_unsafe_raw_sql:
   types:
   - undefined
   skip: true
-"#assign_attributes":
+ActiveRecord::Base#as_json:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#assign_attributes:
   types:
   - undefined
   skip: false
-"#association":
+ActiveRecord::Base#association:
   types:
   - undefined
   skip: false
-"#association_cached?":
+ActiveRecord::Base#association_cached?:
   types:
   - undefined
   skip: false
-"#attribute_aliases":
+ActiveRecord::Base#attribute_aliases:
   types:
   - undefined
   skip: true
-"#attribute_aliases?":
+ActiveRecord::Base#attribute_aliases?:
   types:
   - undefined
   skip: true
-"#attribute_before_last_save":
+ActiveRecord::Base#attribute_before_last_save:
   types:
   - undefined
   skip: true
-"#attribute_change_to_be_saved":
+ActiveRecord::Base#attribute_change_to_be_saved:
   types:
   - undefined
   skip: true
-"#attribute_changed?":
+ActiveRecord::Base#attribute_changed?:
   types:
   - undefined
   skip: true
-"#attribute_changed_in_place?":
+ActiveRecord::Base#attribute_changed_in_place?:
   types:
   - undefined
   skip: true
-"#attribute_for_inspect":
+ActiveRecord::Base#attribute_for_inspect:
   types:
   - undefined
   skip: false
-"#attribute_in_database":
+ActiveRecord::Base#attribute_in_database:
   types:
   - undefined
   skip: true
-"#attribute_method_matchers":
+ActiveRecord::Base#attribute_method_matchers:
   types:
   - undefined
   skip: true
-"#attribute_method_matchers?":
+ActiveRecord::Base#attribute_method_matchers?:
   types:
   - undefined
   skip: true
-"#attribute_missing":
+ActiveRecord::Base#attribute_missing:
   types:
   - undefined
   skip: false
-"#attribute_names":
+ActiveRecord::Base#attribute_names:
   types:
   - undefined
   skip: false
-"#attribute_present?":
+ActiveRecord::Base#attribute_present?:
   types:
   - undefined
   skip: false
-"#attribute_previously_changed?":
+ActiveRecord::Base#attribute_previously_changed?:
   types:
   - undefined
   skip: true
-"#attribute_was":
+ActiveRecord::Base#attribute_was:
   types:
   - undefined
   skip: true
-"#attributes":
+ActiveRecord::Base#attributes:
   types:
   - undefined
   skip: false
-"#attributes=":
+ActiveRecord::Base#attributes=:
   types:
   - undefined
   skip: false
-"#attributes_before_type_cast":
+ActiveRecord::Base#attributes_before_type_cast:
   types:
   - undefined
   skip: true
-"#attributes_in_database":
+ActiveRecord::Base#attributes_in_database:
   types:
   - undefined
   skip: true
-"#becomes":
+ActiveRecord::Base#becomes:
   types:
   - undefined
   skip: false
-"#becomes!":
+ActiveRecord::Base#becomes!:
   types:
   - undefined
   skip: false
-"#before_committed!":
+ActiveRecord::Base#before_committed!:
   types:
   - undefined
   skip: false
-"#cache_key":
+ActiveRecord::Base#blank?:
   types:
+  - 'true'
+  - 'false'
+  skip: false
+ActiveRecord::Base#cache_key:
+  types:
   - undefined
   skip: false
-"#cache_key_with_version":
+ActiveRecord::Base#cache_key_with_version:
   types:
   - undefined
   skip: false
-"#cache_timestamp_format":
+ActiveRecord::Base#cache_timestamp_format:
   types:
   - undefined
   skip: true
-"#cache_timestamp_format?":
+ActiveRecord::Base#cache_timestamp_format?:
   types:
   - undefined
   skip: true
-"#cache_version":
+ActiveRecord::Base#cache_version:
   types:
   - undefined
   skip: false
-"#cache_versioning":
+ActiveRecord::Base#cache_versioning:
   types:
   - undefined
   skip: true
-"#cache_versioning?":
+ActiveRecord::Base#cache_versioning?:
   types:
   - undefined
   skip: true
-"#changed":
+ActiveRecord::Base#changed:
   types:
   - undefined
   skip: true
-"#changed?":
+ActiveRecord::Base#changed?:
   types:
   - undefined
   skip: true
-"#changed_attribute_names_to_save":
+ActiveRecord::Base#changed_attribute_names_to_save:
   types:
   - undefined
   skip: true
-"#changed_attributes":
+ActiveRecord::Base#changed_attributes:
   types:
   - undefined
   skip: true
-"#changed_for_autosave?":
+ActiveRecord::Base#changed_for_autosave?:
   types:
   - undefined
   skip: false
-"#changes":
+ActiveRecord::Base#changes:
   types:
   - undefined
   skip: true
-"#changes_applied":
+ActiveRecord::Base#changes_applied:
   types:
   - undefined
   skip: true
-"#changes_to_save":
+ActiveRecord::Base#changes_to_save:
   types:
   - undefined
   skip: true
-"#clear_attribute_changes":
+ActiveRecord::Base#class_eval:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#clear_attribute_changes:
   types:
   - undefined
   skip: true
-"#clear_changes_information":
+ActiveRecord::Base#clear_changes_information:
   types:
   - undefined
   skip: true
-"#column_for_attribute":
+ActiveRecord::Base#column_for_attribute:
   types:
   - undefined
   skip: true
-"#committed!":
+ActiveRecord::Base#committed!:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#connection_handler:
   types:
   - undefined
   skip: false
-"#connection_handler":
+ActiveRecord::Base#decrement:
   types:
   - undefined
   skip: false
-"#decrement":
+ActiveRecord::Base#decrement!:
   types:
   - undefined
   skip: false
-"#decrement!":
+ActiveRecord::Base#deep_dup:
   types:
   - undefined
   skip: false
-"#default_connection_handler":
+ActiveRecord::Base#default_connection_handler:
   types:
   - undefined
   skip: true
-"#default_connection_handler?":
+ActiveRecord::Base#default_connection_handler?:
   types:
   - undefined
   skip: true
-"#default_scope_override":
+ActiveRecord::Base#default_scope_override:
   types:
   - undefined
   skip: true
-"#default_scopes":
+ActiveRecord::Base#default_scopes:
   types:
   - undefined
   skip: true
-"#default_timezone":
+ActiveRecord::Base#default_timezone:
   types:
   - undefined
   skip: true
-"#defined_enums":
+ActiveRecord::Base#defined_enums:
   types:
   - undefined
   skip: true
-"#defined_enums?":
+ActiveRecord::Base#defined_enums?:
   types:
   - undefined
   skip: true
-"#delete":
+ActiveRecord::Base#delete:
   types:
   - undefined
   skip: false
-"#destroy":
+ActiveRecord::Base#destroy:
   types:
   - undefined
   skip: false
-"#destroy!":
+ActiveRecord::Base#destroy!:
   types:
   - undefined
   skip: false
-"#destroyed?":
+ActiveRecord::Base#destroyed?:
   types:
   - undefined
   skip: false
-"#destroyed_by_association":
+ActiveRecord::Base#destroyed_by_association:
   types:
   - undefined
   skip: false
-"#destroyed_by_association=":
+ActiveRecord::Base#destroyed_by_association=:
   types:
   - undefined
   skip: false
-"#dump_schema_after_migration":
+ActiveRecord::Base#dump_schema_after_migration:
   types:
   - undefined
   skip: true
-"#dump_schemas":
+ActiveRecord::Base#dump_schemas:
   types:
   - undefined
   skip: true
-"#encode_with":
+ActiveRecord::Base#duplicable?:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#encode_with:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#eql?:
   types:
   - undefined
   skip: false
-"#error_on_ignored_order":
+ActiveRecord::Base#error_on_ignored_order:
   types:
   - undefined
   skip: true
-"#errors":
+ActiveRecord::Base#errors:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#freeze:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#from_json:
   types:
   - undefined
   skip: false
-"#from_json":
+ActiveRecord::Base#frozen?:
   types:
   - undefined
   skip: false
-"#has_attribute?":
+ActiveRecord::Base#gem:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base#has_attribute?:
   types:
   - undefined
   skip: false
-"#has_changes_to_save?":
+ActiveRecord::Base#has_changes_to_save?:
   types:
   - undefined
   skip: true
-"#id":
+ActiveRecord::Base#hash:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#html_safe?:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#id:
   types:
   - undefined
   skip: true
-"#id=":
+ActiveRecord::Base#id=:
   types:
   - undefined
   skip: true
-"#id?":
+ActiveRecord::Base#id?:
   types:
   - undefined
   skip: true
-"#id_before_type_cast":
+ActiveRecord::Base#id_before_type_cast:
   types:
   - undefined
   skip: true
-"#id_in_database":
+ActiveRecord::Base#id_in_database:
   types:
   - undefined
   skip: true
-"#id_was":
+ActiveRecord::Base#id_was:
   types:
   - undefined
   skip: true
-"#include_root_in_json":
+ActiveRecord::Base#in?:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#include_root_in_json:
   types:
   - undefined
   skip: true
-"#include_root_in_json?":
+ActiveRecord::Base#include_root_in_json?:
   types:
   - undefined
   skip: true
-"#increment":
+ActiveRecord::Base#increment:
   types:
   - undefined
   skip: false
-"#increment!":
+ActiveRecord::Base#increment!:
   types:
   - undefined
   skip: false
-"#index_nested_attribute_errors":
+ActiveRecord::Base#index_nested_attribute_errors:
   types:
   - undefined
   skip: true
-"#init_with":
+ActiveRecord::Base#init_with:
   types:
   - undefined
   skip: false
-"#initialize_internals_callback":
+ActiveRecord::Base#initialize_internals_callback:
   types:
   - undefined
   skip: false
-"#invalid?":
+ActiveRecord::Base#inspect:
   types:
   - undefined
   skip: false
-"#lock!":
+ActiveRecord::Base#instance_values:
   types:
   - undefined
   skip: false
-"#lock_optimistically":
+ActiveRecord::Base#instance_variable_names:
   types:
   - undefined
+  skip: false
+ActiveRecord::Base#invalid?:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#load_dependency:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base#lock!:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#lock_optimistically:
+  types:
+  - undefined
   skip: true
-"#lock_optimistically?":
+ActiveRecord::Base#lock_optimistically?:
   types:
   - undefined
   skip: true
-"#locking_enabled?":
+ActiveRecord::Base#locking_enabled?:
   types:
   - undefined
   skip: false
-"#logger":
+ActiveRecord::Base#logger:
   types:
   - undefined
   skip: true
-"#mark_for_destruction":
+ActiveRecord::Base#mark_for_destruction:
   types:
   - undefined
   skip: false
-"#marked_for_destruction?":
+ActiveRecord::Base#marked_for_destruction?:
   types:
   - undefined
   skip: false
-"#method_missing":
+ActiveRecord::Base#method_missing:
   types:
   - undefined
   skip: false
-"#model_name":
+ActiveRecord::Base#model_name:
   types:
   - undefined
   skip: true
-"#nested_attributes_options":
+ActiveRecord::Base#nested_attributes_options:
   types:
   - undefined
   skip: true
-"#nested_attributes_options?":
+ActiveRecord::Base#nested_attributes_options?:
   types:
   - undefined
   skip: true
-"#new_record?":
+ActiveRecord::Base#new_record?:
   types:
   - undefined
   skip: false
-"#no_touching?":
+ActiveRecord::Base#no_touching?:
   types:
   - undefined
   skip: false
-"#partial_writes":
+ActiveRecord::Base#partial_writes:
   types:
   - undefined
   skip: true
-"#partial_writes?":
+ActiveRecord::Base#partial_writes?:
   types:
   - undefined
   skip: true
-"#persisted?":
+ActiveRecord::Base#persisted?:
   types:
   - undefined
   skip: false
-"#pluralize_table_names":
+ActiveRecord::Base#pluralize_table_names:
   types:
   - undefined
   skip: true
-"#pluralize_table_names?":
+ActiveRecord::Base#pluralize_table_names?:
   types:
   - undefined
   skip: true
-"#populate_with_current_scope_attributes":
+ActiveRecord::Base#populate_with_current_scope_attributes:
   types:
   - undefined
   skip: false
-"#previous_changes":
+ActiveRecord::Base#presence:
   types:
+  - Object
+  skip: false
+ActiveRecord::Base#presence_in:
+  types:
+  - Object
+  skip: false
+ActiveRecord::Base#present?:
+  types:
+  - 'true'
+  - 'false'
+  skip: false
+ActiveRecord::Base#pretty_print:
+  types:
   - undefined
-  skip: true
-"#primary_key_prefix_type":
+  skip: false
+ActiveRecord::Base#previous_changes:
   types:
   - undefined
   skip: true
-"#query_attribute":
+ActiveRecord::Base#primary_key_prefix_type:
   types:
   - undefined
   skip: true
-"#read_attribute":
+ActiveRecord::Base#pry:
   types:
   - undefined
-  skip: true
-"#read_attribute_before_type_cast":
+  skip: false
+ActiveRecord::Base#query_attribute:
   types:
   - undefined
   skip: true
-"#read_attribute_for_serialization":
+ActiveRecord::Base#read_attribute:
   types:
   - undefined
-  skip: false
-"#read_attribute_for_validation":
+  skip: true
+ActiveRecord::Base#read_attribute_before_type_cast:
   types:
   - undefined
-  skip: false
-"#readonly!":
+  skip: true
+ActiveRecord::Base#readonly!:
   types:
   - undefined
   skip: false
-"#readonly?":
+ActiveRecord::Base#readonly?:
   types:
   - undefined
   skip: false
-"#record_timestamps":
+ActiveRecord::Base#record_timestamps:
   types:
   - undefined
   skip: true
-"#record_timestamps=":
+ActiveRecord::Base#record_timestamps=:
   types:
   - undefined
   skip: true
-"#record_timestamps?":
+ActiveRecord::Base#record_timestamps?:
   types:
   - undefined
   skip: true
-"#reload":
+ActiveRecord::Base#reload:
   types:
   - undefined
   skip: false
-"#respond_to_without_attributes?":
+ActiveRecord::Base#require_dependency:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base#require_or_load:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base#respond_to?:
   types:
   - undefined
   skip: false
-"#restore_attributes":
+ActiveRecord::Base#restore_attributes:
   types:
   - undefined
   skip: true
-"#rollback_active_record_state!":
+ActiveRecord::Base#rollback_active_record_state!:
   types:
   - undefined
   skip: false
-"#rolledback!":
+ActiveRecord::Base#rolledback!:
   types:
   - undefined
   skip: false
-"#run_callbacks":
+ActiveRecord::Base#run_callbacks:
   types:
   - undefined
   skip: true
-"#save":
+ActiveRecord::Base#save:
   types:
   - undefined
   skip: false
-"#save!":
+ActiveRecord::Base#save!:
   types:
   - undefined
   skip: false
-"#saved_change_to_attribute":
+ActiveRecord::Base#saved_change_to_attribute:
   types:
   - undefined
   skip: true
-"#saved_change_to_attribute?":
+ActiveRecord::Base#saved_change_to_attribute?:
   types:
   - undefined
   skip: true
-"#saved_changes":
+ActiveRecord::Base#saved_changes:
   types:
   - undefined
   skip: true
-"#saved_changes?":
+ActiveRecord::Base#saved_changes?:
   types:
   - undefined
   skip: true
-"#schema_format":
+ActiveRecord::Base#schema_format:
   types:
   - undefined
   skip: true
-"#serializable_hash":
+ActiveRecord::Base#serializable_hash:
   types:
   - undefined
   skip: false
-"#skip_time_zone_conversion_for_attributes":
+ActiveRecord::Base#skip_time_zone_conversion_for_attributes:
   types:
   - undefined
   skip: true
-"#skip_time_zone_conversion_for_attributes?":
+ActiveRecord::Base#skip_time_zone_conversion_for_attributes?:
   types:
   - undefined
   skip: true
-"#slice":
+ActiveRecord::Base#slice:
   types:
   - undefined
   skip: false
-"#store_full_sti_class":
+ActiveRecord::Base#store_full_sti_class:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base#store_full_sti_class?:
   types:
   - undefined
   skip: true
-"#store_full_sti_class?":
+ActiveRecord::Base#table_name_prefix:
   types:
   - undefined
   skip: true
-"#table_name_prefix":
+ActiveRecord::Base#table_name_prefix?:
   types:
   - undefined
   skip: true
-"#table_name_prefix?":
+ActiveRecord::Base#table_name_suffix:
   types:
   - undefined
   skip: true
-"#table_name_suffix":
+ActiveRecord::Base#table_name_suffix?:
   types:
   - undefined
   skip: true
-"#table_name_suffix?":
+ActiveRecord::Base#time_zone_aware_attributes:
   types:
   - undefined
   skip: true
-"#time_zone_aware_attributes":
+ActiveRecord::Base#time_zone_aware_types:
   types:
   - undefined
   skip: true
-"#time_zone_aware_types":
+ActiveRecord::Base#time_zone_aware_types?:
   types:
   - undefined
   skip: true
-"#time_zone_aware_types?":
+ActiveRecord::Base#timestamped_migrations:
   types:
   - undefined
   skip: true
-"#timestamped_migrations":
+ActiveRecord::Base#to_gid:
   types:
   - undefined
   skip: true
-"#to_gid":
+ActiveRecord::Base#to_gid_param:
   types:
   - undefined
   skip: true
-"#to_gid_param":
+ActiveRecord::Base#to_global_id:
   types:
   - undefined
   skip: true
-"#to_global_id":
+ActiveRecord::Base#to_json:
   types:
   - undefined
   skip: true
-"#to_key":
+ActiveRecord::Base#to_key:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#to_model:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#to_param:
   types:
   - undefined
   skip: false
-"#to_model":
+ActiveRecord::Base#to_partial_path:
   types:
   - undefined
   skip: false
-"#to_partial_path":
+ActiveRecord::Base#to_query:
   types:
   - undefined
   skip: false
-"#to_sgid":
+ActiveRecord::Base#to_sgid:
   types:
   - undefined
   skip: true
-"#to_sgid_param":
+ActiveRecord::Base#to_sgid_param:
   types:
   - undefined
   skip: true
-"#to_signed_global_id":
+ActiveRecord::Base#to_signed_global_id:
   types:
   - undefined
   skip: true
-"#toggle":
+ActiveRecord::Base#toggle:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#toggle!:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#touch:
   types:
   - undefined
   skip: false
-"#toggle!":
+ActiveRecord::Base#touch_later:
   types:
   - undefined
   skip: false
-"#touch":
+ActiveRecord::Base#transaction:
   types:
   - undefined
   skip: false
-"#touch_later":
+ActiveRecord::Base#try:
   types:
   - undefined
   skip: false
-"#transaction":
+ActiveRecord::Base#try!:
   types:
   - undefined
   skip: false
-"#type_for_attribute":
+ActiveRecord::Base#type_for_attribute:
+  types:
+  - undefined
+  skip: true
+ActiveRecord::Base#unloadable:
   types:
   - undefined
   skip: true
-"#update":
+ActiveRecord::Base#update:
   types:
   - undefined
   skip: false
-"#update!":
+ActiveRecord::Base#update!:
   types:
   - undefined
   skip: false
-"#update_attribute":
+ActiveRecord::Base#update_attribute:
   types:
   - undefined
   skip: false
-"#update_attributes":
+ActiveRecord::Base#update_attributes:
   types:
   - undefined
   skip: false
-"#update_attributes!":
+ActiveRecord::Base#update_attributes!:
   types:
   - undefined
   skip: false
-"#update_column":
+ActiveRecord::Base#update_column:
   types:
   - undefined
   skip: false
-"#update_columns":
+ActiveRecord::Base#update_columns:
   types:
   - undefined
   skip: false
-"#valid?":
+ActiveRecord::Base#valid?:
   types:
   - undefined
   skip: false
-"#validate":
+ActiveRecord::Base#validate:
   types:
   - Boolean
   skip: false
-"#validate!":
+ActiveRecord::Base#validate!:
   types:
   - undefined
   skip: false
-"#validates_absence_of":
+ActiveRecord::Base#validates_absence_of:
   types:
   - undefined
   skip: true
-"#validates_acceptance_of":
+ActiveRecord::Base#validates_acceptance_of:
   types:
   - undefined
   skip: true
-"#validates_confirmation_of":
+ActiveRecord::Base#validates_confirmation_of:
   types:
   - undefined
   skip: true
-"#validates_exclusion_of":
+ActiveRecord::Base#validates_exclusion_of:
   types:
   - undefined
   skip: true
-"#validates_format_of":
+ActiveRecord::Base#validates_format_of:
   types:
   - undefined
   skip: true
-"#validates_inclusion_of":
+ActiveRecord::Base#validates_inclusion_of:
   types:
   - undefined
   skip: true
-"#validates_length_of":
+ActiveRecord::Base#validates_length_of:
   types:
   - undefined
   skip: true
-"#validates_numericality_of":
+ActiveRecord::Base#validates_numericality_of:
   types:
   - undefined
   skip: true
-"#validates_presence_of":
+ActiveRecord::Base#validates_presence_of:
   types:
   - undefined
   skip: true
-"#validates_size_of":
+ActiveRecord::Base#validates_size_of:
   types:
   - undefined
   skip: true
-"#validates_with":
+ActiveRecord::Base#validates_with:
   types:
   - undefined
   skip: false
-"#validation_context":
+ActiveRecord::Base#validation_context:
   types:
   - undefined
   skip: true
-"#verbose_query_logs":
+ActiveRecord::Base#verbose_query_logs:
   types:
   - undefined
   skip: true
-"#warn_on_records_fetched_greater_than":
+ActiveRecord::Base#warn_on_records_fetched_greater_than:
   types:
   - undefined
   skip: true
-"#will_save_change_to_attribute?":
+ActiveRecord::Base#will_save_change_to_attribute?:
   types:
   - undefined
   skip: true
-"#with_lock":
+ActiveRecord::Base#with_lock:
   types:
   - undefined
   skip: false
-"#with_transaction_returning_status":
+ActiveRecord::Base#with_options:
   types:
   - undefined
   skip: false
-"#write_attribute":
+ActiveRecord::Base#with_transaction_returning_status:
+  types:
+  - undefined
+  skip: false
+ActiveRecord::Base#write_attribute:
   types:
   - undefined
   skip: true
