@@ -78,7 +78,7 @@ RSpec.describe "Rails 5 API" do
     expect(completion_at(filename, [6, 7], map)).to include("create_table")
   end
 
-  it "provides completions for ActiveJob::Base" do
+  it "provides completions for ActiveJob::Base", coverage: :rails5 do
     map = use_workspace "./spec/rails5"
 
     assert_matches_definitions(
@@ -89,7 +89,7 @@ RSpec.describe "Rails 5 API" do
     )
   end
 
-  it "provides completions for ActionDispatch::Routing::Mapper" do
+  it "provides completions for ActionDispatch::Routing::Mapper", coverage: :rails5 do
     map = use_workspace "./spec/rails5"
 
     assert_matches_definitions(
@@ -100,7 +100,7 @@ RSpec.describe "Rails 5 API" do
     )
   end
 
-  it "provides completions for ActiveRecord::Base" do
+  it "provides completions for ActiveRecord::Base", coverage: :rails5 do
     map = use_workspace "./spec/rails5"
 
     assert_matches_definitions(
@@ -111,7 +111,7 @@ RSpec.describe "Rails 5 API" do
     )
   end
 
-  it "provides completions for ActionController::Base" do
+  it "provides completions for ActionController::Base", coverage: :rails5 do
     map = use_workspace "./spec/rails5"
     assert_matches_definitions(
       map,
@@ -121,7 +121,7 @@ RSpec.describe "Rails 5 API" do
     )
   end
 
-  it "auto-completes ActiveSupport core extensions" do
+  it "auto-completes ActiveSupport core extensions", coverage: :rails5 do
     map = use_workspace "./spec/rails5"
 
     Dir.glob("spec/definitions/rails5/core/*.yml").each do |path|

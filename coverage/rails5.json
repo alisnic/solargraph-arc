@@ -1,0 +1,114 @@
+[
+  {
+    "class_name": "ActionController::Base",
+    "total": 434,
+    "covered": 149,
+    "typed": 13,
+    "percent_covered": 34.3,
+    "percent_typed": 3.0
+  },
+  {
+    "class_name": "ActiveRecord::Base",
+    "total": 688,
+    "covered": 299,
+    "typed": 13,
+    "percent_covered": 43.5,
+    "percent_typed": 1.9
+  },
+  {
+    "class_name": "ActionDispatch::Routing::Mapper",
+    "total": 142,
+    "covered": 126,
+    "typed": 8,
+    "percent_covered": 88.7,
+    "percent_typed": 5.6
+  },
+  {
+    "class_name": "Kernel",
+    "total": 56,
+    "covered": 54,
+    "typed": 4,
+    "percent_covered": 96.4,
+    "percent_typed": 7.1
+  },
+  {
+    "class_name": "Date",
+    "total": 166,
+    "covered": 162,
+    "typed": 8,
+    "percent_covered": 97.6,
+    "percent_typed": 4.8
+  },
+  {
+    "class_name": "String",
+    "total": 117,
+    "covered": 113,
+    "typed": 8,
+    "percent_covered": 96.6,
+    "percent_typed": 6.8
+  },
+  {
+    "class_name": "File",
+    "total": 83,
+    "covered": 79,
+    "typed": 8,
+    "percent_covered": 95.2,
+    "percent_typed": 9.6
+  },
+  {
+    "class_name": "Array",
+    "total": 99,
+    "covered": 95,
+    "typed": 7,
+    "percent_covered": 96.0,
+    "percent_typed": 7.1
+  },
+  {
+    "class_name": "DateTime",
+    "total": 193,
+    "covered": 123,
+    "typed": 8,
+    "percent_covered": 63.7,
+    "percent_typed": 4.1
+  },
+  {
+    "class_name": "Hash",
+    "total": 110,
+    "covered": 106,
+    "typed": 7,
+    "percent_covered": 96.4,
+    "percent_typed": 6.4
+  },
+  {
+    "class_name": "Integer",
+    "total": 110,
+    "covered": 106,
+    "typed": 8,
+    "percent_covered": 96.4,
+    "percent_typed": 7.3
+  },
+  {
+    "class_name": "Class",
+    "total": 112,
+    "covered": 104,
+    "typed": 8,
+    "percent_covered": 92.9,
+    "percent_typed": 7.1
+  },
+  {
+    "class_name": "Time",
+    "total": 192,
+    "covered": 187,
+    "typed": 8,
+    "percent_covered": 97.4,
+    "percent_typed": 4.2
+  },
+  {
+    "class_name": "ActiveJob::Base",
+    "total": 172,
+    "covered": 88,
+    "typed": 8,
+    "percent_covered": 51.2,
+    "percent_typed": 4.7
+  }
+]

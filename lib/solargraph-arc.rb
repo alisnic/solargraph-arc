@@ -25,7 +25,6 @@ module Solargraph
         )
       end
 
-      #<Solargraph::Pin::Reference::Include ``
       def local source_map
         pins = []
         ds   = source_map.document_symbols.select {|n| n.is_a?(Solargraph::Pin::Namespace) }

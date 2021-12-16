@@ -6,6 +6,8 @@ require 'pry'
 require_relative './helpers'
 
 RSpec.configure do |config|
+  coverages = {}
+
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
@@ -22,6 +24,26 @@ RSpec.configure do |config|
   config.before(:suite) do
     # NOTE: without this, gem logic does not see gems inside sample project"
     Bundler.reset_rubygems!
+  end
+
+  config.around(:each) do |example|
+    begin
+      if key = example.metadata[:coverage]
+        Thread.current[:solargraph_arc_coverage] = coverages[key] ||= []
+      end
+
+      example.run
+    ensure
+      Thread.current[:solargraph_arc_coverage] = nil
+    end
+  end
+
+  config.after(:suite) do
+    if coverages.any?
+      coverages.each do |key, data|
+        File.write("coverage/#{key}.json", JSON.pretty_generate(data))
+      end
+    end
   end
 
   if config.files_to_run.one?

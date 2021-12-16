@@ -1,5 +1,6 @@
 tmp/examples.txt
 .DS_Store
+.gem
 spec/rails5/log/
 spec/rails5/tmp/
 spec/rails6/log/

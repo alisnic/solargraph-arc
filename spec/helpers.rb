@@ -51,13 +51,17 @@ module Helpers
       File.write("spec/definitions/#{defition_name}.yml", definitions.to_yaml)
     end
 
-    if print_stats
-      total   = definitions.keys.size
-      covered = total - skipped
+    if coverage = Thread.current[:solargraph_arc_coverage]
+      total = definitions.keys.size
 
-      puts class_name
-      puts "  Completions: #{covered}/#{total} methods (#{percent(covered, total)}%)"
-      puts "  Known types: #{typed}/#{covered} methods (#{percent(typed, covered)}%)"
+      coverage << {
+        class_name: class_name,
+        total:      total,
+        covered:    total - skipped,
+        typed:      typed,
+        percent_covered: percent(total - skipped, total),
+        percent_typed:   percent(typed, total)
+      }
     end
   end
 
