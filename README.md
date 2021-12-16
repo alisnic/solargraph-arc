@@ -22,11 +22,10 @@ This gem is tested on:
 
 # Usage
 
-1. clone repo somewhere `git clone git@github.com:alisnic/solar-rails.git`
-2. Install or update `solargraph`
+1. Install gem
 
     ```
-    gem update solargraph || gem install solagraph
+    gem install solargraph-arc
     ```
 
 2. If you project does not have a solagraph config, generate one using `solargraph config`
@@ -35,5 +34,5 @@ This gem is tested on:
     ```yml
     # ...
     plugins:
-      - path/to/solar-rails/lib/solar-rails.rb
+      - solargraph-arc
     ```
