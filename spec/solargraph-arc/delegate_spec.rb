@@ -17,8 +17,8 @@ RSpec.describe Solargraph::Arc::Delegate do
       end
     RUBY
 
-    assert_public_instance_method(api_map, "Thing#one", "undefined")
-    assert_public_instance_method(api_map, "Thing#two", "undefined") do |pin|
+    assert_public_instance_method(api_map, "Thing#one", ["undefined"])
+    assert_public_instance_method(api_map, "Thing#two", ["undefined"]) do |pin|
       expect(pin.location.range.to_hash).to eq({
         :start => { :line => 1, :character => 0 },
         :end => { :line=>1, :character => 8 }

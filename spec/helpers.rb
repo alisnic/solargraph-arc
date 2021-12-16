@@ -112,7 +112,7 @@ module Helpers
     pin = find_pin(query, map)
     expect(pin).to_not be_nil
     expect(pin.scope).to eq(:instance)
-    expect(pin.return_type.tag).to eq(return_type)
+    expect(pin.return_type.map(&:tag)).to eq(return_type)
 
     yield pin if block_given?
   end

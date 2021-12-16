@@ -41,7 +41,8 @@ RSpec.configure do |config|
   config.after(:suite) do
     if coverages.any?
       coverages.each do |key, data|
-        File.write("coverage/#{key}.json", JSON.pretty_generate(data))
+        sorted = data.sort_by {|hash| hash[:class_name]}
+        File.write("coverage/#{key}.json", JSON.pretty_generate(sorted))
       end
     end
   end

@@ -1,4 +1,6 @@
-# README
+# Solargraph ARC
+
+Solargraph **A**wesome **R**ails **C**completions
 
 This is an attempt for another approach for making Solargraph play well with
 Rails. Features:
@@ -36,3 +38,4 @@ This gem is tested on:
     plugins:
       - solargraph-arc
     ```
+2. if you use solargraph from bundle, don't forget to include `solagraph-arc` in your gemfile

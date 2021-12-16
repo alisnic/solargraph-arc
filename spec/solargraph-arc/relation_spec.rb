@@ -15,14 +15,14 @@ RSpec.describe Solargraph::Arc::Relation do
       end
     RUBY
 
-    assert_public_instance_method(api_map, "Transaction#account", "Account") do |pin|
+    assert_public_instance_method(api_map, "Transaction#account", ["Account"]) do |pin|
       expect(pin.location.range.to_hash).to eq({
         :start => { :line => 1, :character => 0 },
         :end => { :line=>1, :character => 8 }
       })
     end
 
-    assert_public_instance_method(api_map, "Transaction#category", "Category")
+    assert_public_instance_method(api_map, "Transaction#category", ["Category"])
   end
 
   it "generates methods for plural associations" do
@@ -36,12 +36,12 @@ RSpec.describe Solargraph::Arc::Relation do
     assert_public_instance_method(
       api_map,
       "Account#transactions",
-      "ActiveRecord::Associations::CollectionProxy<Transaction>"
+      ["ActiveRecord::Associations::CollectionProxy<Transaction>"]
     )
     assert_public_instance_method(
       api_map,
       "Account#things",
-      "ActiveRecord::Associations::CollectionProxy<Thing>"
+      ["ActiveRecord::Associations::CollectionProxy<Thing>"]
     )
   end
 

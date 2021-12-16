@@ -19,7 +19,6 @@ RSpec.describe Solargraph::Arc::Devise do
         class PagesController < ApplicationController
           def index
             curr
-            sign
             AwesomeUser.new.conf
           end
         end
@@ -27,8 +26,12 @@ RSpec.describe Solargraph::Arc::Devise do
     end
 
     filename = './app/controllers/pages_controller.rb'
-    expect(completion_at(filename, [3, 7], map)).to include("sign_in_and_redirect")
     expect(completion_at(filename, [2, 7], map)).to include("current_awesome_user")
-    expect(completion_at(filename, [4, 23], map)).to include("confirm")
+    expect(completion_at(filename, [3, 23], map)).to include("confirm")
+
+    assert_public_instance_method(map, "ApplicationController#authenticate_awesome_user!", ['undefined'])
+    assert_public_instance_method(map, "ApplicationController#awesome_user_signed_in?", ['true', 'false'])
+    assert_public_instance_method(map, "ApplicationController#current_awesome_user", ['AwesomeUser', 'nil'])
+    assert_public_instance_method(map, "ApplicationController#awesome_user_session", ['undefined'])
   end
 end

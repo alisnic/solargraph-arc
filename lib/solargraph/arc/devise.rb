@@ -56,14 +56,33 @@ module Solargraph
 
         pins + @seen_devise_closures.map do |model_ns|
           ast = Walker.normalize_ast(source_map.source)
+          mapping = model_ns.name.underscore
 
-          Util.build_public_method(
-            ns,
-            "current_#{model_ns.name.underscore}",
-            types: [model_ns.name, "nil"],
-            location: Util.build_location(ast, ns.filename)
-          )
-        end
+          [
+            Util.build_public_method(
+              ns,
+              "authenticate_#{mapping}!",
+              location: Util.build_location(ast, ns.filename)
+            ),
+            Util.build_public_method(
+              ns,
+              "#{mapping}_signed_in?",
+              types: ["true", "false"],
+              location: Util.build_location(ast, ns.filename)
+            ),
+            Util.build_public_method(
+              ns,
+              "current_#{mapping}",
+              types: [model_ns.name, "nil"],
+              location: Util.build_location(ast, ns.filename)
+            ),
+            Util.build_public_method(
+              ns,
+              "#{mapping}_session",
+              location: Util.build_location(ast, ns.filename)
+            )
+          ]
+        end.flatten
       end
     end
   end

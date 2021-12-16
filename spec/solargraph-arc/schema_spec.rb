@@ -38,20 +38,20 @@ RSpec.describe Solargraph::Arc::Schema do
       RUBY
     end
 
-    assert_public_instance_method(map, "Account#extra", "Hash") do |pin|
+    assert_public_instance_method(map, "Account#extra", ["Hash"]) do |pin|
       expect(pin.location.range.to_hash).to eq({
         :start => { :line => 5, :character => 0 },
         :end => { :line => 5, :character => 4 }
       })
     end
 
-    assert_public_instance_method(map, "Account#balance", "BigDecimal")
-    assert_public_instance_method(map, "Account#some_int", "Integer")
-    assert_public_instance_method(map, "Account#some_date", "Date")
-    assert_public_instance_method(map, "Account#some_big_id", "Integer")
-    assert_public_instance_method(map, "Account#name", "String")
-    assert_public_instance_method(map, "Account#active", "Boolean")
-    assert_public_instance_method(map, "Account#notes", "String")
-    assert_public_instance_method(map, "Account#some_ip", "IPAddr")
+    assert_public_instance_method(map, "Account#balance", ["BigDecimal"])
+    assert_public_instance_method(map, "Account#some_int", ["Integer"])
+    assert_public_instance_method(map, "Account#some_date", ["Date"])
+    assert_public_instance_method(map, "Account#some_big_id", ["Integer"])
+    assert_public_instance_method(map, "Account#name", ["String"])
+    assert_public_instance_method(map, "Account#active", ["Boolean"])
+    assert_public_instance_method(map, "Account#notes", ["String"])
+    assert_public_instance_method(map, "Account#some_ip", ["IPAddr"])
   end
 end
