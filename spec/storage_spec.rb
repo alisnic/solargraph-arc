@@ -1,8 +1,8 @@
 require "spec_helper"
 
-RSpec.describe SolarRails::Storage do
+RSpec.describe Solargraph::Arc::Storage do
   before do
-    Solargraph::Convention.register SolarRails::Convention
+    Solargraph::Convention.register Solargraph::Arc::Convention
   end
 
   it "can auto-complete ActiveStorage" do

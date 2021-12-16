@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-RSpec.describe SolarRails::Devise do
+RSpec.describe Solargraph::Arc::Devise do
   let(:api_map) { Solargraph::ApiMap.new }
 
   before do
-    Solargraph::Convention.register SolarRails::Convention
+    Solargraph::Convention.register Solargraph::Arc::Convention
   end
 
   it "includes devise modules" do

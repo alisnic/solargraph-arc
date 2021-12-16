@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-RSpec.describe SolarRails::Relation do
+RSpec.describe Solargraph::Arc::Relation do
   let(:api_map) { Solargraph::ApiMap.new }
 
   before do
-    Solargraph::Convention.register SolarRails::Convention
+    Solargraph::Convention.register Solargraph::Arc::Convention
   end
 
   it "generates methods for singular association" do

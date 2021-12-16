@@ -1,15 +1,9 @@
 ENV["RAILS_ENV"] = "test"
 
 require 'solargraph'
-require 'solar-rails'
+require 'solargraph-arc'
 require 'pry'
 require_relative './helpers'
-
-class Solargraph::Pin::Base
-  def inspect
-    "#<#{self.class} `#{self.path}`>"
-  end
-end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

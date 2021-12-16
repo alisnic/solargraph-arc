@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe SolarRails::Schema do
+RSpec.describe Solargraph::Arc::Schema do
   let(:schema) do
     <<~RUBY
       ActiveRecord::Schema.define(version: 2021_10_20_084658) do
@@ -25,7 +25,7 @@ RSpec.describe SolarRails::Schema do
   end
 
   before do
-    Solargraph::Convention.register SolarRails::Convention
+    Solargraph::Convention.register Solargraph::Arc::Convention
   end
 
   it "generates methods based on schema" do

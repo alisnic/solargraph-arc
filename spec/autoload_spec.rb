@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-RSpec.describe SolarRails::Autoload do
+RSpec.describe Solargraph::Arc::Autoload do
   let(:api_map) { Solargraph::ApiMap.new }
 
   before do
-    Solargraph::Convention.register SolarRails::Convention
+    Solargraph::Convention.register Solargraph::Arc::Convention
   end
 
   it "auto completes implicit nested classes" do

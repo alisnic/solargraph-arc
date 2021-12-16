@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe "Rails 5 API" do
   before do
-    Solargraph::Convention.register SolarRails::Convention
+    Solargraph::Convention.register Solargraph::Arc::Convention
   end
 
   it "it provides Rails controller api" do
