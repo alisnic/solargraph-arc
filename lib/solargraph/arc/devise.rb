@@ -42,6 +42,7 @@ module Solargraph
         end
 
         walker.walk
+        Solargraph.logger.debug("[ARC][Devise] added #{pins.map(&:name)} to #{ns.path}") if pins.any?
         pins
       end
 
@@ -54,7 +55,7 @@ module Solargraph
           )
         ]
 
-        pins + @seen_devise_closures.map do |model_ns|
+        mapping_pins = @seen_devise_closures.map do |model_ns|
           ast = Walker.normalize_ast(source_map.source)
           mapping = model_ns.name.underscore
 
@@ -83,6 +84,10 @@ module Solargraph
             )
           ]
         end.flatten
+
+        pins += mapping_pins
+        Solargraph.logger.debug("[ARC][Devise] added #{pins.map(&:name)} to #{ns.path}") if pins.any?
+        pins
       end
     end
   end

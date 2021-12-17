@@ -12,7 +12,7 @@ module Solargraph
         source = Solargraph::Source.load_string(ann, "annotations.rb")
         map    = Solargraph::SourceMap.map(source)
 
-        Solargraph.logger.debug("[Rails] found #{map.pins.size} pins in annotations")
+        Solargraph.logger.debug("[Arc][Rails] found #{map.pins.size} pins in annotations")
 
         overrides = YAML.load_file(File.dirname(__FILE__) + "/types.yml").map do |meth, types|
           Util.method_return(meth, types)
@@ -61,7 +61,7 @@ module Solargraph
         return [] unless source_map.filename.include?("db/migrate")
         node = Walker.normalize_ast(source_map.source)
 
-        [
+        pins = [
           Util.build_module_include(
             ns,
             "ActiveRecord::ConnectionAdapters::SchemaStatements",
@@ -73,6 +73,9 @@ module Solargraph
             Util.build_location(node, ns.filename)
           )
         ]
+
+        Solargraph.logger.debug("[ARC][RailsApi] added #{pins.map(&:name)} to #{ns.path}")
+        pins
       end
     end
   end

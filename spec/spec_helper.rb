@@ -38,6 +38,12 @@ RSpec.configure do |config|
     end
   end
 
+  config.around(:each, :debug) do |example|
+    Solargraph.logger.level = Logger::DEBUG
+    example.run
+    Solargraph.logger.level = Logger::INFO
+  end
+
   config.after(:suite) do
     if coverages.any?
       coverages.each do |key, data|

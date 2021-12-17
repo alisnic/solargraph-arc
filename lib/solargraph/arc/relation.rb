@@ -27,11 +27,8 @@ module Solargraph
           pins << plural_association(ns, ast)
         end
 
-        if pins.any?
-          Solargraph.logger.debug("[Rails][Relation] seeded #{pins.size} methods for #{ns.path}")
-        end
-
         walker.walk
+        Solargraph.logger.debug("[ARC][Relation] added #{pins.map(&:name)} to #{ns.path}") if pins.any?
         pins
       end
 

@@ -25,6 +25,9 @@ module Solargraph
         Solargraph::Environ.new(
           pins: Solargraph::Arc::RailsApi.instance.global(yard_map)
         )
+      rescue => error
+        Solargraph.logger.warn(error.message + "\n" + error.backtrace)
+        EMPTY_ENVIRON
       end
 
       def local source_map
@@ -34,15 +37,24 @@ module Solargraph
 
         return EMPTY_ENVIRON unless ns
 
-        pins += Schema.instance.process(source_map, ns)
-        pins += Relation.instance.process(source_map, ns)
-        pins += Storage.instance.process(source_map, ns)
-        pins += Autoload.instance.process(source_map, ns, ds)
-        pins += Devise.instance.process(source_map, ns)
-        pins += Delegate.instance.process(source_map, ns)
-        pins += RailsApi.instance.local(source_map, ns)
+        pins += run_feature { Schema.instance.process(source_map, ns) }
+        pins += run_feature { Relation.instance.process(source_map, ns) }
+        pins += run_feature { Storage.instance.process(source_map, ns) }
+        pins += run_feature { Autoload.instance.process(source_map, ns, ds) }
+        pins += run_feature { Devise.instance.process(source_map, ns) }
+        pins += run_feature { Delegate.instance.process(source_map, ns) }
+        pins += run_feature { RailsApi.instance.local(source_map, ns) }
 
         Solargraph::Environ.new(pins: pins)
+      end
+
+      private
+
+      def run_feature(&block)
+        yield
+      rescue => error
+        Solargraph.logger.warn(error.message + "\n" + error.backtrace)
+        []
       end
     end
   end

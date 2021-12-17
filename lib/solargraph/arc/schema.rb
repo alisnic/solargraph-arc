@@ -34,9 +34,7 @@ module Solargraph
 
         return [] unless table
 
-        Solargraph.logger.debug("[Rails][Schema] seeded #{table.size} methods for #{ns.path}")
-
-        table.map do |column, data|
+        pins = table.map do |column, data|
           Util.build_public_method(
             ns,
             column,
@@ -44,6 +42,9 @@ module Solargraph
             location: Util.build_location(data.ast, "db/schema.rb")
           )
         end
+
+        Solargraph.logger.debug("[ARC][Schema] added #{pins.map(&:name)} to #{ns.path}") if pins.any?
+        pins
       end
 
       private

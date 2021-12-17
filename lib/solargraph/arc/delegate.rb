@@ -26,6 +26,7 @@ module Solargraph
         end
 
         walker.walk
+        Solargraph.logger.debug("[ARC][Delegate] added #{pins.map(&:name)} to #{ns.path}")
         pins
       end
     end

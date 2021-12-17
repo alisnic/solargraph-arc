@@ -34,6 +34,7 @@ module Solargraph
         end
 
         walker.walk
+        Solargraph.logger.debug("[ARC][Storage] added #{pins.map(&:name)} to #{ns.path}") if pins.any?
         pins
       end
     end

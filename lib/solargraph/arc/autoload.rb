@@ -7,7 +7,7 @@ module Solargraph
 
       def process(source_map, ns, ds)
         return [] unless ds.size == 1 && ns.path.include?("::")
-        Solargraph.logger.debug("[Rails][NamespaceHack] seeding class tree for #{ns.path}")
+        Solargraph.logger.debug("[Arc][Autoload] seeding class tree for #{ns.path}")
 
         root_ns = source_map.pins.find {|p| p.path == "" }
         namespace_stubs(root_ns, ns)
