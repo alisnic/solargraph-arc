@@ -11,6 +11,8 @@ require_relative 'solargraph/arc/walker.rb'
 require_relative 'solargraph/arc/rails_api.rb'
 require_relative 'solargraph/arc/delegate.rb'
 require_relative 'solargraph/arc/storage.rb'
+require_relative 'solargraph/arc/debug.rb'
+require_relative 'solargraph/arc/version.rb'
 
 module Solargraph
   module Arc
