@@ -71,6 +71,12 @@ RSpec.describe "Rails 5 API" do
             create_table :things do |t|
               t.col
             end
+            change_table :things do |t|
+              t.col
+            end
+            create_join_table :things do |t|
+              t.col
+            end
           end
         end
       EOS
@@ -80,6 +86,8 @@ RSpec.describe "Rails 5 API" do
     expect(completion_at(filename, [2, 7], map)).to include("create_table")
     expect(completion_at(filename, [6, 7], map)).to include("create_table")
     expect(completion_at(filename, [8, 10], map)).to include("column")
+    expect(completion_at(filename, [11, 10], map)).to include("column")
+    expect(completion_at(filename, [14, 10], map)).to include("column")
   end
 
   it "provides completions for ActiveJob::Base", coverage: :rails5 do

@@ -59,7 +59,7 @@ RSpec.describe "Rails 6 API" do
   end
 
   it "can auto-complete inside migrations" do
-    map = use_workspace "./spec/rails6" do |root|
+    map = use_workspace "./spec/rails5" do |root|
       root.write_file 'db/migrate/20130502114652_create_things.rb', <<~EOS
         class CreateThings < ActiveRecord::Migration[5.2]
           def self.up
@@ -68,6 +68,15 @@ RSpec.describe "Rails 6 API" do
 
           def change
             crea
+            create_table :things do |t|
+              t.col
+            end
+            change_table :things do |t|
+              t.col
+            end
+            create_join_table :things do |t|
+              t.col
+            end
           end
         end
       EOS
@@ -76,6 +85,9 @@ RSpec.describe "Rails 6 API" do
     filename = './db/migrate/20130502114652_create_things.rb'
     expect(completion_at(filename, [2, 7], map)).to include("create_table")
     expect(completion_at(filename, [6, 7], map)).to include("create_table")
+    expect(completion_at(filename, [8, 10], map)).to include("column")
+    expect(completion_at(filename, [11, 10], map)).to include("column")
+    expect(completion_at(filename, [14, 10], map)).to include("column")
   end
 
   it "provides completions for ActiveJob::Base", coverage: :rails6 do
