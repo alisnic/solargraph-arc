@@ -59,7 +59,7 @@ RSpec.describe "Rails 6 API" do
   end
 
   it "can auto-complete inside migrations" do
-    map = use_workspace "./spec/rails5" do |root|
+    map = use_workspace "./spec/rails6" do |root|
       root.write_file 'db/migrate/20130502114652_create_things.rb', <<~EOS
         class CreateThings < ActiveRecord::Migration[5.2]
           def self.up
