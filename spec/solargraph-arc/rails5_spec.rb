@@ -68,6 +68,9 @@ RSpec.describe "Rails 5 API" do
 
           def change
             crea
+            create_table :things do |t|
+              t.col
+            end
           end
         end
       EOS
@@ -76,6 +79,7 @@ RSpec.describe "Rails 5 API" do
     filename = './db/migrate/20130502114652_create_things.rb'
     expect(completion_at(filename, [2, 7], map)).to include("create_table")
     expect(completion_at(filename, [6, 7], map)).to include("create_table")
+    expect(completion_at(filename, [8, 10], map)).to include("column")
   end
 
   it "provides completions for ActiveJob::Base", coverage: :rails5 do

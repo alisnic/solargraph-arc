@@ -1,7 +1,18 @@
-ActionController::Metal#params: ["ActionController::Parameters"]
-ActionController::Cookies#cookies: ["ActionDispatch::Cookies::CookieJar"]
-ActionDispatch::Flash::FlashHash#now: ["ActionDispatch::Flash::FlashNow"]
-ActiveRecord::QueryMethods#where: ["self", "ActiveRecord::Relation", "ActiveRecord::QueryMethods::WhereChain"]
-ActiveRecord::QueryMethods#not: ["ActiveRecord::QueryMethods::WhereChain"]
-ActiveRecord::FinderMethods#find_by: ["self", "nil"]
-Rails.application: ["Rails::Application"]
+ActionController::Metal#params:
+  return: ["ActionController::Parameters"]
+ActionController::Cookies#cookies:
+  return: ["ActionDispatch::Cookies::CookieJar"]
+ActionDispatch::Flash::FlashHash#now:
+  return: ["ActionDispatch::Flash::FlashNow"]
+ActiveRecord::QueryMethods#where:
+  return: ["self", "ActiveRecord::Relation", "ActiveRecord::QueryMethods::WhereChain"]
+ActiveRecord::QueryMethods#not:
+  return: ["ActiveRecord::QueryMethods::WhereChain"]
+ActiveRecord::FinderMethods#find_by:
+  return: ["self", "nil"]
+Rails.application:
+  return: ["Rails::Application"]
+ActionDispatch::Routing::RouteSet#draw:
+  yieldself: ["ActionDispatch::Routing::Mapper"]
+ActiveRecord::ConnectionAdapters::SchemaStatements#create_table:
+  yieldparam: ["ActiveRecord::ConnectionAdapters::TableDefinition"]

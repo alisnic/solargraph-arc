@@ -14,8 +14,20 @@ module Solargraph
 
         Solargraph.logger.debug("[Arc][Rails] found #{map.pins.size} pins in annotations")
 
-        overrides = YAML.load_file(File.dirname(__FILE__) + "/types.yml").map do |meth, types|
-          Util.method_return(meth, types)
+        overrides = YAML.load_file(File.dirname(__FILE__) + "/types.yml").map do |meth, data|
+          if data["return"]
+            Util.method_return(meth, data["return"])
+          elsif data["yieldself"]
+            Solargraph::Pin::Reference::Override.from_comment(
+              meth,
+              "@yieldself [#{data['yieldself'].join(',')}]"
+            )
+          elsif data["yieldparam"]
+            Solargraph::Pin::Reference::Override.from_comment(
+              meth,
+              "@yieldparam [#{data['yieldparam'].join(',')}]"
+            )
+          end
         end
 
         ns = Solargraph::Pin::Namespace.new(
@@ -47,10 +59,6 @@ module Solargraph
             "flash",
             types: ["ActionDispatch::Flash::FlashHash"],
             location: Util.dummy_location("whatever.rb")
-          ),
-          Solargraph::Pin::Reference::Override.from_comment(
-            "ActionDispatch::Routing::RouteSet#draw",
-            "@yieldself [ActionDispatch::Routing::Mapper]"
           )
         ]
 
