@@ -41,3 +41,8 @@ This gem currently supports:
       - solargraph-arc
     ```
 2. if you use solargraph from bundle, don't forget to include `solagraph-arc` in your Gemfile
+2. Make sure yard documentation is built for your project (solargraph uses it for completions)
+
+    ```
+    $ yard gems
+    ```
