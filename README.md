@@ -24,7 +24,7 @@ For an up to date coverage report, please see https://github.com/alisnic/solargr
 ## Supported Ruby/Rails versions
 
 This gem currently supports:
-- Ruby 2.5, 2.6, and 2.7
+- Ruby 2.5, 2.6, and 2.7. Ruby 3.0 [almost](https://github.com/alisnic/solargraph-arc/issues/16) works
 - Rails 5 and Rails 6
 
 ## Usage
