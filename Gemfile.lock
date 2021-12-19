@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    solargraph-arc (0.1.0)
+    solargraph-arc (0.2.0)
       activesupport (~> 6.1.4.1)
       solargraph (~> 0.44.2)
 
