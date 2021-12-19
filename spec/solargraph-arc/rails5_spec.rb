@@ -32,6 +32,9 @@ RSpec.describe "Rails 5 API" do
           resource :things do
             res
           end
+          namespace :foo do
+            res
+          end
         end
       EOS
     end
@@ -39,6 +42,7 @@ RSpec.describe "Rails 5 API" do
     filename = './config/routes.rb'
     expect(completion_at(filename, [1, 5], map)).to include("resources")
     expect(completion_at(filename, [3, 7], map)).to include("resources")
+    expect(completion_at(filename, [6, 7], map)).to include("resources")
   end
 
   it "can auto-complete inside mailers" do

@@ -20,13 +20,13 @@ Still. Due to dynamic nature of some Rails code, not all completion candidates a
 
 ## Supported Ruby/Rails versions
 
-This gem is tested on:
+This gem currently supports:
 - Ruby 2.5, 2.6, and 2.7
-- Rails 5.2.6 and Rails 6.1.4
+- Rails 5 and Rails 6
 
 ## Usage
 
-1. Install gem
+1. Install gem and [make sure your editor is integrated with it](https://solargraph.org/)
 
     ```
     gem install solargraph-arc

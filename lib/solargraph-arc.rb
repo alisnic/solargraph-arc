@@ -26,7 +26,7 @@ module Solargraph
           pins: Solargraph::Arc::RailsApi.instance.global(yard_map)
         )
       rescue => error
-        Solargraph.logger.warn(error.message + "\n" + error.backtrace)
+        Solargraph.logger.warn(error.message + "\n" + error.backtrace.join("\n"))
         EMPTY_ENVIRON
       end
 
@@ -53,7 +53,7 @@ module Solargraph
       def run_feature(&block)
         yield
       rescue => error
-        Solargraph.logger.warn(error.message + "\n" + error.backtrace)
+        Solargraph.logger.warn(error.message + "\n" + error.backtrace.join("\n"))
         []
       end
     end
