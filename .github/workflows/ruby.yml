@@ -34,7 +34,7 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Configure yard
-      run: echo '--document=yard' > ~/.gemrc
+      run: echo 'gem: --document=yard' > ~/.gemrc
     - name: Install Rails 5 deps
       run: (cd spec/rails5; bundle install)
     - name: Install Rails 6 deps
