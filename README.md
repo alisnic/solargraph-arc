@@ -46,3 +46,25 @@ This gem currently supports:
     ```
     $ yard gems
     ```
+
+## Contributing
+
+1. create fork and clone the repo
+2. install gem deps `bundle install`
+3. install dummy rails5 app deps and build its yard cache
+
+    ```
+    $ cd spec/rails5
+    $ bundle install && yard gems
+    $ cd ../../
+    ```
+
+3. install dummy rails6 app deps and build its yard cache
+
+    ```
+    $ cd spec/rails6
+    $ bundle install && yard gems
+    $ cd ../../
+    ```
+4. now tests should pass locally and you can try different changes
+5. sumbit PR
