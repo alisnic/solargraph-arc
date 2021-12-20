@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     solargraph-arc (0.2.0)
-      activesupport (~> 6.1.4.1)
+      activesupport (>= 5.0)
       solargraph (~> 0.44.2)
 
 GEM
