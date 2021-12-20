@@ -29,7 +29,7 @@ This gem currently supports:
 
 ## Usage
 
-1. Install gem and [make sure your editor is integrated with it](https://solargraph.org/)
+1. Install gem and [make sure your editor is integrated with solargraph](https://solargraph.org/)
 
     ```
     gem install solargraph-arc
