@@ -53,6 +53,10 @@ Execute this in your project root:
 
     otherwise a lot of completions won't work
 
+## Troubleshooting
+
+See https://solargraph.org/guides/troubleshooting
+
 ## Contributing
 
 1. create fork and clone the repo
