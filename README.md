@@ -1,6 +1,6 @@
 # Solargraph ARC
 
-[Solargraph](https://solargraph.org/) **A**wesome **R**ails **C**completions
+[Solargraph](https://solargraph.org/) **A**wesome **R**ails **C**ompletions
 
 ## Features
 
