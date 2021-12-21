@@ -32,8 +32,9 @@ module Solargraph
 
           pins << Util.build_public_method(
             ns,
-            name,
+            name.to_s,
             types: ns.return_type.map(&:tag),
+            scope: :class,
             location: Util.build_location(ast, ns.filename)
           )
         end

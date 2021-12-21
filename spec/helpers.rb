@@ -117,6 +117,15 @@ module Helpers
     yield pin if block_given?
   end
 
+  def assert_class_method(map, query, return_type, &block)
+    pin = find_pin(query, map)
+    expect(pin).to_not be_nil
+    expect(pin.scope).to eq(:class)
+    expect(pin.return_type.map(&:tag)).to eq(return_type)
+
+    yield pin if block_given?
+  end
+
   def find_pin(path, map=api_map)
     find_pins(path, map).first
   end

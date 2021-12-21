@@ -52,9 +52,9 @@ RSpec.describe Solargraph::Arc::Model do
       end
     RUBY
 
-    assert_public_instance_method(
+    assert_class_method(
       api_map,
-      "Transaction#positive",
+      "Transaction.positive",
       ["Class<Transaction>"]
     )
   end
