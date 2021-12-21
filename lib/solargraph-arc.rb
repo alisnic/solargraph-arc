@@ -5,7 +5,7 @@ require_relative 'solargraph/arc/patches.rb'
 require_relative 'solargraph/arc/util.rb'
 require_relative 'solargraph/arc/schema.rb'
 require_relative 'solargraph/arc/autoload.rb'
-require_relative 'solargraph/arc/relation.rb'
+require_relative 'solargraph/arc/model.rb'
 require_relative 'solargraph/arc/devise.rb'
 require_relative 'solargraph/arc/walker.rb'
 require_relative 'solargraph/arc/rails_api.rb'
@@ -38,7 +38,7 @@ module Solargraph
         return EMPTY_ENVIRON unless ns
 
         pins += run_feature { Schema.instance.process(source_map, ns) }
-        pins += run_feature { Relation.instance.process(source_map, ns) }
+        pins += run_feature { Model.instance.process(source_map, ns) }
         pins += run_feature { Storage.instance.process(source_map, ns) }
         pins += run_feature { Autoload.instance.process(source_map, ns, ds) }
         pins += run_feature { Devise.instance.process(source_map, ns) }

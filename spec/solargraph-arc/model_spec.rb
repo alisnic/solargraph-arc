@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Solargraph::Arc::Relation do
+RSpec.describe Solargraph::Arc::Model do
   let(:api_map) { Solargraph::ApiMap.new }
 
   before do
@@ -45,4 +45,17 @@ RSpec.describe Solargraph::Arc::Relation do
     )
   end
 
+  it "generates methods for scope" do
+    load_string 'app/models/transaction.rb', <<-RUBY
+      class Transaction < ActiveRecord::Base
+        scope :positive, ->(arg) { where(foo: "bar")}
+      end
+    RUBY
+
+    assert_public_instance_method(
+      api_map,
+      "Transaction#positive",
+      ["Class<Transaction>"]
+    )
+  end
 end

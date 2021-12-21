@@ -1,6 +1,6 @@
 module Solargraph
   module Arc
-    class Relation
+    class Model
       def self.instance
         @instance ||= self.new
       end
@@ -27,8 +27,19 @@ module Solargraph
           pins << plural_association(ns, ast)
         end
 
+        walker.on :send, [nil, :scope] do |ast|
+          name = ast.children[2].children.last
+
+          pins << Util.build_public_method(
+            ns,
+            name,
+            types: ns.return_type.map(&:tag),
+            location: Util.build_location(ast, ns.filename)
+          )
+        end
+
         walker.walk
-        Solargraph.logger.debug("[ARC][Relation] added #{pins.map(&:name)} to #{ns.path}") if pins.any?
+        Solargraph.logger.debug("[ARC][Model] added #{pins.map(&:name)} to #{ns.path}") if pins.any?
         pins
       end
 
