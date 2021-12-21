@@ -1,5 +1,7 @@
 ActionController::Metal#params:
   return: ["ActionController::Parameters"]
+ActiveRecord::FinderMethods#find:
+  return: ["self", "Array<self>"]
 ActionController::Cookies#cookies:
   return: ["ActionDispatch::Cookies::CookieJar"]
 ActionDispatch::Flash::FlashHash#now:
