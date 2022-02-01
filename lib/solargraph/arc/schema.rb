@@ -13,7 +13,9 @@ module Solargraph
         boolean: 'Boolean',
         text: 'String',
         jsonb: 'Hash',
+        json: 'Hash',
         bigint: 'Integer',
+        uuid: 'String',
         inet: 'IPAddr'
       }
 
