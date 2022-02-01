@@ -77,6 +77,7 @@ module Solargraph
             type = column_ast.children[1]
 
             next if type == :index
+            next if type == :check_constraint
             schema[table_name][name] = ColumnData.new(type, column_ast)
           end
         end
