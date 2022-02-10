@@ -60,4 +60,5 @@ module Solargraph
   end
 end
 
-Solargraph::Convention.register(Solargraph::Arc::Convention) unless ENV["RAILS_ENV"] == "test"
+Solargraph::Convention.register(Solargraph::Arc::Convention)
+

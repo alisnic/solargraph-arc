@@ -3,10 +3,6 @@ require 'spec_helper'
 RSpec.describe Solargraph::Arc::Model do
   let(:api_map) { Solargraph::ApiMap.new }
 
-  before do
-    Solargraph::Convention.register Solargraph::Arc::Convention
-  end
-
   it "generates methods for singular association" do
     load_string 'app/models/transaction.rb', <<-RUBY
       class Transaction < ActiveRecord::Base
@@ -59,3 +55,4 @@ RSpec.describe Solargraph::Arc::Model do
     )
   end
 end
+

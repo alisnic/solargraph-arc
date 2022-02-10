@@ -3,10 +3,6 @@ require 'spec_helper'
 RSpec.describe Solargraph::Arc::Autoload do
   let(:api_map) { Solargraph::ApiMap.new }
 
-  before do
-    Solargraph::Convention.register Solargraph::Arc::Convention
-  end
-
   it "auto completes implicit nested classes" do
     load_string 'test1.rb', %(
       class Foo
@@ -35,3 +31,4 @@ RSpec.describe Solargraph::Arc::Autoload do
     expect(completion_at('test1.rb', [4, 16])).to include("Baz")
   end
 end
+

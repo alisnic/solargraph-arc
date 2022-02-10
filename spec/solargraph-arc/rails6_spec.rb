@@ -1,10 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe "Rails 6 API" do
-  before do
-    Solargraph::Convention.register Solargraph::Arc::Convention
-  end
-
   it "it provides Rails controller api" do
     map = use_workspace "./spec/rails6" do |root|
       root.write_file 'app/controllers/things_controller.rb', <<~EOS
@@ -148,3 +144,4 @@ RSpec.describe "Rails 6 API" do
     end
   end
 end
+

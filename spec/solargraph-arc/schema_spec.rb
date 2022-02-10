@@ -24,10 +24,6 @@ RSpec.describe Solargraph::Arc::Schema do
     RUBY
   end
 
-  before do
-    Solargraph::Convention.register Solargraph::Arc::Convention
-  end
-
   it "generates methods based on schema" do
     map = use_workspace "./spec/rails5" do |root|
       root.write_file 'db/schema.rb', schema
@@ -55,3 +51,4 @@ RSpec.describe Solargraph::Arc::Schema do
     assert_public_instance_method(map, "Account#some_ip", ["IPAddr"])
   end
 end
+

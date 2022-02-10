@@ -1,10 +1,6 @@
 require "spec_helper"
 
 RSpec.describe Solargraph::Arc::Storage do
-  before do
-    Solargraph::Convention.register Solargraph::Arc::Convention
-  end
-
   it "can auto-complete ActiveStorage" do
     map = use_workspace "./spec/rails5" do |root|
       root.write_file 'app/models/thing.rb', <<~EOS
@@ -23,3 +19,4 @@ RSpec.describe Solargraph::Arc::Storage do
     expect(completion_at(filename, [6, 20], map)).to include("attach")
   end
 end
+
