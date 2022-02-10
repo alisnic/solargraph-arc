@@ -13,7 +13,9 @@ module Solargraph
         boolean: 'Boolean',
         text: 'String',
         jsonb: 'Hash',
+        json: 'Hash',
         bigint: 'Integer',
+        uuid: 'String',
         inet: 'IPAddr'
       }
 
@@ -75,6 +77,7 @@ module Solargraph
             type = column_ast.children[1]
 
             next if type == :index
+            next if type == :check_constraint
             schema[table_name][name] = ColumnData.new(type, column_ast)
           end
         end

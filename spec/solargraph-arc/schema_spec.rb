@@ -18,6 +18,11 @@ RSpec.describe Solargraph::Arc::Schema do
           t.text "notes"
           t.inet "some_ip"
           t.datetime "created_at", null: false
+          t.json "old_school_json"
+          t.jsonb "new_school_json"
+          t.uuid "uuid"
+
+          t.check_constraint "balance > 0"
           t.index ["some_big_id"], name: "index_accounts_on_some_big_id", unique: true
         end
       end
@@ -49,6 +54,9 @@ RSpec.describe Solargraph::Arc::Schema do
     assert_public_instance_method(map, "Account#active", ["Boolean"])
     assert_public_instance_method(map, "Account#notes", ["String"])
     assert_public_instance_method(map, "Account#some_ip", ["IPAddr"])
+    assert_public_instance_method(map, "Account#uuid", ["String"])
+    assert_public_instance_method(map, "Account#old_school_json", ["Hash"])
+    assert_public_instance_method(map, "Account#new_school_json", ["Hash"])
   end
 end
 
