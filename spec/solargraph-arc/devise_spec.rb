@@ -1,7 +1,9 @@
 require 'spec_helper'
 
 RSpec.describe Solargraph::Arc::Devise do
-  let(:api_map) { Solargraph::ApiMap.new }
+  before :all do
+    Solargraph.logger.level = Logger::DEBUG
+  end
 
   it "includes devise modules in rails5" do
     map = use_workspace "./spec/rails5" do |root|
@@ -59,10 +61,3 @@ RSpec.describe Solargraph::Arc::Devise do
     assert_public_instance_method(map, "ApplicationController#awesome_user_session", ['undefined'])
   end
 end
-
-
-
-
-
-
-

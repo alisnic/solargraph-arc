@@ -6,13 +6,16 @@ module Solargraph
       end
 
       def initialize
-        @seen_devise_closures = []
+        @seen_devise_models = []
+        @models_parsed = false
       end
 
       def process(source_map, ns)
         if source_map.filename.include?("app/models")
-          process_model(source_map, ns)
+          @models_parsed = true
+          process_model(source_map.source, ns)
         elsif source_map.filename.end_with?("app/controllers/application_controller.rb")
+          parse_models unless @models_parsed
           process_controller(source_map, ns)
         else
           []
@@ -21,12 +24,22 @@ module Solargraph
 
       private
 
-      def process_model(source_map, ns)
-        walker = Walker.from_source(source_map.source)
+      def parse_models
+        Dir.glob("app/models/**/*.rb").each do |filename|
+          source     = Solargraph::Source.load_string(File.read(filename), filename)
+          node       = Walker.normalize_ast(source)
+          class_name = node.children.first.children.last
+
+          process_model(source, Solargraph::Pin::Namespace.new(name: class_name.to_s))
+        end
+      end
+
+      def process_model(source, ns)
+        walker = Walker.from_source(source)
         pins   = []
 
         walker.on :send, [nil, :devise] do |ast|
-          @seen_devise_closures << ns
+          @seen_devise_models << ns
 
           modules = ast.children[2..-1]
             .map {|c| c.children.first }
@@ -55,9 +68,9 @@ module Solargraph
           )
         ]
 
-        mapping_pins = @seen_devise_closures.map do |model_ns|
+        mapping_pins = @seen_devise_models.map do |ns|
           ast = Walker.normalize_ast(source_map.source)
-          mapping = model_ns.name.underscore
+          mapping = ns.name.underscore
 
           [
             Util.build_public_method(
@@ -74,7 +87,7 @@ module Solargraph
             Util.build_public_method(
               ns,
               "current_#{mapping}",
-              types: [model_ns.name, "nil"],
+              types: [ns.name, "nil"],
               location: Util.build_location(ast, ns.filename)
             ),
             Util.build_public_method(

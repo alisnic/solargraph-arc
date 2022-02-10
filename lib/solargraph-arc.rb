@@ -61,4 +61,3 @@ module Solargraph
 end
 
 Solargraph::Convention.register(Solargraph::Arc::Convention)
-
