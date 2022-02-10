@@ -1,5 +1,13 @@
 {
   "*": {
     "make": "bundle exec rspec {file}"
+  },
+  "lib/solargraph/arc/*.rb": {
+    "alternate": "spec/solargraph-arc/{}_spec.rb",
+    "type": "lib",
+    "make": "bundle exec rspec spec/solargraph-arc/{}_spec.rb"
+  },
+  "spec/solargraph-arc/*_spec.rb": {
+    "alternate": "lib/solargraph/arc/{}.rb"
   }
 }
