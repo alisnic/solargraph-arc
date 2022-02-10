@@ -29,6 +29,11 @@ RSpec.describe Solargraph::Arc::Schema do
     RUBY
   end
 
+  before(:each) do
+    # This feature has internal state that needs to be reset between test runs
+    described_class.reset
+  end
+
   it "generates methods based on schema" do
     map = use_workspace "./spec/rails5" do |root|
       root.write_file 'db/schema.rb', schema

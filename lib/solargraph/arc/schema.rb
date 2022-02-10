@@ -23,6 +23,10 @@ module Solargraph
         @instance ||= self.new
       end
 
+      def self.reset
+        @instance = nil
+      end
+
       def initialize
         @schema_present = File.exist?("db/schema.rb")
       end
