@@ -29,8 +29,10 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     method_source (1.0.0)
+    mini_portile2 (2.6.1)
     minitest (5.14.4)
-    nokogiri (1.12.5-arm64-darwin)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     parallel (1.21.0)
     parser (3.0.3.2)
@@ -99,11 +101,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.17)
+  bundler (~> 2.3)
   pry (~> 0.14.1)
   rake (~> 10.0)
   rspec (~> 3.9.0)
   solargraph-arc!
 
 BUNDLED WITH
-   1.17.3
+   2.3.7
