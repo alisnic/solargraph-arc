@@ -54,5 +54,22 @@ RSpec.describe Solargraph::Arc::Model do
       ["Class<Transaction>"]
     )
   end
+
+  it "generates scope methods with parameters" do
+    load_string 'app/models/person.rb', <<-RUBY
+      class Person < ActiveRecord::Base
+        scope :taller_than, ->(min_height) { where("height > ?", min_height) }
+      end
+    RUBY
+
+    assert_class_method(
+      api_map,
+      "Person.taller_than",
+      ["Class<Person>"]
+    ) do |pin|
+      expect(pin.parameters).not_to be_empty
+      expect(pin.parameters.first.name).to eq("min_height")
+    end
+  end
 end
 
