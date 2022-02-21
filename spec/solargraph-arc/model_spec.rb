@@ -21,6 +21,16 @@ RSpec.describe Solargraph::Arc::Model do
     assert_public_instance_method(api_map, "Transaction#category", ["Category"])
   end
 
+  it "generates methods for association with custom class_name" do
+    load_string 'app/models/transaction.rb', <<-RUBY
+      class Transaction < ActiveRecord::Base
+        belongs_to :account, class_name: 'CustomAccount'
+      end
+    RUBY
+
+    assert_public_instance_method(api_map, "Transaction#account", ["CustomAccount"])
+  end
+
   it "generates methods for plural associations" do
     load_string 'app/models/account.rb', <<-RUBY
       class Account < ActiveRecord::Base
