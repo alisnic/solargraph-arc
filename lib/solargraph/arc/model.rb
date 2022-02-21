@@ -30,13 +30,20 @@ module Solargraph
         walker.on :send, [nil, :scope] do |ast|
           name = ast.children[2].children.last
 
-          pins << Util.build_public_method(
+          method_pin = Util.build_public_method(
             ns,
             name.to_s,
             types: ns.return_type.map(&:tag),
             scope: :class,
             location: Util.build_location(ast, ns.filename)
           )
+
+          if ast.children.last.type == :block
+            location = ast.children.last.location
+            block_pin = source_map.locate_block_pin(location.line, location.column)
+            method_pin.parameters.concat(block_pin.parameters.clone)
+          end
+          pins << method_pin
         end
 
         walker.walk
