@@ -5,60 +5,66 @@ module Solargraph
         @instance ||= self.new
       end
 
-      def global yard_map
+      def global(yard_map)
         return [] if yard_map.required.empty?
 
-        ann    = File.read(File.dirname(__FILE__) + "/annotations.rb")
-        source = Solargraph::Source.load_string(ann, "annotations.rb")
-        map    = Solargraph::SourceMap.map(source)
+        ann = File.read(File.dirname(__FILE__) + '/annotations.rb')
+        source = Solargraph::Source.load_string(ann, 'annotations.rb')
+        map = Solargraph::SourceMap.map(source)
 
-        Solargraph.logger.debug("[Arc][Rails] found #{map.pins.size} pins in annotations")
-
-        overrides = YAML.load_file(File.dirname(__FILE__) + "/types.yml").map do |meth, data|
-          if data["return"]
-            Util.method_return(meth, data["return"])
-          elsif data["yieldself"]
-            Solargraph::Pin::Reference::Override.from_comment(
-              meth,
-              "@yieldself [#{data['yieldself'].join(',')}]"
-            )
-          elsif data["yieldparam"]
-            Solargraph::Pin::Reference::Override.from_comment(
-              meth,
-              "@yieldparam [#{data['yieldparam'].join(',')}]"
-            )
-          end
-        end
-
-        ns = Solargraph::Pin::Namespace.new(
-          name:  "ActionController::Base",
-          gates: ["ActionController::Base"]
+        Solargraph.logger.debug(
+          "[Arc][Rails] found #{map.pins.size} pins in annotations"
         )
+
+        overrides =
+          YAML
+            .load_file(File.dirname(__FILE__) + '/types.yml')
+            .map do |meth, data|
+              if data['return']
+                Util.method_return(meth, data['return'])
+              elsif data['yieldself']
+                Solargraph::Pin::Reference::Override.from_comment(
+                  meth,
+                  "@yieldself [#{data['yieldself'].join(',')}]"
+                )
+              elsif data['yieldparam']
+                Solargraph::Pin::Reference::Override.from_comment(
+                  meth,
+                  "@yieldparam [#{data['yieldparam'].join(',')}]"
+                )
+              end
+            end
+
+        ns =
+          Solargraph::Pin::Namespace.new(
+            name: 'ActionController::Base',
+            gates: ['ActionController::Base']
+          )
 
         definitions = [
           Util.build_public_method(
             ns,
-            "response",
-            types: ["ActionDispatch::Response"],
-            location: Util.dummy_location("whatever.rb")
+            'response',
+            types: ['ActionDispatch::Response'],
+            location: Util.dummy_location('whatever.rb')
           ),
           Util.build_public_method(
             ns,
-            "request",
-            types: ["ActionDispatch::Request"],
-            location: Util.dummy_location("whatever.rb")
+            'request',
+            types: ['ActionDispatch::Request'],
+            location: Util.dummy_location('whatever.rb')
           ),
           Util.build_public_method(
             ns,
-            "session",
-            types: ["ActionDispatch::Request::Session"],
-            location: Util.dummy_location("whatever.rb")
+            'session',
+            types: ['ActionDispatch::Request::Session'],
+            location: Util.dummy_location('whatever.rb')
           ),
           Util.build_public_method(
             ns,
-            "flash",
-            types: ["ActionDispatch::Flash::FlashHash"],
-            location: Util.dummy_location("whatever.rb")
+            'flash',
+            types: ['ActionDispatch::Flash::FlashHash'],
+            location: Util.dummy_location('whatever.rb')
           )
         ]
 
@@ -66,23 +72,25 @@ module Solargraph
       end
 
       def local(source_map, ns)
-        return [] unless source_map.filename.include?("db/migrate")
-        node = Walker.normalize_ast(source_map.source)
+        return [] unless source_map.filename.include?('db/migrate')
+        node, _ = Walker.normalize_ast(source_map.source)
 
         pins = [
           Util.build_module_include(
             ns,
-            "ActiveRecord::ConnectionAdapters::SchemaStatements",
+            'ActiveRecord::ConnectionAdapters::SchemaStatements',
             Util.build_location(node, ns.filename)
           ),
           Util.build_module_extend(
             ns,
-            "ActiveRecord::ConnectionAdapters::SchemaStatements",
+            'ActiveRecord::ConnectionAdapters::SchemaStatements',
             Util.build_location(node, ns.filename)
           )
         ]
 
-        Solargraph.logger.debug("[ARC][RailsApi] added #{pins.map(&:name)} to #{ns.path}")
+        Solargraph.logger.debug(
+          "[ARC][RailsApi] added #{pins.map(&:name)} to #{ns.path}"
+        )
         pins
       end
     end

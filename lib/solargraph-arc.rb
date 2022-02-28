@@ -4,6 +4,7 @@ require 'active_support/core_ext/string/inflections'
 require_relative 'solargraph/arc/patches.rb'
 require_relative 'solargraph/arc/util.rb'
 require_relative 'solargraph/arc/schema.rb'
+require_relative 'solargraph/arc/annotate.rb'
 require_relative 'solargraph/arc/autoload.rb'
 require_relative 'solargraph/arc/model.rb'
 require_relative 'solargraph/arc/devise.rb'
@@ -21,23 +22,29 @@ module Solargraph
     end
 
     class Convention < Solargraph::Convention::Base
-      def global yard_map
+      def global(yard_map)
         Solargraph::Environ.new(
           pins: Solargraph::Arc::RailsApi.instance.global(yard_map)
         )
       rescue => error
-        Solargraph.logger.warn(error.message + "\n" + error.backtrace.join("\n"))
+        Solargraph.logger.warn(
+          error.message + "\n" + error.backtrace.join("\n")
+        )
         EMPTY_ENVIRON
       end
 
-      def local source_map
+      def local(source_map)
         pins = []
-        ds   = source_map.document_symbols.select {|n| n.is_a?(Solargraph::Pin::Namespace) }
-        ns   = ds.first
+        ds =
+          source_map.document_symbols.select do |n|
+            n.is_a?(Solargraph::Pin::Namespace)
+          end
+        ns = ds.first
 
         return EMPTY_ENVIRON unless ns
 
         pins += run_feature { Schema.instance.process(source_map, ns) }
+        pins += run_feature { Annotate.instance.process(source_map, ns) }
         pins += run_feature { Model.instance.process(source_map, ns) }
         pins += run_feature { Storage.instance.process(source_map, ns) }
         pins += run_feature { Autoload.instance.process(source_map, ns, ds) }
@@ -53,7 +60,9 @@ module Solargraph
       def run_feature(&block)
         yield
       rescue => error
-        Solargraph.logger.warn(error.message + "\n" + error.backtrace.join("\n"))
+        Solargraph.logger.warn(
+          error.message + "\n" + error.backtrace.join("\n")
+        )
         []
       end
     end
