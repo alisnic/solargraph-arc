@@ -17,29 +17,27 @@ module Solargraph
         if ast.is_a?(::Parser::AST::Node)
           ast
         else
-          NodeParser.parse(source.code, source.filename)
+          NodeParser.parse_with_comments(source.code, source.filename)
         end
       end
 
       def self.from_source(source)
-        self.new(self.normalize_ast(source))
+        self.new(*self.normalize_ast(source))
       end
 
-      def initialize(ast)
-        @ast   = ast
+      attr_reader :ast, :comments
+      def initialize(ast, comments = {})
+        @comments = comments
+        @ast = ast
         @hooks = Hash.new([])
       end
 
-      def on(node_type, args=[], &block)
+      def on(node_type, args = [], &block)
         @hooks[node_type] << Hook.new(node_type, args, &block)
       end
 
       def walk
-        if @ast.is_a?(Array)
-          @ast.each { |node| traverse(node) }
-        else
-          traverse(@ast)
-        end
+        @ast.is_a?(Array) ? @ast.each { |node| traverse(node) } : traverse(@ast)
       end
 
       private
@@ -47,22 +45,24 @@ module Solargraph
       def traverse(node)
         return unless node.is_a?(::Parser::AST::Node)
 
-        @hooks[node.type].each do |hook|
-          try_match(node, hook)
-        end
+        @hooks[node.type].each { |hook| try_match(node, hook) }
 
-        node.children.each {|child| traverse(child) }
+        node.children.each { |child| traverse(child) }
       end
 
       def try_match(node, hook)
         return unless node.type == hook.node_type
         return unless node.children
 
-        matched = hook.args.empty? || if node.children.first.is_a?(::Parser::AST::Node)
-          node.children.any? { |child| child.is_a?(::Parser::AST::Node) && match_children(hook.args[1..-1], child.children) }
-        else
-          match_children(hook.args, node.children)
-        end
+        matched =
+          hook.args.empty? || if node.children.first.is_a?(::Parser::AST::Node)
+            node.children.any? do |child|
+              child.is_a?(::Parser::AST::Node) &&
+                match_children(hook.args[1..-1], child.children)
+            end
+          else
+            match_children(hook.args, node.children)
+          end
 
         if matched
           if hook.proc.arity == 1

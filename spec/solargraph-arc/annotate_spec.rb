@@ -4,7 +4,7 @@ RSpec.describe Solargraph::Arc::Annotate do
   let(:api_map) { Solargraph::ApiMap.new }
 
   it 'auto completes implicit nested classes' do
-    load_string 'test1.rb',
+    load_string 'app/models/my_model.rb',
                 <<~RUBY
       #  id                        :integer          not null, primary key
       #  start_date                :date
@@ -18,6 +18,26 @@ RSpec.describe Solargraph::Arc::Annotate do
       end
     RUBY
 
-    assert_public_instance_method(api_map, "MyModel#id", ["Integer"])
+    assert_public_instance_method(api_map, 'MyModel#id', ['Integer']) do |pin|
+      expect(pin.location.range.to_hash).to eq(
+        { start: { line: 0, character: 0 }, end: { line: 0, character: 68 } }
+      )
+    end
+
+    assert_public_instance_method(api_map, 'MyModel#start_date', ['Date'])
+    assert_public_instance_method(
+      api_map,
+      'MyModel#living_expenses',
+      ['BigDecimal']
+    )
+    assert_public_instance_method(api_map, 'MyModel#less_deposits', ['Boolean'])
+    assert_public_instance_method(api_map, 'MyModel#notes', ['String'])
+    assert_public_instance_method(api_map, 'MyModel#name', ['String'])
+    assert_public_instance_method(
+      api_map,
+      'MyModel#created_at',
+      ['ActiveSupport::TimeWithZone']
+    )
+    assert_public_instance_method(api_map, 'MyModel#price', ['BigDecimal'])
   end
 end
