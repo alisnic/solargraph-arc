@@ -1,5 +1,7 @@
 # Solargraph ARC
 
+## Solargraph-arc [was merged](https://github.com/iftheshoefritz/solargraph-rails/pull/29) in [solargraph-rails](https://github.com/iftheshoefritz/solargraph-rails). Please use that repo for issues/PR.
+
 [Solargraph](https://solargraph.org/) **A**wesome **R**ails **C**ompletions
 
 ## Features
